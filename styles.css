@@ -1,0 +1,293 @@
+.hero-heading-section {
+    width: 535px;
+    height: 165px;
+    top: 185px;
+    left: 453px;
+}
+
+.heading {
+    font-family: 'Avenir', sans-serif;
+    font-weight: 700; 
+    font-size: 40px; 
+    line-height: 54.64px; 
+    text-align: center;
+}
+
+.green-icon {
+    background: #6AC37F;
+    width: 8px;
+    height: 8px;
+    top: 380px;
+    left: 450px;    
+    gap: 0px;
+    opacity: 0px;
+}
+
+.hero-badge {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem; 
+    background-color: #FAFAFAB2;
+    border: 1px solid #ECECEC; 
+    padding: 16px;
+    margin-top: 1rem; 
+
+    width: 592px;
+height: 44px;
+
+}
+
+.hero-badge-text {
+    font-family: 'Avenir', sans-serif;
+
+font-size: 16px;
+font-weight: 400;
+line-height: 21.79px;
+text-align: left;
+
+}
+
+.button {
+     display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 25px;
+    height: 50px;
+    gap: 0px;
+    border-radius: 25px;
+}
+
+.hero-img {
+    width: 1002px;
+    height: 302px;
+    top: 507px;
+    left: 219px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.setup-badge {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 146px;
+    height: 36px;
+    border-radius: 2rem; 
+    background-color: #FAFAFAB2;
+    border: 1px solid #ECECEC; 
+    padding: 16px;
+    margin-top: 1rem; 
+}
+
+.setup-badge-text {
+    font-family: 'Avenir', sans-serif;
+
+font-size: 12px;
+font-weight: 400;
+line-height: 22.2px;
+text-align: left;
+color: #343F4C;
+
+}
+
+.setup-heading-section {
+    width: 371px;
+height: 82px;
+top: 941px;
+left: 535px;
+gap: 0px;
+opacity: 0px;
+}
+
+.setup-heading {
+    font-family: 'Avenir', sans-serif;
+font-size: 30px;
+font-weight: 700;
+line-height: 40.98px;
+text-align: center;
+
+}
+  
+
+.card {
+    width: 347px;
+    height: 431px;
+  border: 1px solid #EDEDED; 
+  transition: 0.3s;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.steps-badge {
+    width: 124px;
+height: 36px;
+display: flex; 
+align-items: center;
+justify-content: space-between;
+padding: 16px;
+background-color: #FAFAFAB2;
+border: 1px solid #ECECEC; 
+border-radius: 2rem; 
+}
+
+.steps-badge-text {
+    font-family: 'Avenir', sans-serif;
+font-size: 12px;
+font-weight: 400;
+line-height: 22.2px;
+text-align: left;
+
+}
+
+.company-section {
+    padding: 20px;
+}
+
+.company-badge {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 173px;
+    height: 36px;
+    padding: 14px;
+    background-color: #FAFAFAB2;
+    border: 1px solid #ECECEC; 
+    border-radius: 2rem; 
+}
+
+.company-badge-text {
+    font-family: 'Avenir', sans-serif;
+font-size: 12px;
+font-weight: 400;
+line-height: 22.2px;
+text-align: left;
+
+}
+
+.company-heading {
+    /* width: 431px;
+height: 114px; */
+gap: 0px;
+font-family: 'Avenir', sans-serif;
+font-size: 30px;
+font-weight: 700;
+line-height: 38.1px;
+/* text-align: left; */
+}
+
+.company-right-container {
+    height: 310px;
+    gap: 0px;
+    background-color: #EEF0F2;
+    border: 1px solid #ECECEC; 
+    border-radius: 2rem; 
+}
+
+
+.cloud-section {
+    padding: 20px;
+}
+
+.cloud-badge {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 195px;
+    height: 36px;
+    padding: 14px;
+    background-color: #FFFFFF26;
+    border: 1px solid #ECECEC; 
+    border-radius: 2rem; 
+}
+
+.cloud-badge-text {
+    color: white;
+    font-family: 'Avenir', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22.2px;
+    text-align: left;
+}
+
+.cloud-image {
+    margin-bottom: -100px;
+    margin-top: 20px;
+}
+
+.essentials-badge {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 178px;
+    height: 36px;
+    padding: 14px;
+    background-color: #FFFFFF26;
+    border: 1px solid #ECECEC; 
+    border-radius: 2rem; 
+}
+
+.essentials-badge-text {
+    font-family: 'Avenir', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22.2px;
+    text-align: left;
+}
+
+.essentials-card {
+    width: 493px;
+height: 69px;
+top: 4585px;
+left: 197px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+.essentials-card2 {
+    width: 415px;
+height: 69px;
+top: 4585px;
+left: 788px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+.line {
+    border-left: 1px dashed #E9E9E9;
+}
+  
+.hr {
+    border: 1px dashed #E9E9E9;
+width: 1101px;
+top: 4170px;
+left: 1270px;
+gap: 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+}
+
+.highlights-card {
+    background-color: #F9F9F966;
+  border: 1px solid #EDEDED; 
+  transition: 0.3s;
+  border-radius: 20px;
+  padding: 30px;
+  padding-left: 40px;
+}
+
+
+.slack-img {
+    width: 30px;
+    /* height: 30px; */
+}
+
+.slack-button-img {
+    width: 25px;
+}
+
+.footer-section {
+    margin-top: 500px;
+}
