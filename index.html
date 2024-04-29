@@ -4,65 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocHours</title>
-    <link rel="icon" type="image/x-icon" href="./assets/logo.svg">
+    <link rel="icon" type="image/x-icon" href="./assets/headerLogo.svg">
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="relative md:px-44 px-8 py-4">
+    <div class="container">
+      <!-- Sign Up Header -->
+      <div class="flex items-center justify-center text-lg py-3 bg-[#E8EBFF] gap-8 mb-1">
+        <h1 class="">Get up to <span class="font-bold">6 Months</span> of free access to DocHours</h1>
+        <a href="https://app.dochours.com/" target="_blank" class="custom-btn px-6 py-2 text-sm cursor-pointer">Sign Up Now</a>
+      </div>
       <!-- Header Section -->
-      <div class="flex justify-between">
+      <div class="flex justify-between md:px-44 px-8 py-4">
         <div class="flex">
-          <img src="./assets/logo.svg" alt="Logo" />
+          <img src="./assets/headerLogo.svg" alt="Logo" />
           <h1 class="font-medium ml-2 text-xl text-blue-800">doc<span class="font-bold">Hours</span></h1>
         </div>  
-        <div class="flex gap-12 text-lg font-medium">
-          <button class="hover:text-green-500">Home</button>
-          <button class="hover:text-green-500">Features</button>
-          <button class="hover:text-green-500">Pricing</button>
-          <button class="hover:text-green-500">Contact</button>
-          <button class="hover:text-green-500">Login / Register</button>
+        <div class="flex gap-12">
+          <a href="#" class="hover:text-green-500 cursor-pointer text-lg font-medium">Home</a>
+          <a href="#" class="hover:text-green-500 cursor-pointer text-lg font-medium">Features</a>
+          <a href="#" class="hover:text-green-500 cursor-pointer text-lg font-medium">Pricing</a>
+          <a href="#" class="hover:text-green-500 cursor-pointer text-lg font-medium">Contact</a>
+          <a href="https://app.dochours.com/" target="_blank" class="hover:text-green-500 cursor-pointer text-lg font-medium">Login / Register</a>
         </div>
       </div>
 
       <!-- Hero -->
-      <div class="text-center flex flex-col items-center justify-center mt-24">
-        <div class="element"></div>
-        <div class="hero-heading-section">
-          <h1 class="heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
+      <div class="text-center flex flex-col items-center justify-center mt-28 md:px-44 px-8 py-4 relative">
+        <div class="items-center justify-center md:w-5/12 w-full mb-4">
+          <h1 class="text-4xl font-semibold text-center " style="line-height: 50px;">Prioritizing convenience in healthcare for everyone</h1>
         </div>
-        <div class="hero-badge">
-          <span class="green-icon rounded-full"></span>
-          <h1 class="hero-badge-text">A <span class="font-extrabold">clinic management software</span> that prioritises convenience in care</h1>
-          <span class="green-icon rounded-full"></span>
+        <div class="hero-badge md:w-max w-96 gap-2 md:px-4 px-4 py-3 mt-4">
+          <span class="hero-green-icon rounded-full"></span>
+          <h1 class="md:text-base text-xs">An affordable and efficient <span class="font-bold">clinic management solution</span> for clinics of all sizes.</h1>
+          <span class="hero-green-icon rounded-full"></span>
         </div>
-        <div class="flex justify-center items-center mt-6 mb-4">
-          <div class="button bg-[#4C42B8] gap-3">
-            <button class="btn text-white text-lg text-center">Try it for free</button>
-            <img src="./assets/arrow.svg" alt="Button Arrow" />
-          </div>
-        </div>
+        <a class="custom-btn mt-10 md:mb-4 mb-8 px-6 py-3" href="https://app.dochours.com/" target="_blank">
+          Try it for free
+          <svg id="arrow" width="30" height="14" viewBox="0 0 22 14" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path id="arrow-path" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
         <div class="hero-img">
           <img src="./assets/heroImg.png" alt="Hero Image" class="" />
         </div>
+        <div class="hero-child"></div>
       </div>
 
-      <!-- SETUP Section -->
-      <div class="text-center flex flex-col items-center justify-center mt-24">
-        <div class="setup-badge mt-24">
+      <!-- ONBOARDING Section -->
+      <div class="text-center flex flex-col items-center justify-center mt-6 md:px-1 px-8 py-4 relative">
+        <div class="badge px-4 py-2 mt-24">
           <span class="green-icon rounded-full"></span>
-          <h1 class="setup-badge-text">THE SETUP</h1>
+          <h1 class="badge-text">EFFORTLESS ONBOARDING</h1>
           <span class="green-icon rounded-full"></span>
         </div>
-        <div class="setup-heading-section mt-6">
-          <h1 class="setup-heading">Take back your time with effortless scheduling</h1>
+        <div class="mt-6 md:w-1/4 w-full">
+          <h1 class="font-bold text-3xl leading-10 mb-1">Get your clinic up and running in no time</h1>
         </div>
-        <span class='mt-3'>Get your clinic up and running with docHours in just three easy steps</span>
+        <span class='mt-3 mb-24 font-medium'>Set up your own Dochours profile in just 3 simple steps</span>
 
-        <div class="flex gap-10 mt-8 md:flex-row flex-col">
-
-          <div class="card">
+        <div class="cards-container flex gap-10 mt-8 md:flex-row flex-col">
+          <div class="card md:w-1/3 w-full">
             <img src="./assets/card1.png" alt="Card 1" />
             <div class="steps-badge">
               <span class="green-icon rounded-full"></span>
@@ -74,8 +80,7 @@
               <p class="text-base">Complete the setup wizard in order to create a unique profile for your clinic</p>
             </div>
           </div>
-
-          <div class="card">
+          <div class="card md:w-1/3 w-full">
             <div class="steps-badge">
               <span class="green-icon rounded-full"></span>
               <h1 class="steps-badge-text">STEP 2</h1>
@@ -88,7 +93,7 @@
             <img src="./assets/card2.png" alt="Card 2" />
           </div>
             
-          <div class="card">
+          <div class="card md:w-1/3 w-full">
             <img src="./assets/card3.png" alt="Card 3" />
             <div class="steps-badge">
               <span class="green-icon rounded-full"></span>
@@ -101,304 +106,390 @@
             </div>
           </div>
         </div>
+        
+        <div class="onboarding-child"></div>
+        <div class="absolute left-0 md:block hidden" style="bottom: 75px;">
+          <img src="./assets/rocket1.svg" alt="setup bg" />
+        </div>
+        <div class="absolute right-0 md:block hidden" style="bottom: 150px;">
+          <img src="./assets/rocket2.svg" alt="setup bg" />
+        </div>
+        <div class="absolute  md:block hidden" style="top: 338px; right: 350px;">
+          <img src="./assets/cardsLine1.svg" alt="setup bg" />
+        </div>
+        <div class="absolute md:block hidden" style="bottom: -65px; left: 390px;">
+          <img src="./assets/cardsLine2.svg" alt="setup bg" />
+        </div>
       </div>
 
-      <!-- COMPANY Section -->
-      <div class="company-section flex flex-col items-center justify-center mt-12 px-6">
+      <!-- VISION Section -->
+      <div class="vision-section flex flex-col items-center justify-center mt-28 px-6 md:px-44 px-8 py-4">
         <div class="flex flex-col md:flex-row md:justify-between justify-center md:gap-12 gap-2">
-          <div class="flex flex-col md:w-1/2 w-full">
-            <div class="company-badge">
+          <div class="flex flex-col md:items-start items-center md:w-1/2 w-full">
+            <div class="badge w-40 px-4 py-2">
               <span class="green-icon rounded-full"></span>
-              <h1 class="company-badge-text">OUR COMPANY</h1>
+              <h1 class="badge-text">OUR VISION</h1>
               <span class="green-icon rounded-full"></span>
             </div>
-            <h1 class="text-3xl font-bold mt-4">Lorem Ipsum is simply dummy text of the typesetting industry.</h1>
-            <p class="text-base text-[#212C38] mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <h1 class="text-3xl font-bold mt-4 text-center md:text-left md:w-3/4 w-full leading-10">We aim to make clinics more efficient, patient-centric, and digitally visible</h1>
+            <p class="text-base text-[#212C38] md:mt-4 mt-8 text-center md:text-left mb-8">Dochours is a clinic management solution that strives to make clinics efficient, patient-centric, and digitally visible through a cloud-based solution that streamlines and simplifies the complexities of healthcare administration.</p>
           </div>
 
           <div class="right-side-card md:w-1/2 w-full">
             <div class="rounded overflow-hidden">
               <div class="w-full px-8 py-8 bg-[#EEF0F2] rounded-3xl border border-[#ECECEC]">
-                <p class="text-gray-700 text-lg font-semibold mb-6">
+                <p class="text-gray-700 text-lg font-semibold mb-10">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
               </div>
             </div>
         
             <div class="rounded overflow-hidden -mt-8">
               <div class="w-full px-6 py-8 bg-white rounded-3xl flex items-center border border-[#ECECEC] gap-2">
-                <img src="./assets/companyLogo.svg" alt="Company Logo" />
-                <p class="text-gray-700 text-base ml-2">
-                  Lorem Ipsum is simply dummy text of the typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s   </p>
-              </div>
+                <img src="./assets/manager.png" alt="Company Logo" class="w-28 h-28" />
+                <div class="flex flex-col ml-4">
+                <h1 class="text-xl font-bold mb-2">Haritha Pradeep</h1>
+                <p class="text-gray-700 font-medium text-base">Product Manager</p>
+                </div>
+                </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Cloud Section -->
-      <div class="cloud-section">
-          <div class="flex flex-col items-center justify-center bg-[#4C42B8] rounded-xl mt-12">
-            <div class="flex flex-col md:flex-row md:justify-between justify-center px-16 py-12">
-              <div class="flex flex-col md:w-1/2 w-full">
-                <div class="cloud-badge mt-6">
+      <!-- FOGGY Section -->
+      <div class="foggy-section md:px-44 px-8 py-4 relative">
+          <div class="flex flex-col items-center justify-center bg-[#4C42B8] rounded-xl mt-12 relative">
+            <div class="flex flex-col md:flex-row md:justify-between justify-center md:px-16 px-8 py-12">
+              <div class="flex flex-col md:w-1/2 w-full md:items-start items-center md:text-left text-center md:pl-6 pl-0 pt-6">
+                <div class="badge border border-white w-40 px-4 py-2 mt-4 bg-[#FFFFFF26]">
                   <span class="green-icon rounded-full"></span>
-                  <h1 class="cloud-badge-text">WHY CLOUD BASED</h1>
+                  <h1 class="badge-text text-white">STILL FOGGY</h1>
                   <span class="green-icon rounded-full"></span>
                 </div>
-                <h1 class="text-xl text-white font-bold mt-8">A cloud-based clinic management software for all your clinic's needs</h1>
-                <p class="mt-4 text-white">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum</p>
-                <h2 class="text-xl text-white font-bold mt-8">Lorem Ipsum is simply dummy text of the printing industry.</h2>
-                <p class="mt-4 text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                <h1 class="text-3xl text-white font-semibold leading-10 mt-6">Can a cloud management software bring any benefits to your clinic?</h1>
+                <p class="mt-4 text-white leading-6">If you have any reservations about using a cloud-based solution, Dochours can put your mind at ease. We provide a mobile, flexible, and cost-effective platform that runs on a highly secure AWS infrastructure that is HIPAA-compliant, with world-class safety, security, and low latency for users around the world. You can easily get started and scale your plans with a few clicks.</p>
+                <h2 class="text-xl text-white font-semibold mt-6">We guarantee you a cloud-nine experience.</h2>
+                <p class="mt-4 text-white leading-6">Rest assured that we have developed our software with great care and consideration for our customers. However, if you have any questions or encounter any difficulties, please do not hesitate to contact us. We would be more than happy to assist you as soon as possible.</p>
               </div>
-              <div class="cloud-image">
-                <img src="./assets/cloud.png" srcset="Cloud Image" />
+              <div class="foggy-image">
+                <img src="./assets/Frame.png" alt="Foggy Image" />
               </div>
             </div>
           </div>
+
+          <!-- Lines -->
+          <div class="absolute md:block hidden" style="bottom: 16px; left: 220px;">
+            <div class="h-[708px] bg-[#F0E9FE] opacity-30  w-[1px]"></div>
+          </div>
+          <div class="absolute md:block hidden" style="top: 120px;">
+            <div class="w-[1168px] bg-[#F0E9FE] opacity-30  h-[1px]"></div>
+          </div>
+          <div class="absolute md:block hidden" style="top: 235px; right: 20px;">
+            <div class="w-[720px] bg-[#F0E9FE] opacity-30  h-[1px]"></div>
+          </div>
+          <div class="absolute md:block hidden" style="top: 120px; right: 640px;">
+            <div class="h-[180px] bg-[#F0E9FE] opacity-30  w-[1px]"></div>
+          </div>
+          <div class="absolute md:block hidden" style="top: 64px; right: 360px;">
+            <div class="h-[140px] bg-[#F0E9FE] opacity-30  w-[1px]"></div>
+          </div>
       </div>
 
-      <!-- ESSENTIALS SECTION -->
-      <div class="essentials-section flex flex-col items-center justify-center mt-18">
-        <div class="essentials-badge mt-24">
+      <!-- FEATURES SECTION -->
+      <div class="features-section flex flex-col items-center justify-center mt-18 md:px-44 px-8 py-4 relative">
+        <div class="badge w-40 px-4 py-2 mt-24">
           <span class="green-icon rounded-full"></span>
-          <h1 class="essentials-badge-text">THE ESSENTIALS</h1>
+          <h1 class="badge-text">FEATURES</h1>
           <span class="green-icon rounded-full"></span>
         </div>
         <div class="mt-6">
-          <h1 class="text-3xl font-bold mb-2">Save time and get more done</h1>
+          <h1 class="text-3xl font-bold mb-2">What We Offer </h1>
         </div>
-        <span class='mt-3 mb-8'>All you need in one tool</span>
-        <div class="flex md:flex-row flex-col justify-between">
-          <div class="flex flex-col items-center justify-center">
+        <span class='mt-3 mb-20'>Simple. Swift. Secure</span>
+        <div class="flex md:flex-row flex-col justify-between md:gap-12 gap-8">
+          <div class="flex flex-col items-center justify-center md:w-1/2 w-full">
             <img src="./assets/essentials1.png" alt="Essentials 1 Img" />
             <div class="flex items-center justify-between px-4 gap-2 py-1 border border-[#ECECEC] rounded-2xl mt-8">
               <span class="green-icon rounded-full"></span>
-              <h1 class="essentials-badge-text">EFFECTIVE CROWD MANAGEMENT</h1>
+              <h1 class="badge-text">EFFECTIVE CROWD MANAGEMENT</h1>
               <span class="green-icon rounded-full"></span>
             </div>
-            <h1 class="font-bold text-xl mt-2 mb-2">Seamless OP Flow</h1>
-            <p class="text-center">Efficiently manage patient arrivals and prevent overcrowding through online appointment scheduling and automated reminders.</p>
+            <h1 class="font-bold text-xl mt-4 mb-2">Seamless OP Flow</h1>
+            <p class="text-center mt-1 md:w-3/4 w-10/12">Efficient appointment scheduling, automated patient reminders, and patient flow tracking to ensure organized movement of patients through the clinic, reducing wait times and minimizing crowding.</p>
           </div>
 
-          <!-- <hr class="h-full border border-gray-500 w-full rotate-90 relative" /> -->
-
-          <div class="flex flex-col items-center justify-center line">
+          <div class="flex flex-col items-center justify-center md:w-1/2 w-full mb-12">
             <img src="./assets/essentials2.png" alt="Essentials 2 Img" />
-            <div class="flex items-center justify-between px-4 gap-2 py-1 border border-[#ECECEC] rounded-2xl mt-12">
+            <div class="flex items-center justify-between px-4 gap-2 py-1 border border-[#ECECEC] rounded-2xl mt-8">
               <span class="green-icon rounded-full"></span>
-              <h1 class="essentials-badge-text">SECURE CLOUD-BASED EHR</h1>
+              <h1 class="badge-text">KEEP YOUR DATA SAFE</h1>
               <span class="green-icon rounded-full"></span>
             </div>
-            <h1 class="font-bold text-xl mt-2 mb-2">Keep your data safe</h1>
-            <p class="text-center">Our Secure Cloud-Based Electronic Health Records (EHR) keep your patient information safe, easily accessible, and less prone to errors.</p>
+            <h1 class="font-bold text-xl mt-4 mb-2">Secure Cloud-based EMR</h1>
+            <p class="text-center mt-1">Keep your data safe to Secure Cloud-based EMR.</p>
           </div>
         </div>
 
-        <hr class="w-full mt-8 hr" />
+        <hr class="w-full mt-8 hr md:block hidden" />
         
-        <div class="flex flex-col items-center justify-center mt-12">
+        <div class="flex flex-col items-center justify-center mt-12 w-full">
           <img src="./assets/essentials3.png" alt="Essentials 3 Img" />
           <div class="flex items-center justify-between px-4 gap-2 py-1 border border-[#ECECEC] rounded-2xl mt-8">
             <span class="green-icon rounded-full"></span>
-            <h1 class="essentials-badge-text">BETTER ONLINE PRESENCE</h1>
+            <h1 class="badge-text">BETTER ONLINE PRESENCE</h1>
             <span class="green-icon rounded-full"></span>
           </div>
-          <h1 class="font-bold text-xl mt-2 mb-2">Create your own website in seconds</h1>
-          <p class="text-center w-3/4">Get a fully functional website for your clinic that serves as a virtual extension of your practice with no external help. Choose from our range of customizable templates and instantly launch your website.</p>
+          <h1 class="font-bold text-xl mt-4 mb-2">Lightning Fast Website Setup</h1>
+          <p class="text-center mt-1 md:w-1/3 w-10/12">Launch your very own website with department listings and patient bookings in an instant.</p>
         </div>
 
-        <hr class="w-full mt-8 hr" />
+        <hr class="w-full mt-8 hr md:block hidden" />
 
-        <div class="flex md:flex-row flex-col mt-12 justify-between gap-4">
-          <div class="flex flex-col items-center justify-center">
+        <div class="flex md:flex-row flex-col mt-20 justify-between md:gap-12 gap-8">
+          <div class="flex flex-col items-center justify-center md:w-1/2 w-full">
             <img src="./assets/essentials4.png" alt="Essentials 4 Img" />
             <div class="flex items-center justify-between px-4 gap-2 py-1 border border-[#ECECEC] rounded-2xl mt-4">
               <span class="green-icon rounded-full"></span>
-              <h1 class="essentials-badge-text">INTELLIGENT DASHBOARD</h1>
+              <h1 class="badge-text">INFORMED DECISION-MAKING</h1>
               <span class="green-icon rounded-full"></span>
             </div>
-            <h1 class="text-center font-bold text-xl mt-2 mb-2">Informed Decision-making</h1>
-            <p class="text-center essentials-card">Effortlessly optimize clinic operations with docHours' intelligent dashboard. Obtain data-driven insights on patient statistics, clinic revenue, and appointment trends</p>
+            <h1 class="text-center font-bold text-xl mt-4 mb-2">Intelligent Dashboard</h1>
+            <p class="text-center mt-1 w-3/4">DocHours' Intelligent Dashboard provides a comprehensive overview and an array of analytics to streamline clinic operations every day.</p>
           </div>
 
-          <div class="flex flex-col items-center justify-center line">
+          <div class="flex flex-col items-center justify-center md:w-1/2 w-full">
             <img src="./assets/essentials5.png" alt="Essentials 5 Img" />
             <div class="flex items-center justify-between px-4 gap-2 py-1 border border-[#ECECEC] rounded-2xl mt-4">
               <span class="green-icon rounded-full"></span>
-              <h1 class="essentials-badge-text">AUTOMATED CLINICAL NOTE SUGGESTIONS</h1>
+              <h1 class="badge-text">STRESS LESS, SAVE TIME</h1>
               <span class="green-icon rounded-full"></span>
             </div>
-            <h1 class="font-bold text-xl mt-2 mb-2">Save time. Get more done.</h1>
-            <p class="text-center essentials-card ml-8">Our Secure Cloud-Based Electronic Health Records (EHR) keep your patient information safe, easily accessible, and less prone to errors.  </p>
+            <h1 class="font-bold text-xl mt-4 mb-2 md:ml-6 ml-0">Automated Clinical Note Suggestions</h1>
+            <p class="text-center mt-1 w-3/4 ml-8">With our automated note suggestions, doctors can save time on the recurring and tiring tasks of generating clinical notes.</p>
           </div>
         </div>
 
-        <hr class="w-full mt-8 hr" />
+        <hr class="w-full mt-8 hr md:block hidden" />
         
         <div class="flex justify-center items-center mt-12 mb-4">
-          <div class="button bg-[#4C42B8] gap-3">
-            <button class="btn text-white text-lg text-center">View all Features</button>
-            <img src="./assets/arrow.svg" alt="Button Arrow" />
-          </div>
+          <a class="custom-btn mt-10 mb-4 px-8 py-4 rounded-full" href="#">
+            View all Features
+            <svg id="arrow" width="30" height="14" viewBox="0 0 22 14" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path id="arrow-path" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
+
+        <div class="features-child-1"></div>
+        <div class="features-child-2"></div>
+
+        <div class="absolute md:block hidden" style="top: 315px; left: 754px;">
+          <div class="h-[510px] hr  w-[1px]"></div>
+        </div>        
+        <div class="absolute md:block hidden" style="top: 312px; left: 743px;">
+          <img src="./assets/featuresRound.svg" />
+        </div>        
+        <div class="absolute md:block hidden" style="top: 815px; left: 743px;">
+          <img src="./assets/featuresRound.svg" />
+        </div>        
+        <div class="absolute md:block hidden" style="bottom: 690px; left: 745px;">
+          <img src="./assets/featuresRound.svg" />
+        </div>   
+        <div class="absolute md:block hidden" style="bottom: 192px; left: 756px;">
+          <div class="h-[498px] hr w-[1px]"></div>
+        </div>  
+        <div class="absolute md:block hidden" style="bottom: 178px; left: 745px;">
+          <img src="./assets/featuresRound.svg" />
+        </div>           
+        
+
       </div>
 
-      <!-- Highlights Section -->
-      <div class="hightlights-section flex flex-col mt-16">
-        <div class="company-badge">
+      <!-- Perks Section -->
+      <div class="perks-section flex flex-col md:items-start items-center mt-16 md:px-44 px-8 py-4 relative">
+        <div class="badge w-40 px-4 py-2">
           <span class="green-icon rounded-full"></span>
-          <h1 class="company-badge-text">HIGHLIGHTS</h1>
+          <h1 class="badge-text">PERKS</h1>
           <span class="green-icon rounded-full"></span>
         </div>
-        <h1 class="text-3xl font-bold mt-4">Why Clinics</h1>
-        <h1 class="text-3xl font-bold mt-1">Prefer docHours</h1>
-        <p class="text-lg mt-4 mb-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <h1 class="text-3xl font-bold mt-4 md:w-5/12 w-full md:text-left text-center leading-10">Why should you choose us?</h1>
+        <p class="text-lg mt-4 mb-6 text-center">With Dochours, you can always count on quality and reliability</p>
         <div class="flex flex-col md:justify-between justify-center md:gap-12 gap-2">
           <div class="flex md:flex-row flex-col gap-8">
-            <div class="highlights-card">
-              <div class="company-badge">
+            <div class="perks-card md:w-8/12 w-full">
+              <div class="badge w-40 px-4 py-1">
                 <span class="green-icon rounded-full"></span>
-                <h1 class="company-badge-text">SUPPORT</h1>
+                <h1 class="badge-text">SUPPORT</h1>
                 <span class="green-icon rounded-full"></span>
               </div>
-              <h1 class="text-2xl font-bold mt-2 mb-2">Personalized Support</h1>
-              <p class="w-3/4">Our round-the-clock support team will help you every step of the way. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+              <h1 class="text-2xl font-bold mt-2 mb-2">We’re here to help</h1>
+              <p class="w-3/4">Our dedicated support team is readily available to assist you along very step of the way </p>
             </div>
-            <div class="highlights-card md:w-2/3 w-full">
-              <div class="company-badge">
+            <div class="perks-card md:w-6/12 w-full">
+              <div class="badge w-48 px-4 py-1">
                 <span class="green-icon rounded-full"></span>
-                <h1 class="company-badge-text">LOREM IPSUM</h1>
+                <h1 class="badge-text">100% PAPERLESS</h1>
                 <span class="green-icon rounded-full"></span>
               </div>
               <h1 class="text-2xl font-bold mt-2 mb-2">Zero Paperwork</h1>
-              <p class="w-3/4">Our clinic management software is fully streamlined so that you can avoid the trouble of unnecessary clutter. </p>
+              <p class="w-3/4">Digitizing your operations can help you improve efficiency and ensure that you don't miss any important details.</p>
             </div>
           </div>
         
-          <div class="flex md:flex-row flex-col gap-8">
-            <div class="highlights-card md:w-2/3 w-full">
-              <div class="company-badge">
+          <div class="flex md:flex-row flex-col gap-8 z-10">
+            <div class="perks-card md:w-6/12 w-full">
+              <div class="badge w-40 px-4 py-1">
                 <span class="green-icon rounded-full"></span>
-                <h1 class="company-badge-text">EASY ACCESS</h1>
+                <h1 class="badge-text">BETTER UI</h1>
                 <span class="green-icon rounded-full"></span>
               </div>
-              <h1 class="text-2xl font-bold mt-2 mb-2">Get ahead of the curve</h1>
-              <p class="w-3/4">Our quick load speeds and easy navigation help you browse swiftly and efficiently. Lorem Ipsum is simply dummy text </p>
+              <h1 class="text-2xl font-bold mt-2 mb-2">Smooth Navigation</h1>
+              <p class="w-3/4">Our user-friendly platform with fast load speeds and easy navigation ensures no specific staff training and effortless browsing</p>
             </div>
-            <div class="highlights-card">
-              <div class="company-badge">
+            <div class="perks-card md:w-8/12 w-full">
+              <div class="badge w-52 px-4 py-1">
                 <span class="green-icon rounded-full"></span>
-                <h1 class="company-badge-text">VISIBILITY</h1>
+                <h1 class="badge-text">ROLE-BASED ACCESS</h1>
                 <span class="green-icon rounded-full"></span>
               </div>
-              <h1 class="text-2xl font-bold mt-2 mb-2">Digital Visibility</h1>
-              <p class="w-3/4">Reduce your website costs and efforts significantly with our built-in website setup feature. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h1 class="text-2xl font-bold mt-2 mb-2">Set up users and permissions</h1>
+              <p class="w-3/4">Assign different user roles and regulate their access to the platform.</p>
             </div>
           </div>
 
           <div class="flex md:flex-row flex-col gap-8">
-            <div class="highlights-card md:w-1/2 w-full">
-              <div class="company-badge">
+            <div class="perks-card md:w-1/2 w-full">
+              <div class="badge w-40 px-4 py-1">
                 <span class="green-icon rounded-full"></span>
-                <h1 class="company-badge-text">EXPERIENCE</h1>
+                <h1 class="badge-text">EXPERIENCE</h1>
                 <span class="green-icon rounded-full"></span>
               </div>
               <h1 class="text-2xl font-bold mt-2 mb-2">Improved Patience Experience</h1>
               <p class="w-3/4">Patients can browse department listings, view featured doctors, their OP schedules, and book appointments with ease.</p>
             </div>
-            <div class="highlights-card md:w-1/2 w-full">
-              <div class="company-badge">
+            <div class="perks-card md:w-1/2 w-full">
+              <div class="badge w-40 px-4 py-1">
                 <span class="green-icon rounded-full"></span>
-                <h1 class="company-badge-text">LOREM IPSUM</h1>
+                <h1 class="badge-text">LOREM IPSUM</h1>
                 <span class="green-icon rounded-full"></span>
               </div>
-              <h1 class="text-2xl font-bold mt-2 mb-2">Better Finance Management</h1>
-              <p class="w-3/4">Automated reminders and billing smoothen operations, reducing missed appointments and boosting revenue.</p>
+              <h1 class="text-2xl font-bold mt-2 mb-2">Rebrand your clinic</h1>
+              <p class="w-3/4">Now you have the option to customize your clinic's website themes and invoice templates, allowing you to create a unique brand.</p>
             </div>
           </div>
+          <div class="perks-child"></div>
         </div>  
+      
       </div>
-<!-- <img src="./assets/communityLogo.png" alt="" /> -->
 
       <!-- Community Section -->
-      <div class="community-section flex flex-col items-center justify-center mt-16">
-        <div class="flex md:flex-row flex-col md:justify-between justify-center">
-          <div class="flex flex-col py-24">
-            <div class="company-badge">
+      <div class="community-section mt-16 md:px-44 px-8 py-4">
+        <div class="flex md:flex-row flex-col md:justify-between items-center justify-center">
+          <div class="flex flex-col md:items-start items-center py-24">
+            <div class="badge w-48 px-4 py-2">
               <span class="green-icon rounded-full"></span>
-              <h1 class="company-badge-text">THE COMMUNITY</h1>
+              <h1 class="badge-text">THE COMMUNITY</h1>
               <span class="green-icon rounded-full"></span>
             </div>
-            <h1 class="text-3xl font-bold mt-4">Join our</h1>
-            <div class="flex items-center gap-2 mt-1">
-              <img src="./assets/slackImg.png" alt="Slack Img" class="slack-img" />
+            <div class="flex md:flex-col flex-row md:items-start items-center mt-6 md:gap-0 gap-3">
+            <h1 class="text-3xl font-bold">Join our</h1>
+            <div class="flex items-center gap-2 md:mt-1 mt-0">
+              <img src="./assets/slackImg.png" alt="Slack Img" class="w-10" />
               <h1 class="text-3xl font-bold">slack channel</h1>
             </div>
-            <p class="text-lg mt-4">Join the latest discussions and trends in the healthcare industry</p>
+          </div>
+            <p class="text-lg md:text-left text-center mt-4 md:w-3/4 w-full">Be a part of the latest news and trends in healthcare.</p>
             <div class="flex mt-8">
-              <div class="button bg-[#4C42B8] gap-3">
-                <button class="flex items-center gap-2 btn text-white text-lg text-center">
-                  <span>Join our</span>
-                  <img src="./assets/slackButtonImg.png" alt="" class="slack-button-img" />
+              <a class="custom-btn mt-2 gap-2 mb-4 px-6 py-3" href="#">
+                <span>Join our</span>
+                  <img src="./assets/slackButtonImg.png" alt="" class="w-8" />
                   <span>Channel</span>
-                </button>
-                <img src="./assets/arrow.svg" alt="Button Arrow" />
-              </div>
+                <svg id="arrow" width="30" height="14" viewBox="0 0 22 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path id="arrow-path" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
             </div>
           </div>
-          <div class="w-1/2">
+          <div class="md:w-1/2 w-full">
           <img src="./assets/communityImg.png" alt="" /> 
         </div>
         </div>
       </div>
     
     
-      <!-- Lorem Ipsum Section -->
-      <div class="lorem-ipsum-section flex flex-col items-center justify-center w-full bg-[#F1F0EF] mt-16 absolute left-0 w-full px-4 py-16">
-        <div class="company-badge">
+      <!-- Streamlining Care Section -->
+      <div class="streamlining-section flex flex-col items-center justify-center w-full mt-16 w-full px-4 py-4 pt-24">
+        <div class="badge w-52 px-4 py-2">
           <span class="green-icon rounded-full"></span>
-          <h1 class="company-badge-text">LOREM IPSUM</h1>
+          <h1 class="badge-text">STREAMLINING CARE</h1>
           <span class="green-icon rounded-full"></span>
         </div>
-        <h1 class="text-3xl font-bold mt-4">Lorem Ipsum is just dummy text</h1>
-        <div class="lorem-ipsum-text mt-6">
-          <h2 class="text-2xl text-[#4C42B8] font-semibold">Faster Bookings</h2>
-          <!-- <h2>Quicker Care</h2> -->
-          <!-- <h2>Deeper Insights</h2> -->
+        <h1 class="text-3xl font-bold mt-6">Dochours assures you</h1>
+        <div id="vertical-text-slider" class="vertical-text-slider">
+          <h2 class="vt-slider-1 ">Faster Bookings</h2>
+          <h2 class="vt-slider-2 ">Quicker Care</h2>
+          <h2 class="vt-slider-3 ">Deeper Insights</h2>
         </div>
-        <p class="text-base mt-4 w-3/4 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-        <div class="flex justify-center items-center mt-8 mb-4">
-          <div class="button bg-[#4C42B8] gap-3">
-            <button class="btn text-white text-lg text-center">Try it for free</button>
-            <img src="./assets/arrow.svg" alt="Button Arrow" />
-          </div>
+        <p class="text-base mt-8 md:w-4/12 w-3/4 text-center">We provide clinics with a user-friendly management solution that prioritizes their time and values</p>
+        <div class="flex justify-center items-center mt-2 mb-4">
+          <a class="custom-btn mt-6 mb-4 px-6 py-3" href="#">
+            Try it for free
+            <svg id="arrow" width="30" height="14" viewBox="0 0 22 14" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path id="arrow-path" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
+        <img src="./assets/rocket.gif" alt="Rocket" />
       </div>
 
 
         <!-- Footer Section -->
-        <div class="footer-section flex flex-col items-center justify-center px-4 py-24 relative">
-          <h1 class="text-3xl font-bold text-center">Lorem Ipsum is simply dummy text</h1>
+        <div class="footer-section flex flex-col items-center justify-center px-4 py-12 relative">
+          <h1 class="text-3xl font-bold text-center md:w-4/12 w-full leading-10">Subscribe to our newsletter to get the latest updates</h1>
+          <!-- <h1 class="text-3xl font-bold text-center mt-1">simply dummy text</h1> -->
           <div class="flex rounded-full border mt-12 relative">
-            <input placeholder="Your email" type="email" class="px-4 py-2 bg-gray-200 rounded-full w-80" />
-            <button class="px-4 py-2 absolute top-0 right-0 bg-[#4C42B8] text-white rounded-full">Subscribe</button>
+            <input placeholder="Your email" type="email" class="px-4 py-2 bg-gray-100 placeholder:italic rounded-full w-96" />
+            <button class="px-6 py-2 absolute top-0 right-0 bg-[#4C42B8] text-white rounded-full">Subscribe</button>
+          </div>
+          <div class="flex items-center justify-center gap-4 mt-12 opacity-15 hover:opacity-100 transition ease-in-out delay-50">
+            <img src="./assets/footerLogo.svg" alt="Footer text" style="width: 40px;" />
+            <h1 class="text-4xl text-[#224D91]">doc<span class="font-bold">Hours</span></h1>  
           </div>
           <div class="footer-headers flex items-center gap-16 mt-12 justify-between">
-            <a>Features</a>
-            <a>Pricing</a>
-            <a>Resources</a>
-            <a>Support</a>
-            <a>Blog</a>
-            <a>Contact Us</a>
+            <a href="#" class="cursor-pointer">Features</a>
+            <a href="#" class="cursor-pointer">Pricing</a>
+            <a href="#" class="cursor-pointer">Resources</a>
+            <a href="#" class="cursor-pointer">Support</a>
+            <a href="#" class="cursor-pointer">Blog</a>
+            <a href="#" class="cursor-pointer">Contact Us</a>
           </div>
           <div class="flex justify-between gap-12 mt-8 text-gray-400">
-            <a>Terms & Conditions</a>
-            <a>Privacy Policy</a>
+            <a href="#" class="cursor-pointer">Terms & Conditions</a>
+            <a href="#" class="cursor-pointer">Privacy Policy</a>
+          </div>
+          <div class="flex justify-between gap-4 mt-8">
+            <img src="./assets/facebook.svg" class="social-icons" />
+            <img src="./assets/instagram.svg" class="social-icons" />
+            <img src="./assets/twitter.svg" class="social-icons" />
+            <img src="./assets/linkedin.svg" class="social-icons" />
+            <img src="./assets/youtube.svg" class="social-icons" />
+          </div>
+          <hr class="w-8/12 mt-8 hr" />
+          <div class="flex justify-between gap-12 mt-6 text-lg font-semibold text-gray-400">
+            <span>© 2024</span>
+            <a href="/index.html" class="flex items-center gap-1 cursor-pointer">
+              <img src="./assets/footerLogo.svg" />
+              <span>docHours</span>
+            </a>
           </div>
         </div>
-
     </div>
-
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
