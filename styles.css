@@ -1,3 +1,14 @@
+body
+{
+margin:0px;
+padding:0px;
+width:100%;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
 
 .green-icon {
     background: #6AC37F;
@@ -94,7 +105,7 @@
     border: 1px solid #EDEDED; 
     transition: 0.3s;
     border-radius: 20px;
-    padding: 30px 30px 70px 40px;
+    /* padding: 30px 30px 70px 40px; */
 }
 
 .custom-btn {
@@ -110,6 +121,8 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 21.79px;
+    margin-top: 0.5rem;
+    width: 10.5rem;
     background: linear-gradient(90deg, #4C42B8, #4C42B8);
 }
 
@@ -131,15 +144,46 @@
     opacity: 1;
 }
 
-#arrow,
-#arrow_2 {
-    margin-left: 0.2rem;
+
+#arrow-path-1,
+#arrow-path-2,
+#arrow-path-3,
+#arrow-path-4 {
+    transition: all 0.5s;
 }
 
-#arrow-path,
-#arrow-path-bt {
-    transition: all 1s;
+.custom-btn-1 {
+    padding: 0.8rem 0.5rem 0.8rem 1.5rem;
+    width: 11rem;
+    display: flex;
+    gap: 7px;
 }
+
+.custom-btn-2 {
+    padding: 0.8rem 0.5rem 0.8rem 1.5rem;
+    width: 11rem;
+    display: flex;
+    gap: 7px;
+}
+
+.custom-btn-3 {
+    padding: 0.8rem 0.5rem 0.8rem 1.5rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.custom-btn-4 {
+    padding: 0.8rem 0.5rem 0.8rem 1.5rem;
+    width: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
 
 .streamlining-section {
     background-image: url('./assets/loremIpsumBg.png');
@@ -149,12 +193,10 @@
 
 .hero-child {
     position: absolute;
-    width: 513.07px;
+    width: 500.07px;
     height: 401.07px;
     bottom: 220px;
     right: 0px;
-    gap: 0px;
-    opacity: 1px;
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
     z-index: -1; 
     transform: rotate(96.67deg);
@@ -167,14 +209,12 @@
     height: 123.73px;
     top: 450px;
     left: 450px;
-    gap: 0px;
     z-index: -1;
-    opacity: 1px;
     transform: rotate(43.73deg); 
     border: 85.33px solid transparent;
     border-image-source: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(103, 232, 249, 0.85) 0%, rgba(192, 132, 252, 0.85) 100%);
     border-image-slice: 1;
-    filter: blur(50px);
+    filter: blur(80px);
 }
 
 
@@ -184,11 +224,9 @@
     height: 401.07px;
     top: -50px;
     left: 0px;
-    gap: 0px;
-    opacity: 1px;
     transform: rotate(-135deg); 
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
-    filter: blur(100px);
+    filter: blur(150px);
 }
 
 .features-child-2 {
@@ -197,12 +235,10 @@
     height: 123.73px;
     bottom: 600px;
     right: 0px;
-    gap: 0px;
-    opacity: 0.8;
     border: 85.33px solid transparent; 
     border-image-source: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(103, 232, 249, 0.65) 0%, rgba(192, 132, 252, 0.65) 100%);
     border-image-slice: 1; 
-    filter: blur(50px);
+    filter: blur(80px);
 }
 
 .perks-child {
@@ -211,8 +247,6 @@
     height: 220.77px;
     top: 650px;
     left: 520px;
-    gap: 0px;
-    opacity: 0.8px;
     z-index: -1;
     transform: rotate(-210deg); 
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.6) 0%, rgba(192, 132, 252, 0.6) 100%);
@@ -220,14 +254,15 @@
 }
 
 .social-icons {
-    opacity: 0.15;
-    transition: opacity 0.3s ease-in-out; 
+    transition: filter 0.3s ease-in-out; 
     cursor: pointer;
+    filter: grayscale(200%); 
 }
   
 .social-icons:hover {
-    opacity: 1;
+    filter: none; 
 }
+
 
 /* Slider */
 .vertical-text-slider {
@@ -290,7 +325,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 600px) {
    
     .hero-green-icon {
         display: none;
@@ -305,4 +340,23 @@
         margin-bottom: -90px;
         margin-top: 50px;
     }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .cards-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .foggy-image {
+        margin-bottom: -100px;
+        margin-top: 140px;
+        margin-left: 100px;
+    }
+
+}
+
+
+.side-menu-blur-bg {
+    background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
 }
