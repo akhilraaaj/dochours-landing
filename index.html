@@ -19,61 +19,57 @@
       </div>
 
       <!-- Header Section -->
-      <div id="side-menu-bar" class="h-0  w-full pt-2.5 fixed z-50 top-0 right-0 bg-white overflow-x-hidden overflow-y-hidden opacity-0 transition-all duration-300">
-      <div class="side-menu-header w-full flex justify-between items-center px-4">
-          <a href="/" class="logo">
-              <img class="side-menu-header-logo h-7 mt-1.5" src="./assets/headerLogo.svg" alt="" srcset="">
+      <div id="nav-bar" class="h-0 w-full pt-2.5 fixed z-50 top-0 right-0 bg-white overflow-x-hidden overflow-y-hidden opacity-0 transition-all duration-300">
+        <div class="w-full flex justify-between items-center px-4">
+          <a href="/">
+            <img class="h-7 mt-1.5" src="./assets/headerLogo.svg" alt="logo">
           </a>
-          <a onclick="closeSideBar()" class="closebtn w-6 transition-all duration-300">
-              <img class="side-menu-header-logo h-7 mt-1.5" src="./assets/close.svg" alt="close-arrow">
+          <a onclick="closeNavbar()" class="closebtn w-6 transition-all duration-300">
+            <img class="h-7 mt-1.5" src="./assets/close.svg" alt="close-arrow">
           </a>
+        </div>
+        <nav class="nav-links relative h-full flex flex-col gap-6 text-center justify-start">
+          <div class="absolute mt-16 w-full flex flex-col gap-6 text-center justify-start h-screen">
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="#">Home</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="/features.html">Features</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="/pricing.html">Pricing</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="/contact.html">Contact</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/" target="_blank">Login / Register</a>
+          </div>
+          <div class="nav-child"></div>
+          <div class="nav-footer absolute bottom-20 w-full flex flex-col items-center">
+            <div class="flex justify-between gap-12 mt-8 text-gray-400 ">
+              <a href="#" class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Terms & Conditions</a>
+              <a href="#" class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Privacy Policy</a>
+            </div>
+            <div class="flex justify-between gap-4 mt-8">
+              <img src="./assets/facebook.svg" class="social-icons" />
+              <img src="./assets/instagram.svg" class="social-icons" />
+              <img src="./assets/twitter.svg" class="social-icons" />
+              <img src="./assets/linkedin.svg" class="social-icons" />
+              <img src="./assets/youtube.svg" class="social-icons" />
+            </div>
+          </div>
+        </nav>
       </div>
-      <nav class="side-menu-links relative h-full flex flex-col gap-6 text-center justify-start">
-          <div class="side-menu-nav-Links absolute mt-16 w-full flex flex-col gap-6 text-center justify-start h-screen">
-              <a class=" transition-all duration-300 no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="#">Home</a>
-              <a class=" transition-all duration-300 no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="/features.html">Features</a>
-              <a class=" transition-all duration-300 no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="/pricing.html">Pricing</a>
-              <a class=" transition-all duration-300 no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="/contact.html">Contact</a>
-              <a class=" transition-all duration-300 no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/" target="_blank">Login / Register</a>
-          </div>
-          <div
-              class="side-menu-blur-bg absolute blur-3xl w-[413.07px] h-[321.07px] top-24 left-[-14rem] rotate-[208.67deg]">
-          </div>
-          <div class="side-menu-footer absolute bottom-20 w-full flex flex-col items-center">
-              <div class="flex justify-between gap-12 mt-8 text-gray-400 ">
-                  <a href="#" class="cursor-pointer transition-all duration-300 text-[#ACB6C3] font-['Open_Sans'] no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]">Terms & Conditions</a>
-                  <a href="#" class="cursor-pointer transition-all duration-300 text-[#ACB6C3] font-['Open_Sans'] no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]">Privacy Policy</a>
-              </div>
-              <div class="flex justify-between gap-4 mt-8">
-                  <img src="./assets/facebook.svg" class="social-icons  transition-all duration-300" />
-                  <img src="./assets/instagram.svg" class="social-icons  transition-all duration-300" />
-                  <img src="./assets/twitter.svg" class="social-icons  transition-all duration-300" />
-                  <img src="./assets/linkedin.svg" class="social-icons  transition-all duration-300" />
-                  <img src="./assets/youtube.svg" class="social-icons  transition-all duration-300" />
-              </div>
-          </div>
-      </nav>
-  </div>
-  <!-- <header class="container mx-auto flex md:px-44 px-4 sm:justify-normal md:justify-center"> -->
-    <header class="mx-auto flex px-4 md:px-0 sm:justify-normal md:justify-center md:w-11/12 lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px]">
-      <div class="header-container w-full flex justify-between mt-4">
+      
+      <header class="mx-auto flex px-4 md:px-0 sm:justify-normal md:justify-center md:w-11/12 lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px]">
+        <div class="w-full flex justify-between mt-4">
           <div class="header-left-sec">
-              <a href="./index.html" class="logo">
-                  <img class="header-logo w-36" src="./assets/navLogo.svg" alt="" srcset="">
-              </a>
+            <a href="./index.html" class="logo">
+              <img class="header-logo w-36" src="./assets/navLogo.svg" alt="logo">
+            </a>
           </div>
-          
-          <nav class="header-right-sec hidden flex items-center gap-8 md:flex">
-              <a class=" transition-all duration-300  no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="#">Home</a>
-              <a class=" transition-all duration-300  no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="/features.html">Features</a>
-              <a class=" transition-all duration-300  no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="/pricing.html">Pricing</a>
-              <a class=" transition-all duration-300  no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F] " href="/contact.html">Contact</a>
-              <a class="border-l border-solid border-[#dadada] pl-4 transition-all duration-300 no-underline text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/" target="_blank">Login / Register</a>
+          <nav class="hidden flex items-center gap-8 md:flex">
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="#">Home</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="/features.html">Features</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="/pricing.html">Pricing</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F] " href="/contact.html">Contact</a>
+            <a class="border-l border-solid border-[#dadada] pl-4 text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/" target="_blank">Login / Register</a>
           </nav>
-          <img src="./assets/hamburger.svg" onclick="openSideBar()" class="menu-icon md:hidden h-6" alt="menu">
-      </div>
-  </header>
-
+          <img src="./assets/hamburger.svg" onclick="openNavbar ()" class="md:hidden h-6" alt="hamburger">
+        </div>
+      </header>
 
       <!-- Hero -->
       <div class="text-center flex flex-col items-center justify-center mt-28 sm:px-24 md:px-24 lg:px-44 px-8 py-4 relative">
@@ -94,7 +90,7 @@
           </svg>
       </a>
         <div class="hero-img">
-          <img src="./assets/heroImg.png" alt="Hero Image" class="" />
+          <img src="./assets/heroImg.png" alt="Hero Image" />
         </div>
         <div class="hero-child"></div>
       </div>
@@ -153,16 +149,16 @@
         
         <div class="onboarding-child"></div>
         <div class="absolute left-0 lg:block hidden" style="bottom: 75px;">
-          <img src="./assets/rocket1.svg" alt="setup bg" />
+          <img src="./assets/rocket1.svg" alt="rocket 1" />
         </div>
         <div class="absolute right-0 lg:block hidden" style="bottom: 150px;">
-          <img src="./assets/rocket2.svg" alt="setup bg" />
+          <img src="./assets/rocket2.svg" alt="rocket 2" />
         </div>
         <div class="absolute  md:block hidden" style="top: 338px; right: 350px;">
-          <img src="./assets/cardsLine1.svg" alt="setup bg" />
+          <img src="./assets/cardsLine1.svg" alt="line 1" />
         </div>
         <div class="absolute md:block hidden" style="bottom: -65px; left: 390px;">
-          <img src="./assets/cardsLine2.svg" alt="setup bg" />
+          <img src="./assets/cardsLine2.svg" alt="line 2" />
         </div>
       </div>
 
@@ -190,7 +186,7 @@
         
             <div class="rounded overflow-hidden -mt-8">
               <div class="w-full px-6 py-6 bg-white rounded-3xl flex items-center border border-[#ECECEC] gap-2">
-                <img src="./assets/manager.png" alt="Company Logo" class="w-28 h-28" />
+                <img src="./assets/manager.png" alt="Product Manager" class="w-28 h-28" />
                 <div class="flex flex-col ml-4">
                 <h1 class="text-xl font-bold mb-2">Haritha Pradeep</h1>
                 <p class="text-gray-700 font-medium text-base">Product Manager</p>
@@ -455,30 +451,18 @@
           </div>
             <p class="text-lg md:text-left text-center mt-4 md:w-3/4 w-full">Be a part of the latest news and trends in healthcare.</p>
             <div class="flex mt-8">
-              <!-- <a class="custom-btn mt-2 gap-2 mb-4 px-6 py-3" href="#">
-                <span>Join our</span>
-                  <img src="./assets/slackButtonImg.png" alt="" class="w-8" />
-                  <span>Channel</span>
-                <svg id="arrow" width="30" height="14" viewBox="0 0 22 14" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path id="arrow-path" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F"
-                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a> -->
               <a class="custom-btn custom-btn-4 mt-2 gap-2 mb-4 px-0 py-3" href="#">
                 Join Our
                 <img src="./assets/slackButtonImg.png" alt="" class="md:w-7 w-6" />
                 Channel
-                <svg width="30" height="14" viewBox="0 0 22 14" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path id="arrow-path-4" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F"
-                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path id="arrow-path-4" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </a>
             </div>
           </div>
           <div class="md:w-1/2 w-full">
-          <img src="./assets/communityImg.png" alt="" /> 
+          <img src="./assets/communityImg.png" alt="Community Img" /> 
         </div>
         </div>
       </div>
@@ -529,7 +513,7 @@
             <button class="px-6 py-2 absolute top-0 right-0 bg-[#4C42B8] text-white rounded-full">Subscribe</button>
           </div>
           <div class="flex items-center justify-center gap-4 mt-12 opacity-15 hover:opacity-100 transition ease-in-out delay-50">
-            <img src="./assets/footerLogo.svg" alt="Footer text" class="w-60" />
+            <img src="./assets/footerLogo.svg" alt="Footer Logo" class="w-60" />
             <!-- <h1 class="text-4xl text-[#224D91]">doc<span class="font-bold">Hours</span></h1>   -->
           </div>
           <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 mt-10 justify-center text-center items-center lg:w-5/12 md:w-6/12 w-11/12 leading-8">

@@ -73,13 +73,13 @@ if (customBtn4) {
 }
 
 // side bar
-function openSideBar() {
-    const sideBar = document.getElementById('side-menu-bar');
+function openNavbar() {
+    const sideBar = document.getElementById('nav-bar');
     sideBar.classList.add('opacity-100','h-full');
 }
 
-function closeSideBar() {
-    const sideBar = document.getElementById('side-menu-bar');
+function closeNavbar() {
+    const sideBar = document.getElementById('nav-bar');
     sideBar.classList.remove('opacity-100','h-full');
 }
 
