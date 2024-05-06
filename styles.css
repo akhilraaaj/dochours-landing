@@ -44,17 +44,12 @@
     color: #343F4C;
 }
 
-.cards-container {
-    padding-left: 168px;
-    padding-right: 168px;
-}
-
 .card {
   border: 1px solid #EDEDED; 
   background-color: #FBFBFC8F;
   transition: 0.3s;
   border-radius: 20px;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .steps-badge {
@@ -77,10 +72,10 @@
     text-align: left;
 }
 
-.foggy-image {
+/* .foggy-image {
     margin-bottom: -90px;
     margin-top: 140px;
-}
+} */
 
 .hr {
     border: 1px dotted #E9E9E9;
@@ -182,10 +177,10 @@
 
 .hero-child {
     position: absolute;
-    width: 500.07px;
+    width: 480.07px;
     height: 401.07px;
     bottom: 220px;
-    right: 0px;
+    right: -230px;
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
     z-index: -1; 
     transform: rotate(96.67deg);
@@ -196,8 +191,8 @@
     position: absolute;
     width: 157.87px;
     height: 123.73px;
-    top: 450px;
-    left: 450px;
+    top: 500px;
+    left: 300px;
     z-index: -1;
     transform: rotate(43.73deg); 
     border: 85.33px solid transparent;
@@ -209,10 +204,11 @@
 
 .features-child-1 {
     position: absolute;
-    width: 513.07px;
+    width: 400.07px;
     height: 401.07px;
     top: -50px;
-    left: 0px;
+    left: -100px;
+    z-index: -1;
     transform: rotate(-135deg); 
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
     filter: blur(150px);
@@ -220,14 +216,14 @@
 
 .features-child-2 {
     position: absolute;
-    width: 157.87px;
+    width: 127.87px;
     height: 123.73px;
     bottom: 600px;
-    right: 0px;
+    right: -150px;
     border: 85.33px solid transparent; 
     border-image-source: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(103, 232, 249, 0.65) 0%, rgba(192, 132, 252, 0.65) 100%);
     border-image-slice: 1; 
-    filter: blur(80px);
+    filter: blur(120px);
 }
 
 .perks-child {
@@ -235,11 +231,11 @@
     width: 380.25px;
     height: 220.77px;
     top: 650px;
-    left: 520px;
+    left: 320px;
     z-index: -1;
     transform: rotate(-210deg); 
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.6) 0%, rgba(192, 132, 252, 0.6) 100%);
-    filter: blur(80px);
+    filter: blur(90px);
 }
 
 .nav-child {
@@ -333,11 +329,6 @@
         display: none;
     }
 
-    .cards-container {
-        padding-left: 2px;
-        padding-right: 2px;
-    }
-
     .perks-image {
         margin-bottom: -90px;
         margin-top: 50px;
@@ -345,11 +336,7 @@
 }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
-    .cards-container {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
+    
     .foggy-image {
         margin-bottom: -100px;
         margin-top: 140px;
