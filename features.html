@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocHours</title>
+    <link rel="icon" type="image/x-icon" href="./assets/headerLogo.svg">
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+</head>
+<body>
+    <div class="overflow-x-hidden">
+
+        <!-- Sign Up Header -->
+        <div class="flex md:flex-row flex-col items-center justify-center text-lg py-3 bg-[#E8EBFF] md:gap-8 gap-2 mb-1">
+          <h1 class="text-center md:text-lg text-base">Get up to <span class="font-bold">6 Months</span> of free access to DocHours</h1>
+          <a href="https://app.dochours.com/" target="_blank" class="custom-btn text-center items-center justify-center w-32 py-2 text-sm cursor-pointer mt-1">Sign Up Now</a>
+        </div>
+  
+        <!-- Header Section -->
+        <div id="nav-bar" class="h-0 w-full pt-2.5 fixed z-50 top-0 right-0 bg-white overflow-x-hidden overflow-y-hidden opacity-0 transition-all duration-300">
+          <div class="w-full flex justify-between items-center px-4">
+            <a href="./index.html"><img class="h-7 mt-1.5" src="./assets/headerLogo.svg" alt="logo"></a>
+            <a onclick="closeNavbar()" class="closebtn w-6 transition-all duration-300">
+              <img class="h-7 mt-1.5" src="./assets/close.svg" alt="close-arrow">
+            </a>
+          </div>
+          <nav class="nav-links relative h-full flex flex-col gap-6 text-center justify-start">
+            <div class="absolute mt-16 w-full flex flex-col gap-6 text-center justify-start h-screen">
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="#">Pricing</a>
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="#">Contact</a>
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/" target="_blank">Login / Register</a>
+            </div>
+            <div class="nav-child"></div>
+            <div class="nav-footer absolute bottom-20 w-full flex flex-col items-center">
+              <div class="flex justify-between gap-12 mt-8 text-gray-400 ">
+                <a href="#" class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Terms & Conditions</a>
+                <a href="#" class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Privacy Policy</a>
+              </div>
+              <div class="flex justify-between gap-4 mt-8">
+                <img src="./assets/facebook.svg" class="social-icons" />
+                <img src="./assets/instagram.svg" class="social-icons" />
+                <img src="./assets/twitter.svg" class="social-icons" />
+                <img src="./assets/linkedin.svg" class="social-icons" />
+                <img src="./assets/youtube.svg" class="social-icons" />
+              </div>
+            </div>
+          </nav>
+        </div>
+        
+        <header class="container mx-auto flex sm:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 lg:w-4/5 xl:3/5 2xl:max-w-screen-2xl  lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] px-6">
+          <div class="w-full flex justify-between mt-4">
+            <div class="header-left-sec">
+              <a href="./index.html" class="logo">
+                <img class="header-logo w-36" src="./assets/navLogo.svg" alt="logo">
+              </a>
+            </div>
+            <nav class="hidden flex items-center gap-8 md:flex">
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="#">Pricing</a>
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F] " href="#">Contact</a>
+              <a class="border-l border-solid border-[#dadada] pl-4 text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/" target="_blank">Login / Register</a>
+            </nav>
+            <img src="./assets/hamburger.svg" onclick="openNavbar()" class="md:hidden h-6" alt="hamburger">
+          </div>
+        </header>
+
+    <!-- features hero  -->
+    <div class="bg-[#F7FBFE] pt-24 pb-16 w-full">
+        <div class="container mx-auto flex flex-col items-center justify-center mt-6 sm:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 lg:w-4/5 xl:3/5 2xl:max-w-screen-2xl  lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative px-6">
+            <div class="">
+                <div
+                    class="badge pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
+                    <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+                    <h1 class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">The
+                        Essentials</h1>
+                    <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+                </div>
+                <div class="w-3/5">
+                    <h1 class="text-2xl font-medium ">Everything your clinic needs to keep track of hours</h1>
+                    <p class="mt-3">intuitive time tracking software with powerful insight that help your team thrive.
+                    </p>
+                </div>
+                <div class="w-full flex justify-start gap-2 py-4">
+                    <div class="flex flex-row p-4 justify-between  items-center w-[315px] h-14 border rounded-lg gap-2">
+                        <img src="./assets/features/featuresLogo.svg" class="w-[20.96px]" srcset="">
+                        <p class="font-normal font-['Open_Sans'] text-base text-[#343F4C]">Effective crowd management
+                        </p>
+                        <img src="./assets/features/arrowDown.svg" alt="" class="w-3" srcset="">
+                    </div>
+                    <div class="flex flex-row p-4 justify-between  items-center w-[284px] h-14 border rounded-lg gap-2">
+                        <img src="./assets/features/featuresLogo.svg" class="w-[20.96px]" srcset="">
+                        <p class="font-normal font-['Open_Sans'] text-base text-[#343F4C]">Secure cloud-based EHR</p>
+                        <img src="./assets/features/arrowDown.svg" alt="" class="w-3" srcset="">
+                    </div>
+                    <div class="flex flex-row p-4 justify-between  items-center w-[260px] h-14 border rounded-lg gap-2">
+                        <img src="./assets/features/featuresLogo.svg" class="w-[20.96px]" srcset="">
+                        <p class="font-normal font-['Open_Sans'] text-base text-[#343F4C]">Intelligent Dashboard</p>
+                        <img src="./assets/features/arrowDown.svg" alt="" class="w-3" srcset="">
+                    </div>
+                    <div class="flex flex-row p-4 justify-between items-center w-[209px] h-14 border rounded-lg gap-2">
+                        <img src="./assets/features/featuresLogo.svg" class="w-[20.96px]" srcset="">
+                        <p class="font-normal font-['Open_Sans'] text-base text-[#343F4C]">Patient 360</p>
+                        <img src="./assets/features/arrowDown.svg" alt="" class="w-3" srcset="">
+                    </div>
+
+                </div>
+                <div class="w-full flex justify-start gap-2">
+                    <div class="flex flex-row p-4 justify-between items-center w-[274px] h-14 border rounded-lg gap-2">
+                        <img src="./assets/features/featuresLogo.svg" class="w-[20.96px]" srcset="">
+                        <p class="font-normal font-['Open_Sans'] text-base text-[#343F4C]">Better online presence</p>
+                        <img src="./assets/features/arrowDown.svg" alt="" class="w-3" srcset="">
+                    </div>
+                    <div class="flex flex-row p-4 justify-between items-center w-[365px] h-14 border rounded-lg gap-2">
+                        <img src="./assets/features/featuresLogo.svg" class="w-[20.96px]" srcset="">
+                        <p class="font-normal font-['Open_Sans'] text-base text-[#343F4C]">Automated clinical note
+                            suggestions</p>
+                        <img src="./assets/features/arrowDown.svg" alt="" class="w-3" srcset="">
+                    </div>
+                    <div class="flex flex-row p-4 justify-between items-center w-[283px] h-14 border rounded-lg gap-2">
+                        <img src="./assets/features/featuresLogo.svg" class="w-[20.96px]" srcset="">
+                        <p class="font-normal font-['Open_Sans'] text-base text-[#343F4C]">Smooth User Experience</p>
+                        <img src="./assets/features/arrowDown.svg" alt="" class="w-3" srcset="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- horizontal scroll slider -->
+    <div class="hr-scroll w-full h-16  flex justify-center">
+        <nav class=" h-16 px-16 flex justify-start gap-16 items-center overflow-x-auto hide-scrollbar" >
+            <a href="" class="px-4 py-[1.1rem] text-nowrap text-[#343F4C]">Effective crowd management</a>
+            <a href="" class="px-4 py-[1.1rem] text-nowrap text-[#343F4C]">Effective crowd management</a>
+            <a href="" class="px-4 py-[1.1rem] text-nowrap text-[#343F4C] hr-scroll-acitve">Effective crowd management</a>
+            <a href="" class="px-4 py-[1.1rem] text-nowrap text-[#343F4C]">Effective crowd management</a>
+            <a href="" class="px-4 py-[1.1rem] text-nowrap text-[#343F4C]">Effective crowd management</a>
+            <a href="" class="px-4 py-[1.1rem] text-nowrap text-[#343F4C]">Effective crowd management</a>
+            <a href="" class="px-4 py-[1.1rem] text-nowrap text-[#343F4C]">Effective crowd management</a>
+            <a href="" class="px-4 py-[1.1rem] text-nowrap text-[#343F4C]">Effective crowd management</a>
+            
+        </nav>
+    </div>
+
+    <div
+        class="w-full container mx-auto flex flex-col items-center px-4 md:px-0 md:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12  lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px]">
+    </div>
+
+
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

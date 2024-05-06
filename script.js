@@ -1,3 +1,14 @@
+// nav bar
+function openNavbar() {
+    const sideBar = document.getElementById('nav-bar');
+    sideBar.classList.add('opacity-100','h-full');
+}
+
+function closeNavbar() {
+    const sideBar = document.getElementById('nav-bar');
+    sideBar.classList.remove('opacity-100','h-full');
+}
+
 // Get the button element and the SVG path element
 const button = document.querySelector('.custom-btn');
 const pathElement = document.querySelector('#arrow-path');
@@ -30,56 +41,36 @@ const arrowPath4 = document.querySelector('#arrow-path-4');
 
 if (customBtn1) {
     customBtn1.addEventListener('mouseover', () => {
-        // Change the d attribute to the new value when hovered
         arrowPath1.setAttribute('d', newD);
     });
     customBtn1.addEventListener('mouseout', () => {
-        // Revert the d attribute to the original value when not hovered
         arrowPath1.setAttribute('d', originalD);
     });
 }
 
 if (customBtn2) {
     customBtn2.addEventListener('mouseover', () => {
-        // Change the d attribute to the new value when hovered
         arrowPath2.setAttribute('d', newD);
     });
     customBtn2.addEventListener('mouseout', () => {
-        // Revert the d attribute to the original value when not hovered
         arrowPath2.setAttribute('d', originalD);
     });
 }
 
 if (customBtn3) {
     customBtn3.addEventListener('mouseover', () => {
-        // Change the d attribute to the new value when hovered
         arrowPath3.setAttribute('d', newD);
     });
     customBtn3.addEventListener('mouseout', () => {
-        // Revert the d attribute to the original value when not hovered
         arrowPath3.setAttribute('d', originalD);
     });
 }
 
 if (customBtn4) {
     customBtn4.addEventListener('mouseover', () => {
-        // Change the d attribute to the new value when hovered
         arrowPath4.setAttribute('d', newD);
     });
     customBtn4.addEventListener('mouseout', () => {
-        // Revert the d attribute to the original value when not hovered
         arrowPath4.setAttribute('d', originalD);
     });
 }
-
-// side bar
-function openNavbar() {
-    const sideBar = document.getElementById('nav-bar');
-    sideBar.classList.add('opacity-100','h-full');
-}
-
-function closeNavbar() {
-    const sideBar = document.getElementById('nav-bar');
-    sideBar.classList.remove('opacity-100','h-full');
-}
-
