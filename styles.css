@@ -353,43 +353,19 @@ h1 {
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
 }
 
+/* .right-index {
+    overflow-y: auto;
+} */
 
-.custom-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: #B39FF8 transparent;
-  
-    /* Webkit Scrollbar */
-    &::-webkit-scrollbar {
-      width: 5px;
-    }
-  
-    /* Webkit Scrollbar Track */
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-  
-    /* Webkit Scrollbar Thumb */
-    &::-webkit-scrollbar-thumb {
-      background-color: #B39FF8;
-    }
-  }
+.apt {
+    position: sticky;
+    top: 0;
+}
 
-  .custom-scrollbar1 {
-    scrollbar-width: thin;
-    scrollbar-color: white transparent;
-  
-    /* Webkit Scrollbar */
-    &::-webkit-scrollbar {
-      width: 5px;
-    }
-  
-    /* Webkit Scrollbar Track */
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-  
-    /* Webkit Scrollbar Thumb */
-    &::-webkit-scrollbar-thumb {
-      background-color: white;
-    }
-  }
+.left-index {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+.li-index {
+}
