@@ -357,15 +357,8 @@ h1 {
     overflow-y: auto;
 } */
 
-.apt {
-    position: sticky;
-    top: 0;
-}
-
-.left-index {
+.li-index {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-}
-.li-index {
 }
