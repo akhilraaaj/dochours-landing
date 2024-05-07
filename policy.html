@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocHours</title>
+    <link rel="icon" type="image/x-icon" href="./assets/headerLogo.svg">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="overflow-x-hidden">
+
+      <!-- Sign Up Header -->
+      <div class="flex md:flex-row flex-col items-center justify-center text-lg py-3 bg-[#E8EBFF] md:gap-8 gap-2 mb-1">
+        <h1 class="text-center md:text-lg text-base">Get up to <span class="font-bold">6 Months</span> of free access to DocHours</h1>
+        <a href="https://app.dochours.com/" target="_blank" class="custom-btn text-center items-center justify-center w-32 py-2 text-sm cursor-pointer mt-1">Sign Up Now</a>
+      </div>
+
+      <!-- Header Section -->
+      <div id="nav-bar" class="h-0 w-full pt-2.5 fixed z-50 top-0 right-0 bg-white overflow-x-hidden overflow-y-hidden opacity-0 transition-all duration-300">
+        <div class="w-full flex justify-between items-center px-4">
+          <a href="./index.html"><img class="h-7 mt-1.5" src="./assets/headerLogo.svg" alt="logo"></a>
+          <a onclick="closeNavbar()" class="closebtn w-6 transition-all duration-300">
+            <img class="h-7 mt-1.5" src="./assets/close.svg" alt="close-arrow">
+          </a>
+        </div>
+        <nav class="nav-links relative h-full flex flex-col gap-6 text-center justify-start">
+          <div class="absolute mt-16 w-full flex flex-col gap-6 text-center justify-start h-screen">
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="#">Pricing</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="#">Contact</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/" target="_blank">Login / Register</a>
+          </div>
+          <div class="nav-child"></div>
+          <div class="nav-footer absolute bottom-20 w-full flex flex-col items-center">
+            <div class="flex justify-between gap-12 mt-8 text-gray-400 ">
+              <a href="#" class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Terms & Conditions</a>
+              <a href="#" class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Privacy Policy</a>
+            </div>
+            <div class="flex justify-between gap-4 mt-8">
+              <img src="./assets/facebook.svg" class="social-icons" />
+              <img src="./assets/instagram.svg" class="social-icons" />
+              <img src="./assets/twitter.svg" class="social-icons" />
+              <img src="./assets/linkedin.svg" class="social-icons" />
+              <img src="./assets/youtube.svg" class="social-icons" />
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+      <header class="container mx-auto flex sm:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 lg:w-4/5 xl:3/5 2xl:max-w-screen-2xl  lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] px-6">
+        <div class="w-full flex justify-between mt-4">
+          <div class="header-left-sec">
+            <a href="./index.html" class="logo">
+              <img class="header-logo w-36" src="./assets/navLogo.svg" alt="logo">
+            </a>
+          </div>
+          <nav class="hidden flex items-center gap-8 md:flex">
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="#">Pricing</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F] " href="#">Contact</a>
+            <a class="border-l border-solid border-[#dadada] pl-4 text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/" target="_blank">Login / Register</a>
+          </nav>
+          <img src="./assets/hamburger.svg" onclick="openNavbar()" class="md:hidden h-6" alt="hamburger">
+        </div>
+      </header>
+
+      <!-- Policy Heading -->
+      <div class="container mx-auto flex flex-col items-start justify-center lg:mt-16 md:mt-14 mt-12 sm:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 lg:w-4/5 xl:3/5 2xl:max-w-screen-2xl  lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative px-6">
+        <h1 class="text-[30px] font-semibold">Privacy Policy</h1>
+        <p class="text-[15px] text-[#212C38] mt-4 mb-6 text-center font-['Open_Sans']">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        
+        <div class="flex md:flex-row flex-col lg:mt-4 md:mt-20 mt-12 justify-between md:gap-12 gap-8">
+          <div class="left-index flex flex-col md:w-4/12 leading-8 w-full font-medium space-y-2 overflow-hidden">
+            <h1><a href="#info-we-collect" class="hover:text-green-500">1. Information We Collect</a></h1>
+            <h1><a href="#how-we-use" class="hover:text-green-500">2. How We Use Your Information</a></h1>
+            <h1><a href="#sharing-info" class="hover:text-green-500">3. Sharing Your Information</a></h1>
+            <h1><a href="#data-security" class="hover:text-green-500">4. Data Security</a></h1>
+            <h1><a href="#data-retention" class="hover:text-green-500">5. Data Retention</a></h1>
+            <h1><a href="#your-choices" class="hover:text-green-500">6. Your Choices</a></h1>
+            <h1><a href="#contact-us" class="hover:text-green-500">7. Contact Us</a></h1>
+          </div>
+        
+          <div class="right-index flex flex-col md:w-8/12 w-full overflow-y-auto">
+            <div class="custom-scrollbar">
+            <div class="badge px-6 py-2 w-fit mb-4">
+              <span class="green-icon rounded-full"></span>
+              <h1 class="badge-text">EFFECTIVE DATE: [DATE OF LAUNCH]</h1>
+              <span class="green-icon rounded-full"></span>
+            </div>
+            <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">Dochours ("Dochours", "we", "us", or "our") operated by Zennode LLP respects the privacy of its users ("you", "your", or "yours"). This Privacy Policy describes the types of information we collect from and about you when you use our cloud-based clinic management platform ("Platform") and our practices for collecting, using, maintaining, protecting, and disclosing that information.</p>
+                
+            <div id="info-we-collect" class="mt-4">
+              <h1 class="font-semibold text-[20px]">1. Information We Collect</h1>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-3">We collect several different types of information for various purposes to provide and improve our Platform to you. Here's a breakdown of the information we may collect:</p>
+              
+              <ul class="flex flex-col space-y-3 mt-3 list-image-[url(./assets/green-icon.svg)] ml-4">
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-extrabold">Account Information:</span>
+                  <span>This includes contact information such as your name, email address, phone number, and clinic details (name, address, etc.).</span>
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Patient Data:</span>
+                  This is sensitive personal data and includes information about your patients, such as their name, date of birth, medical history, insurance details, and other health information.
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Billing Information:</span>
+                  If you choose to subscribe to a paid plan, we may collect billing information such as your credit card number or bank account information. However, Dochours does not directly store your full credit card details. Payment processing is handled by a secure third-party service provider.   
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Business Information:</span>
+                  This may include details about your clinic or practice, such as your business name and tax identification number.
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Usage Data:</span>
+                  We may collect information about your activity on the Platform, such as the pages you visit, the features you use, and the time and date of your visits.
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Device Information:</span>
+                  We may collect information about the device you use to access the Platform, such as the device type, operating system, browser type, and IP address.  
+                </li>
+              </ul>
+            </div>  
+            
+            <div id="how-we-use" class="mt-4">
+              <h1 class="font-semibold text-[20px]">2. How We Use Your Information</h1>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-3">We use the information we collect for various purposes, including:</p>
+            
+              <ul class="flex flex-col space-y-2 mt-3 list-image-[url(./assets/green-icon.svg)] ml-4">
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">To provide and operate the Platform and its features.</li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">To process your account and requests.</li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">To communicate with you about your account, the Platform, and other relevant updates.</li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">To personalise your experience on the Platform.</li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">To improve the Platform and develop new features and services.</li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">To comply with legal and regulatory requirements.</li>
+              </ul>
+            </div>
+            
+            <div id="sharing-info" class="mt-4">
+              <h1 class="font-semibold text-[20px]">3. Sharing Your Information</h1>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-3">Dochours prioritises the privacy of your information. We do not sell or rent your personal information ("PI") or Patient Data to third parties for their marketing purposes. However, we may share your information with trusted third-party service providers who help us operate the Dochours platform and deliver our services to you. These service providers are bound by strict contractual obligations to protect your information and use it only for the purposes we have authorised. Here are some examples of third-party service providers we may work with:</p>
+              <ul class="flex flex-col space-y-1 mt-3 list-image-[url(./assets/green-icon.svg)] ml-4">
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-extrabold">Payment processors:</span>
+                  <span>To process your subscription fees securely. Dochours does not directly store your full credit card details.</span>
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Hosting providers:</span>
+                  <span>To securely store your data and ensure the Platform's functionality.</span>
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Customer support providers:</span>
+                  <span>To assist you with any questions or technical issues you may encounter while using Dochours.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div id="data-security" class="mt-4">
+              <h1 class="font-semibold text-[20px]">4. Data Security</h1>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-3">At Dochours, we understand the sensitivity of the information you entrust to us. We take data security very seriously and implement robust measures to protect your information from unauthorised access, disclosure, alteration, or destruction. Here's how we safeguard your data:</p>
+              <ul class="flex flex-col space-y-1 mt-3 list-image-[url(./assets/green-icon.svg)] ml-4">
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 space-x-0">
+                  <span class="font-extrabold">Industry-Leading Security Practices:</span>
+                  <span> We employ industry-standard security measures, including encryption at rest and in transit, to protect your information. This means your data is scrambled both when stored on our servers and when transmitted over the internet.</span>
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Regular Security Audits:</span>
+                  <span>We conduct regular security audits to identify and address any potential vulnerabilities in our systems.</span>
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Strict Access Controls:</span>
+                  <span>We restrict access to your information to authorised personnel who have a legitimate business need to access it.</span>
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Compliance with Regulations:</span>
+                  <span>We adhere to relevant data security regulations, including <span class="text-green-500">[mention relevant Indian data security regulations here]</span> to ensure the highest level of protection for your information.</span>
+                </li>
+              </ul>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-4">We are constantly evaluating and improving our security measures to stay ahead of evolving threats. While no security system is foolproof, we are committed to providing a secure environment for your information.</p>
+            </div>
+
+            <div id="data-retention" class="mt-4">
+              <h1 class="font-semibold text-[20px]">5. Data Retention</h1>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-3">We will only retain your information for as long as it's necessary to deliver Dochours services. This includes maintaining your account, processing transactions, and providing ongoing customer support. We may need to retain certain information for legal or regulatory reasons, such as tax records or audit requirements. Some information may also be necessary to resolve disputes or investigate potential issues. Once your information is no longer needed for these purposes, we will delete it securely or anonymize it so it can no longer be traced back to you.</p>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-4">You are always in control! You can request to delete your account and information at any time. However, please be aware that some information may need to be retained for legal or regulatory reasons, even after account deletion.</p>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-4">We are committed to being transparent about our data retention practices and empower you to manage your information.</p>
+            </div>
+
+
+            <div id="your-choices" class="mt-4">
+              <h1 class="font-semibold text-[20px]">6. Your Choices</h1>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-3">We respect your right to access and control your information. We provide you with several options to manage your data:</p>
+              <ul class="flex flex-col space-y-1 mt-3 list-image-[url(./assets/green-icon.svg)] ml-4">
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 space-x-0">
+                  <span class="font-extrabold">Access and Update Your Information:</span>
+                  <span>You have the right to access and update your account information at any time. This includes your name, email address, phone number, and clinic details. You can easily modify this information within your Dochours account settings.</span>
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Data Portability:</span>
+                  <span>In some jurisdictions, you may have the right to request a copy of your data in a readily portable format. This allows you to easily transfer your information to another service provider if desired. Please contact Dochours support if you require assistance with data portability.</span>
+                </li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">
+                  <span class="font-semibold">Data Deletion:</span>
+                  <span>You have the right to request the deletion of your account and information at any time. To initiate a data deletion request, please contact Dochours support. We will process your request promptly; however, please be aware that some information may need to be retained for legal or regulatory reasons, even after account deletion.</span>
+                </li>
+              </ul>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-4">We may update this Privacy Policy from time to time to reflect changes in our practices, applicable laws, or technologies. Here's how we ensure you're aware of these updates:</p>
+              <ul class="flex flex-col space-y-1 mt-3 list-image-[url(./assets/green-icon.svg)] ml-4">
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 space-x-0">We will post any revised Privacy Policy on this page with a clear effective date.</li>
+                <li class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6">In some cases, we may also send you an email notification to inform you about significant changes to the Privacy Policy, especially if they impact your rights or how we use your information.</li>
+              </ul>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-4">We encourage you to review this Privacy Policy periodically to stay informed of any updates.  If you have any questions or concerns about the changes, please don't hesitate to contact Dochours support. We value your feedback and are committed to addressing your inquiries promptly.</p>
+
+            </div>
+            
+            
+            <div id="contact-us" class="mt-4">
+              <h1 class="font-semibold text-[20px]">7. Contact Us</h1>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-3">At Dochours, we prioritise open communication and want to ensure you have a way to reach us with any questions or concerns about your privacy. Here's how you can get in touch:</p>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-4">Feel free to send us an email at [email]. Our dedicated privacy team will respond to your inquiry as soon as possible.</p>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-4">You can also submit a support ticket directly within your Dochours account. Our support team is readily available to assist you with any privacy-related questions.</p>
+              <p class="text-[14px] text-[#212C38] font-['Open_Sans'] leading-6 mt-4">We appreciate you taking the time to understand our Privacy Policy.  We are committed to protecting your information and fostering a trusting relationship with our users.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Streamlining Care Section -->
+      <div class="streamlining-section flex flex-col items-center justify-center w-full mt-16 w-full pt-8 bg-cover bg-no-repeat">
+        <div class="badge px-6 py-2 w-fit mt-12">
+          <span class="green-icon rounded-full"></span>
+          <h1 class="badge-text">STREAMLINING CARE</h1>
+          <span class="green-icon rounded-full"></span>
+        </div>
+        <h1 class="text-3xl font-semibold mt-6">Dochours assures you</h1>
+        <div id="vertical-text-slider" class="vertical-text-slider">
+          <h2 class="vt-slider-1 ">Faster Bookings</h2>
+          <h2 class="vt-slider-2 ">Quicker Care</h2>
+          <h2 class="vt-slider-3 ">Deeper Insights</h2>
+        </div>
+        <p class="text-base text-[#212C38]  font-['Open_Sans'] mt-8 md:w-4/12 w-3/4 text-center">We provide clinics with a user-friendly management solution that prioritizes their time and values</p>
+        <div class="flex justify-center items-center mt-2 mb-4">
+          <a class="custom-btn custom-btn-2 mt-10 md:mb-4 mb-8" href="https://app.dochours.com/" target="_blank">
+            Try it for free
+            <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="arrow-path-2" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+        <img src="./assets/rocket.gif" alt="Rocket" />
+      </div>
+
+        <!-- Footer Section -->
+        <div class="container mx-auto flex flex-col items-center justify-center mt-28 mb-8 sm:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 lg:w-4/5 xl:3/5 2xl:max-w-screen-2xl lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative px-6">
+          <h1 class="text-3xl font-medium text-center lg:w-5/12 md:w-8/12 w-full leading-10">Subscribe to our newsletter to get the latest updates</h1>
+          <div class="flex rounded-full border mt-12 relative ">
+            <input placeholder="Your email" type="email" class="px-4 py-2 bg-gray-100 placeholder:italic rounded-full md:w-96 w-80" />
+            <button class="px-6 py-2 absolute top-0 right-0 bg-[#4C42B8] text-white rounded-full">Subscribe</button>
+          </div>
+          <div class="flex items-center justify-center gap-4 mt-12 opacity-15 hover:opacity-100 transition ease-in-out delay-50">
+            <img src="./assets/footerLogo.svg" alt="Footer Logo" class="w-60" />
+          </div>
+          <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 mt-10 justify-center text-center items-center lg:w-5/12 md:w-6/12 w-11/12 leading-8">
+            <a href="./features.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Features</a>
+            <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500">Pricing</a>
+            <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500">Resources</a>
+            <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500">Support</a>
+            <a href="#" class="cursor-pointer  text-[#343F4C]hover:text-green-500">Blog</a>
+            <a href="#" class="cursor-pointer  text-[#343F4C]hover:text-green-500">Contact</a>
+          </div>
+          <div class="flex justify-between gap-12 mt-8 text-gray-400">
+            <a href="#" class="cursor-pointer hover:text-green-500">Terms & Conditions</a>
+            <a href="./policy.html" class="cursor-pointer hover:text-green-500">Privacy Policy</a>
+          </div>
+          <div class="flex justify-between gap-4 mt-8">
+            <img src="./assets/facebook.svg" class="social-icons" />
+            <img src="./assets/instagram.svg" class="social-icons" />
+            <img src="./assets/twitter.svg" class="social-icons" />
+            <img src="./assets/linkedin.svg" class="social-icons" />
+            <img src="./assets/youtube.svg" class="social-icons" />
+          </div>
+          <hr class="w-8/12 mt-8 hr" />
+          <div class="flex justify-between gap-12 mt-6 text-lg font-semibold text-gray-400">
+            <span>© 2024</span>
+            <a href="./index.html" class="flex items-center cursor-pointer">
+              <img src="./assets/headerLogo.svg" class="w-6 mr-1" />
+              <span class="hover:text-gray-500">docHours</span>
+            </a>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

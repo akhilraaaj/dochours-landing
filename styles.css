@@ -1,3 +1,14 @@
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
+*,
+*::before,
+*::after {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: 'Avenir', sans-serif; 
+}
 
 .green-icon {
     background: #6AC37F;
@@ -35,7 +46,7 @@
 }
 
 .badge-text {
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Open-Sans', sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 22.2px;
@@ -52,6 +63,7 @@
 }
 
 .steps-badge {
+    font-family: 'Open-Sans', sans-serif;
     width: 124px;
     height: 36px;
     display: flex; 
@@ -161,7 +173,6 @@
     gap: 3px;
 }
 
-
 .streamlining-section {
     background-image: url('./assets/loremIpsumBg.png');
     background-repeat: 'no-repeat';
@@ -193,6 +204,15 @@
     border-image-slice: 1;
     filter: blur(80px);
 }
+
+/* .features-section {
+    background: #F9F9F9;
+    background-repeat: 'no-repeat';
+    background-size: cover;
+    z-index: -10;
+    width: 100%;
+    border-top: 0;
+} */
 
 
 .features-child-1 {
@@ -332,3 +352,44 @@
 .side-menu-blur-bg {
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
 }
+
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #B39FF8 transparent;
+  
+    /* Webkit Scrollbar */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  
+    /* Webkit Scrollbar Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  
+    /* Webkit Scrollbar Thumb */
+    &::-webkit-scrollbar-thumb {
+      background-color: #B39FF8;
+    }
+  }
+
+  .custom-scrollbar1 {
+    scrollbar-width: thin;
+    scrollbar-color: white transparent;
+  
+    /* Webkit Scrollbar */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  
+    /* Webkit Scrollbar Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  
+    /* Webkit Scrollbar Thumb */
+    &::-webkit-scrollbar-thumb {
+      background-color: white;
+    }
+  }

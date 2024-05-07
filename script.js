@@ -74,3 +74,23 @@ if (customBtn4) {
         arrowPath4.setAttribute('d', originalD);
     });
 }
+
+
+// Policy Section 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all index items
+    const indexItems = document.querySelectorAll('.index-item');
+
+    // Add click event listener to each index item
+    indexItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            // Get the target ID from the data-target attribute
+            const targetId = item.getAttribute('data-target');
+            // Scroll to the target element
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+});
