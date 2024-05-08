@@ -1,8 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/avenir');
 
-*,
-*::before,
-*::after {
+* 
+{
     scroll-behavior: smooth;
 }
 
@@ -353,12 +352,15 @@ h1 {
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
 }
 
-/* .right-index {
-    overflow-y: auto;
-} */
 
 .li-index {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
 }
+  
+nav ul li a.active {
+    color: #6AC37F;
+  }
+  
+  
