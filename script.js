@@ -76,20 +76,24 @@ if (customBtn4) {
 }
 
 
-// Policy Section 
+// // Policy Section 
 window.addEventListener('scroll', function() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
     const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav ul li a');
+    const navLinks = document.querySelectorAll('.li-index h1 a');
   
     sections.forEach((section, index) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
   
-      if (scrollPosition >= sectionTop - sectionHeight / 3 &&
+      if (scrollPosition > 0 && 
+          scrollPosition >= sectionTop - sectionHeight / 3 &&
           scrollPosition < sectionTop + sectionHeight - sectionHeight / 3) {
         navLinks.forEach(link => link.classList.remove('active'));
         navLinks[index].classList.add('active');
+      } else if (scrollPosition === 0) {
+        navLinks.forEach(link => link.classList.remove('active'));
       }
     });
   });
+  

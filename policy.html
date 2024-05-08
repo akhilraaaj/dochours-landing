@@ -20,7 +20,7 @@
       </div>
 
       <!-- Header Section -->
-      <!-- <div id="nav-bar" class="h-0 w-full pt-2.5 fixed z-50 top-0 right-0 bg-white overflow-x-hidden overflow-y-hidden opacity-0 transition-all duration-300">
+      <div id="nav-bar" class="h-0 w-full pt-2.5 fixed z-50 top-0 right-0 bg-white overflow-x-hidden overflow-y-hidden opacity-0 transition-all duration-300">
         <div class="w-full flex justify-between items-center px-4">
           <a href="./index.html"><img class="h-7 mt-1.5" src="./assets/headerLogo.svg" alt="logo"></a>
           <a onclick="closeNavbar()" class="closebtn w-6 transition-all duration-300">
@@ -64,11 +64,11 @@
             <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
             <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="#">Pricing</a>
             <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F] " href="#">Contact</a>
-            <a class="border-l border-solid border-[#dadada] pl-4 text-[#212C38] text-[15px] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/" target="_blank">Login / Register</a>
+            <a class="text-white font-medium custom-btn text-center items-center justify-center w-36 py-2 text-sm cursor-pointer mt-0" href="https://app.dochours.com/" target="_blank">Login / Register</a>
           </nav>
           <img src="./assets/hamburger.svg" onclick="openNavbar()" class="md:hidden h-6" alt="hamburger">
         </div>
-      </header> -->
+      </header>
 
       <!-- Policy Heading -->
       <div class="container mx-auto flex flex-col items-start justify-center lg:mt-16 md:mt-14 mt-12 sm:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 lg:w-4/5 xl:3/5 2xl:max-w-screen-2xl  lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] px-6">
@@ -79,27 +79,21 @@
 
           <!-- Left Index -->
           <div class="left-index md:w-4/12 w-full font-medium">
-            <div class="li-index md:pt-8 pt-4 space-y-3">
-              <header>
-                <nav>
-                  <ul class="leading-7">
-                  <li><a href="#info-we-collect" class="active">1. Information We Collect</a></li> 
-                  <li><a href="#how-we-use" class="hover:text-green-500 transition duration-500 ease-out">2. How We Use Your Information</a></li>
-                  <li><a href="#sharing-info" class="hover:text-green-500 transition duration-500 ease-out">3. Sharing Your Information</a></li>
-                  <li><a href="#data-security" class="hover:text-green-500 transition duration-500 ease-out">4. Data Security</a></li>
-                  <li><a href="#data-retention" class="hover:text-green-500 transition duration-500 ease-out">5. Data Retention</a></li>
-                  <li><a href="#your-choices" class="hover:text-green-500 transition duration-500 ease-out">6. Your Choices</a></li>
-                  <li><a href="#contact-us" class="hover:text-green-500 transition duration-500 ease-out">7. Contact Us</a></li>
-                </ul>
-                </nav>
-              </header>
+            <div class="li-index md:pt-8 pt-4 space-y-4">
+              <h1><a href="#info-we-collect" class="">1. Information We Collect</a></li> 
+              <h1><a href="#how-we-use" class="hover:text-green-500 transition duration-500 ease-out">2. How We Use Your Information</a></h1>
+              <h1><a href="#sharing-info" class="hover:text-green-500 transition duration-500 ease-out">3. Sharing Your Information</a></h1>
+              <h1><a href="#data-security" class="hover:text-green-500 transition duration-500 ease-out">4. Data Security</a></h1>
+              <h1><a href="#data-retention" class="hover:text-green-500 transition duration-500 ease-out">5. Data Retention</a></h1>
+              <h1><a href="#your-choices" class="hover:text-green-500 transition duration-500 ease-out">6. Your Choices</a></h1>
+              <h1><a href="#contact-us" class="hover:text-green-500 transition duration-500 ease-out">7. Contact Us</a></h1>
             </div>
           </div>
 
           <!-- Right Index -->
           <div class="right-index md:w-8/12 w-full md:pt-8 pt-4">
             <div class="">
-            <div class="badge px-6 py-2 w-fit mb-4">
+            <div class="badge px-6 py-2 w-fit mb-5">
               <span class="green-icon rounded-full"></span>
               <h1 class="badge-text">EFFECTIVE DATE: [DATE OF LAUNCH]</h1>
               <span class="green-icon rounded-full"></span>
@@ -303,5 +297,6 @@
           </div>
         </div>
     </div>
+    <script src="/script.js"></script>
   </body>
 </html>

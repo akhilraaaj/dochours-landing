@@ -359,8 +359,8 @@ h1 {
     top: 0;
 }
   
-nav ul li a.active {
-    color: #6AC37F;
+.li-index h1 a.active {
+    color: rgb(34 197 94);
   }
   
   
