@@ -1,4 +1,4 @@
-// nav bar
+// Navbar
 function openNavbar() {
     const sideBar = document.getElementById('nav-bar');
     sideBar.classList.add('opacity-100','h-full');
@@ -9,22 +9,18 @@ function closeNavbar() {
     sideBar.classList.remove('opacity-100','h-full');
 }
 
-// Get the button element and the SVG path element
+// Custom Button
 const button = document.querySelector('.custom-btn');
 const pathElement = document.querySelector('#arrow-path');
 
-// Define the original and new d attribute values
 const originalD = 'M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13';
 const newD = 'M25 7L1 7M25 7L19.0511 1M25 7L19.0511 13';
 
-// Add event listeners to the button
 if (button) {
     button.addEventListener('mouseover', () => {
-        // Change the d attribute to the new value when hovered
         pathElement.setAttribute('d', newD);
     });
     button.addEventListener('mouseout', () => {
-        // Revert the d attribute to the original value when not hovered
         pathElement.setAttribute('d', originalD);
     });
 }
@@ -75,8 +71,29 @@ if (customBtn4) {
     });
 }
 
+// Community Logo 
+window.addEventListener('load', function() {
+    const communityImg = document.querySelector('.community-img');
+    const imgWidth = communityImg.offsetWidth;
+    const imgHeight = communityImg.offsetHeight;
+    const imgOffsetTop = communityImg.offsetTop;
+    const imgOffsetLeft = communityImg.offsetLeft;
+  
+    // Create multiple circles with decreasing opacity
+    for (let i = 1; i <= 5; i++) {
+      const glowCircle = document.createElement('div');
+      glowCircle.classList.add('glow-circle');
+      glowCircle.style.width = `${imgWidth + (i * 20)}px`;
+      glowCircle.style.height = `${imgHeight + (i * 20)}px`;
+      glowCircle.style.top = `${imgOffsetTop - (i * 20)}px`;
+      glowCircle.style.left = `${imgOffsetLeft - (i * 20)}px`;
+      glowCircle.style.boxShadow = `0 0 ${(i * 10)}px ${(i * 10)}px #E7DCFF`;
+      glowCircle.style.opacity = `${1 - (i * 0.8)}`;
+      document.body.appendChild(glowCircle);
+    }
+});
 
-// // Policy Section 
+// Policy Section 
 window.addEventListener('scroll', function() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
     const sections = document.querySelectorAll('section');
@@ -95,5 +112,4 @@ window.addEventListener('scroll', function() {
         navLinks.forEach(link => link.classList.remove('active'));
       }
     });
-  });
-  
+});
