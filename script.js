@@ -71,28 +71,6 @@ if (customBtn4) {
     });
 }
 
-// Community Logo 
-window.addEventListener('load', function() {
-    const communityImg = document.querySelector('.community-img');
-    const imgWidth = communityImg.offsetWidth;
-    const imgHeight = communityImg.offsetHeight;
-    const imgOffsetTop = communityImg.offsetTop;
-    const imgOffsetLeft = communityImg.offsetLeft;
-  
-    // Create multiple circles with decreasing opacity
-    for (let i = 1; i <= 5; i++) {
-      const glowCircle = document.createElement('div');
-      glowCircle.classList.add('glow-circle');
-      glowCircle.style.width = `${imgWidth + (i * 20)}px`;
-      glowCircle.style.height = `${imgHeight + (i * 20)}px`;
-      glowCircle.style.top = `${imgOffsetTop - (i * 20)}px`;
-      glowCircle.style.left = `${imgOffsetLeft - (i * 20)}px`;
-      glowCircle.style.boxShadow = `0 0 ${(i * 10)}px ${(i * 10)}px #E7DCFF`;
-      glowCircle.style.opacity = `${1 - (i * 0.8)}`;
-      document.body.appendChild(glowCircle);
-    }
-});
-
 // Policy Section 
 window.addEventListener('scroll', function() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
