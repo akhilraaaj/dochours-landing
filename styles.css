@@ -16,15 +16,6 @@ h1 {
     gap: 0px;
  }
 
-/* .hero-green-icon {
-    display: inline-block;
-    background: #6AC37F;
-    width: 8px;
-    height: 8px;
-    gap: 0px;
-    opacity: 0px;
-} */
-
 .hero-badge {
     display: flex; 
     align-items: center;
@@ -83,10 +74,9 @@ h1 {
 }
 
 .hr {
-    border: 1px dotted #E9E9E9;
-    gap: 0px;
-    border: 1px 0px 0px 0px;
-    opacity: 0px;
+    border: 1px dashed #E9E9E9;
+    border-width: 0.1px;
+    border-radius: 10px;
 }
 
 .perks-card {
@@ -132,7 +122,6 @@ h1 {
     opacity: 1;
 }
 
-
 #arrow-path-1,
 #arrow-path-2,
 #arrow-path-3,
@@ -172,10 +161,33 @@ h1 {
     gap: 3px;
 }
 
+.features-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200vw;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(rgba(255, 255, 255,0),#F9F9F9);
+}
+
 .streamlining-section {
     background-image: url('./assets/loremIpsumBg.png');
     background-repeat: 'no-repeat';
     background-size: cover;
+}
+
+.nav-child {
+    position: absolute;
+    width: 413.07px;
+    height: 321.07px;
+    bottom: 250px;
+    left: -14rem;
+    transform: rotate(-210deg); 
+    background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
+    filter: blur(100px);
 }
 
 .hero-child {
@@ -203,16 +215,6 @@ h1 {
     border-image-slice: 1;
     filter: blur(80px);
 }
-
-/* .features-section {
-    background: #F9F9F9;
-    background-repeat: 'no-repeat';
-    background-size: cover;
-    z-index: -10;
-    width: 100%;
-    border-top: 0;
-} */
-
 
 .features-child-1 {
     position: absolute;
@@ -242,23 +244,12 @@ h1 {
     position: absolute;
     width: 380.25px;
     height: 220.77px;
-    top: 650px;
-    left: 320px;
+    top: 850px;
+    left: 380px;
     z-index: -1;
     transform: rotate(-210deg); 
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.6) 0%, rgba(192, 132, 252, 0.6) 100%);
     filter: blur(90px);
-}
-
-.nav-child {
-    position: absolute;
-    width: 413.07px;
-    height: 321.07px;
-    bottom: 250px;
-    left: -14rem;
-    transform: rotate(-210deg); 
-    background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
-    filter: blur(100px);
 }
 
 .social-icons {
@@ -335,24 +326,7 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 600px) {
-   
-    .hero-green-icon {
-        display: none;
-    }
-
-    .perks-image {
-        margin-bottom: -90px;
-        margin-top: 50px;
-    }
-}
-
-
-.side-menu-blur-bg {
-    background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
-}
-
-
+/* Policy Section CSS */
 .li-index {
     position: sticky;
     position: -webkit-sticky;
