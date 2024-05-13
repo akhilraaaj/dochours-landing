@@ -1,5 +1,5 @@
-@import url('https://fonts.cdnfonts.com/css/avenir');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * 
 {
@@ -7,7 +7,7 @@
 }
 
 h1 {
-    font-family: 'Avenir', sans-serif; 
+    font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -70,7 +70,7 @@ p {
 }
 
 .steps-badge-text {
-    font-family: 'Avenir', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 22.2px;
@@ -129,7 +129,11 @@ p {
 #arrow-path-1,
 #arrow-path-2,
 #arrow-path-3,
-#arrow-path-4 {
+#arrow-path-4,
+#arrow-contact-path,
+#pricing-arrow-path-1,
+#pricing-arrow-path-2,
+#pricing-arrow-path-3 {
     transition: all 0.5s;
 }
 
@@ -149,6 +153,27 @@ p {
 .custom-btn-4 {
     padding: 0.8rem 0.5rem 0.8rem 1.5rem;
     width: 16rem;
+    gap: 3px;
+}
+
+.contact-form-btn {
+    padding: 0.8rem 0.2rem 0.8rem 0.8rem;
+    width: 9rem;
+    gap: 3px;
+}
+
+.pricing-btn-1 {
+    width: 9rem;
+    gap: 3px;
+}
+
+.pricing-btn-2 {
+    width: 9rem;
+    gap: 3px;
+}
+
+.pricing-btn-3 {
+    width: 9.5rem;
     gap: 3px;
 }
 
@@ -363,3 +388,63 @@ p {
 .li-index h1 a.active {
     color: #6AC37F;
 }
+
+/* Pricing CSS */
+.pricing-save {
+    background-color: #EEF0F2;
+    color: #C8C8C8;
+}
+
+.pricing-save-active {
+    background-color: #FEC753;
+    color: #000000;
+}
+
+.pricing-lable-active {
+    font-weight: bold;
+}
+
+.toggle-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.toggle-switch {
+    background-color: #6AC37F;
+    width: 42px;
+    height: 23px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.toggle-switch::before {
+    content: "";
+    font-weight: 900;
+    background-color: white;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+    transition: 0.3s;
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+    background-color: #4C42B8;
+}
+
+.toggle-checkbox:checked+.toggle-switch::before {
+    content: "";
+    left: 22px;
+    color: #4C42B8;
+}
+

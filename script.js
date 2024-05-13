@@ -29,11 +29,13 @@ const customBtn1 = document.querySelector('.custom-btn-1');
 const customBtn2 = document.querySelector('.custom-btn-2');
 const customBtn3 = document.querySelector('.custom-btn-3');
 const customBtn4 = document.querySelector('.custom-btn-4');
+const contactBtn = document.querySelector('.contact-form-btn');
 
 const arrowPath1 = document.querySelector('#arrow-path-1');
 const arrowPath2 = document.querySelector('#arrow-path-2');
 const arrowPath3 = document.querySelector('#arrow-path-3');
 const arrowPath4 = document.querySelector('#arrow-path-4');
+const arrowContactPath = document.querySelector('#arrow-contact-path');
 
 if (customBtn1) {
     customBtn1.addEventListener('mouseover', () => {
@@ -69,6 +71,87 @@ if (customBtn4) {
     customBtn4.addEventListener('mouseout', () => {
         arrowPath4.setAttribute('d', originalD);
     });
+}
+
+if (contactBtn) {
+    contactBtn.addEventListener('mouseover', () => {
+        arrowContactPath.setAttribute('d', newD);
+    });
+    contactBtn.addEventListener('mouseout', () => {
+        arrowContactPath.setAttribute('d', originalD);
+    });
+}
+
+// pricing page
+const pricingFreeBtn = document.querySelector('.pricing-btn-1');
+const pricingBasicBtn = document.querySelector('.pricing-btn-2');
+const pricingGrowthBtn = document.querySelector('.pricing-btn-3');
+const arrowPathPrFree = document.querySelector('#pricing-arrow-path-1');
+const arrowPathPrBasic = document.querySelector('#pricing-arrow-path-2');
+const arrowPathPrGrowth = document.querySelector('#pricing-arrow-path-3');
+
+if (pricingFreeBtn) {
+    pricingFreeBtn.addEventListener('mouseover', () => {
+        arrowPathPrFree.setAttribute('d', newD); 
+    });
+    pricingFreeBtn.addEventListener('mouseout', () => {
+        arrowPathPrFree.setAttribute('d', originalD);
+    });
+}
+if (pricingBasicBtn) {
+    pricingBasicBtn.addEventListener('mouseover', () => {
+        arrowPathPrBasic.setAttribute('d', newD);
+    });
+    pricingBasicBtn.addEventListener('mouseout', () => {
+        arrowPathPrBasic.setAttribute('d', originalD);
+    });
+}
+if (pricingGrowthBtn) {
+    pricingGrowthBtn.addEventListener('mouseover', () => {
+        arrowPathPrGrowth.setAttribute('d', newD);
+    });
+    pricingGrowthBtn.addEventListener('mouseout', () => {
+        arrowPathPrGrowth.setAttribute('d', originalD);
+    });
+}
+
+const toggleBtn = document.getElementById('pricing-toggle-btn');
+if (toggleBtn) {
+    toggleBtn.addEventListener('change', () => {
+        const offerLabel = document.getElementById('pricing-save')
+        const annuallyPayLabel = document.getElementById('annually-label');
+        const montlyPayLabel = document.getElementById('monthly-label');
+        if (toggleBtn.value == "on") {
+            toggleBtn.value = "";
+            counter('basic-price', 999, 1099, 200);
+            counter('growth-price', 2999, 3099, 200);
+            montlyPayLabel.classList.add('pricing-lable-active');
+            annuallyPayLabel.classList.remove('pricing-lable-active');
+            offerLabel.classList.remove('pricing-save-active');
+        } else {
+            toggleBtn.value = "on";
+            counter('basic-price', 1099, 999, 200);
+            counter('growth-price', 3099, 2999, 200);
+            offerLabel.classList.add('pricing-save-active');
+            annuallyPayLabel.classList.add('pricing-lable-active');
+            montlyPayLabel.classList.remove('pricing-lable-active');
+        }
+    })
+    // counter function for pricing page, from start price to end price give a counter transition
+    function counter(id, start, end, duration) {
+        let obj = document.getElementById(id),
+            current = start,
+            range = end - start,
+            increment = end > start ? 1 : -1,
+            step = Math.abs(Math.floor(duration / range)),
+            timer = setInterval(() => {
+                current += increment;
+                obj.textContent = current;
+                if (current == end) {
+                    clearInterval(timer);
+                }
+            }, step);
+    }
 }
 
 // Policy Section 
