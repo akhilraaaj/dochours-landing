@@ -448,3 +448,86 @@ p {
     color: #4C42B8;
 }
 
+
+/* Features Section */
+.pr-blur-round-bg {
+    background: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(103, 232, 249, 0.9) 0%, rgba(192, 132, 252, 0.9) 100%);
+}
+
+/* horizontal scroll slider  */
+.hr-scroll {
+    box-shadow: 0px 4px 4px 0px #0000000D;
+    height: 0rem;
+}
+
+.hr-scroll a {
+    transition: .1s all;
+}
+
+.nav-slider {
+    background-color: #11144F;
+    transition: all .3s linear;
+    height: 2px;
+    position: absolute;
+    top: 61px;
+}
+
+.hr-scroll-sticky {
+    position: fixed;
+    top: 0;
+    height: 4rem;
+    transition: 0.5s all;
+    /* height: 4rem; */
+}
+
+.hide-scrollbar {
+
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* style.css */
+
+
+
+/* 
+@import url('https://fonts.cdnfonts.com/css/avenir');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans'); */
+
+.typewriter {
+    font-family: monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cursor {
+    display: inline-block;
+    width: 0.5em;
+
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+.fr-hero-bg-blur {
+    /* background-image: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(103, 232, 249, 0.65) 0%, rgba(192, 132, 252, 0.65) 100%); */
+    /* background: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(103, 232, 249, 0.9) 0%, rgba(192, 132, 252, 0.9) 100%); */
+    background: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(192, 132, 252, 0.38) 9%, rgba(103, 232, 249, 0.38) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+
+
+}

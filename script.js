@@ -166,11 +166,174 @@ window.addEventListener('scroll', function() {
   
       if (scrollPosition > 0 && 
           scrollPosition >= sectionTop - sectionHeight / 3 &&
-          scrollPosition < sectionTop + sectionHeight - sectionHeight / 3) {
+          scrollPosition < sectionTop + sectionHeight - sectionHeight / 3 &&
+          navLinks[index]) { 
         navLinks.forEach(link => link.classList.remove('active'));
         navLinks[index].classList.add('active');
       } else if (scrollPosition === 0) {
         navLinks.forEach(link => link.classList.remove('active'));
       }
     });
-});
+  });
+  
+
+// features page
+const featuresNavbar = document.getElementById('features-hr-scroll');
+const featuresBody = document.getElementById('features');
+const allFeatures = document.querySelectorAll('.features-sec');
+const featuresNavLinks = document.querySelectorAll('#features-hr-scroll a');
+const featuresNavLinksHero = document.querySelectorAll('#featuresLinks a');
+const featuresNavContainer = document.getElementById('featuresNav');
+let scriptScrolling = false; // variable to control the scroll event actions
+if (featuresNavbar) {
+    window.addEventListener('scroll', toggleNav)
+    var sticky = featuresBody.offsetTop - 100;
+    var bt_non_sticky = featuresBody.offsetHeight + featuresBody.offsetTop;
+    var runningSlider = document.getElementById('nav-slider');
+
+    function toggleNav() {
+        if (window.scrollY >= sticky) {
+            featuresNavbar.classList.add("hr-scroll-sticky"); // make features navbar sticky.
+            if (window.scrollY >= bt_non_sticky) {
+                featuresNavbar.classList.remove("hr-scroll-sticky"); // remove sticky
+            }
+            allFeatures.forEach(feature => {
+                let top = window.scrollY;
+                let offset = feature.offsetTop;
+                let id = feature.getAttribute('id');
+                // running slider below features navbar.
+                if (top >= offset - 200) {
+                    const specificFeature = featuresNavContainer.querySelector(`a[href="#${id}"]`);
+                    runningSlider.style.left = specificFeature.offsetLeft + "px";
+                    runningSlider.style.width = specificFeature.offsetWidth + 'px';
+                }
+            })
+            if (!scriptScrolling) {
+                window.addEventListener('scroll', throttle(handleScroll, 200)); // re-attach scroll event 
+            }
+        } else {
+            featuresNavbar.classList.remove("hr-scroll-sticky");
+        }
+    }
+
+    // Get all the sections and convert the NodeList to an array
+    const sections = Array.from(allFeatures);
+    let lastCall = 0; // Variable to track the last time the throttle function was called
+    let scrollAnimation; // Variable to hold the reference to the animation frame
+    // Function to handle window scrolling
+    function handleScroll() {
+        const scrollPosition = window.scrollY + window.innerHeight / 2;   // Calculate the current scroll position, adjusting for the center of the screen
+        const currentSectionIndex = sections.findIndex(section => {  // Find the index of the section currently in view
+            return scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight;
+        });
+
+        // If a section is in view, update the active navigation link and scroll the navigation bar
+        if (currentSectionIndex > 0) { 
+            const activeLink = featuresNavLinks[currentSectionIndex];
+            const navWidth = featuresNavContainer.offsetWidth;
+            const linkWidth = activeLink.offsetWidth;
+            const targetScrollLeft = activeLink.offsetLeft - navWidth / 2 + linkWidth / 2;
+            const acitveLinkRight = activeLink.offsetLeft + linkWidth;
+            const activeLinkLeft = activeLink.offsetLeft;
+
+            if (scrollAnimation) cancelAnimationFrame(scrollAnimation);
+            const startScrollLeft = featuresNavContainer.scrollLeft;
+            scrollAnimation = requestAnimationFrame(function animate(time) {
+                if (!scriptScrolling) {
+                    if (acitveLinkRight > navWidth) {
+                        featuresNavContainer.scrollLeft = startScrollLeft + (targetScrollLeft - startScrollLeft) 
+                    } else if (activeLinkLeft < (navWidth / 2) + 180) {
+                        featuresNavContainer.scrollLeft = 0;
+                    }
+                }
+            });
+        }
+    };
+
+    // Throttle function limits the frequency of the handleScroll function
+    function throttle(callback, delay) {
+        return () => {
+            const now = Date.now();
+            // Check if enough time has passed since the last call
+            if (now - lastCall >= delay) {
+                callback();
+                // Update the lastCall timestamp to the current time
+                lastCall = now;
+            }
+        };
+    };
+
+    featuresNavLinks.forEach(link => {
+        link.addEventListener('click', event => {
+            window.removeEventListener(scroll, throttle(handleScroll, 1000))
+            scrollNavBarOnClickOnNavLink(link)
+        });
+    });
+    featuresNavLinksHero.forEach(link => {
+        link.addEventListener('click', event => {
+            window.removeEventListener(scroll, throttle(handleScroll, 1000))
+            scrollNavBarOnClickOnNavLink(link)
+        });
+    });
+    async function scrollNavBarOnClickOnNavLink(linkElement) {
+        const targetId = linkElement.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        window.removeEventListener(scroll, throttle(handleScroll, 1000))
+        scriptScrolling = true;
+        targetElement.scrollIntoView()
+        var timer = null;
+        window.addEventListener('scroll', function() {
+            if (timer !== null) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(function() {
+                // do something
+                scriptScrolling = false;
+                window.addEventListener('scroll', throttle(handleScroll, 1000));
+                handleScroll();
+                console.log("Attached event listener: for scroll ")
+            }, 300);
+        }, false);
+    }
+    // Type writing Effect on hero section
+    const sentences = [
+        "smoothly",
+        "quickly",
+        "securely."
+    ];
+    let sentenceIndex = 0;
+    let charIndex = 0;
+    let deleting = false; // Flag to track whether we're deleting text
+    const typingSpeed = 150; // Speed of typing out a sentence
+    const deletingSpeed = 100; // Speed of deleting a sentence
+    const textElement = document.getElementById("text-typewriting");
+
+    function typeWriter() {
+        if (deleting) {
+            if (textElement.textContent.length > 0) {
+                textElement.textContent = textElement.textContent.slice(0, -1);
+                setTimeout(typeWriter, deletingSpeed);
+            } else {
+                deleting = false;
+                sentenceIndex++;
+                if (sentenceIndex >= sentences.length) {
+                    sentenceIndex = 0;
+                }
+                charIndex = 0;
+                typeWriter();
+            }
+        } else {
+            if (charIndex < sentences[sentenceIndex].length) {
+                textElement.textContent += sentences[sentenceIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeWriter, typingSpeed);
+            } else {
+                setTimeout(() => {
+                    deleting = true;
+                    typeWriter();
+                }, 1000);
+            }
+        }
+    }
+    typeWriter();
+}
