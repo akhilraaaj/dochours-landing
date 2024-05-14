@@ -138,20 +138,17 @@ p {
 }
 
 .custom-btn-1, .custom-btn-2 {
-    padding: 0.8rem 0.5rem 0.8rem 1.5rem;
-    width: 11rem;
-    display: flex;
+    width: 11.5rem;
     gap: 7px;
 }
 
 .custom-btn-3 {
-    padding: 0.8rem 0.5rem 0.8rem 1.5rem;
-    width: 12rem;
+    /* padding: 0.8rem 0.5rem 0.8rem 1.5rem; */
+    width: 13rem;
     gap: 3px;
 }
 
 .custom-btn-4 {
-    padding: 0.8rem 0.5rem 0.8rem 1.5rem;
     width: 16rem;
     gap: 3px;
 }
