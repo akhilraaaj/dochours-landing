@@ -14,6 +14,31 @@ p {
     font-family: 'Open Sans', sans-serif; 
 }
 
+#play-btn-home {
+    fill: url(#play-btn-color);
+    transition: fill 0.5s, transform 0.5s; 
+  }
+
+  #play-btn-home:hover {
+    /* fill:#1A599E; */
+    fill: url(#play-btn-color-hover);
+    transform: scale(1.04);
+  }
+
+  path {
+    transition: fill 0.5s ease;
+  }
+
+  #play-btn-home path {
+    fill: url(#play-btn-color);
+    /* fill:#4C42B8; */
+  }
+
+  #play-btn-home:hover path {
+    /* fill:#1A599E; */
+    fill: url(#play-btn-color-hover);
+  }
+
 .green-icon {
     background: #6AC37F;
     width: 8px;
@@ -205,14 +230,14 @@ p {
 
 .hero-child {
     position: absolute;
-    width: 480.07px;
+    width: 380.07px;
     height: 401.07px;
-    bottom: 220px;
+    bottom: 250px;
     right: -230px;
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.3) 0%, rgba(192, 132, 252, 0.3) 100%);
-    z-index: -1; 
+    /* z-index: -1;  */
     transform: rotate(96.67deg);
-    filter: blur(180px);
+    filter: blur(150px);
 }
 
 .onboarding-child {
@@ -255,10 +280,10 @@ p {
 
 .perks-child {
     position: absolute;
-    width: 380.25px;
-    height: 220.77px;
-    top: 850px;
-    left: 380px;
+    width: 390.25px;
+    height: 240.77px;
+    top: 830px;
+    left: 320px;
     z-index: -1;
     transform: rotate(-210deg); 
     background: radial-gradient(58.21% 60% at -4.41% 8.74%, rgba(103, 232, 249, 0.6) 0%, rgba(192, 132, 252, 0.6) 100%);
@@ -329,15 +354,15 @@ p {
     }
 
     33% {
-        margin-top: -80px;
+        margin-top: -75px;
     }
 
     38% {
-        margin-top: -36px;
+        margin-top: -40px;
     }
 
     66% {
-        margin-top: -36px;
+        margin-top: -40px;
     }
 
     71% {
@@ -348,7 +373,6 @@ p {
         margin-top: 0px;
     }
 }
-
 
 /* Policy Section CSS */
 .li-index {
@@ -500,6 +524,8 @@ p {
     background: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(192, 132, 252, 0.38) 9%, rgba(103, 232, 249, 0.38) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
     ;
+}
 
-
+.freature-branding-img-main {
+    background-image: url('./assets/features/features-card-8-bg.svg');
 }

@@ -69,71 +69,83 @@
       </header>
       
       <!-- Contact Section -->
-      <div class="container mx-auto flex flex-col items-center px-4 md:px-0 md:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12  xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
-        <div class="mt-24 flex flex-col gap-10 justify-between w-full 2xl:w-full md:flex-row">
-          <div class="relative flex flex-col lg:w-7/12 w-full mt-20">
-            <h1 class="text-[40px] font-semibold w-full">We'd Love to Hear From You!</h1>
-            <p class="text-[16px] w-full font-medium mt-2">Have questions? Fill out the form below and one of our team members will reach out as soon as possible.</p>
-            <div class="flex justify-center items-center">
-            <img src="./assets/contact/contact-main.png" class="mt-16 w-44 md:w-52 lg:w-1/2" alt="Contact Main Img">
-            </div>
-            <img class="absolute top-[285px] left-0 -z-10 md:top-[374px] md:left-[-50px] lg:top-[274px] lg:left-0" src="./assets/contact/contactLine.svg" alt="">
-            </div>
-            <div class="w-full lg:w-8/12 border border-[#F0F0F0] rounded-3xl p-12 md:px-16 pb-7 relative bg-white bg-opacity-30">
-              <h1 class="text-[30px] font-semibold my-3">Submit a Request</h1>
-              <input class="font-normal w-full my-4 p-4 text-sm font-['Open_Sans'] placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]" type="text" name="name" placeholder="Your name" />
-              <input class="font-normal w-full my-4 p-4 text-sm font-['Open_Sans'] placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]" type="text" name="email" placeholder="Your email" />
-              <input class="font-normal w-full my-3 mb-6 p-4 text-sm font-['Open_Sans'] placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]" type="text" name="phone" placeholder="Your phone" />
-              <h1><label class="text-[16px] font-semibold my-4 " for="message">Optional</label></h1>
-              <textarea class="font-normal w-full my-3 p-4 text-sm font-['Open_Sans'] placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]" name="message" id="message" rows="7" placeholder="Your message"></textarea>
-              <div class="flex items-center text-center justify-center">
-                <button class="custom-btn contact-form-btn flex justify-center items-center text-center mt-4 md:mb-4 mb-4">
-                  <span class="">Submit</span>
-                  <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="arrow-contact-path" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </button>
-              </div>
-              <div class="absolute top-[215px] left-[-104px] rotate-[135deg] blur-[140px] -z-50 contact-bg-gradient bg-gradient-to-r from-[#67E8F9BF] to-[#C084FCBF] rounded-xl h-56 w-64"></div>
+      <div
+      class="container mx-auto flex flex-col items-center px-4 md:px-0 md:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12  xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
+      <div class="mt-16 md:mt-24 flex flex-col gap-10 justify-between w-full 2xl:w-full md:flex-row ">
+        <div
+          class=" relative w-full flex flex-col justify-center items-center md:w-[40%] md:py-20 md:justify-start md:items-start">
+          <h1
+            class="text-[40px] font-medium w-full md:text-center px-6 md:p-0 md:text-start md:w-[310px]">We'd Love to Hear From You!</h1>
+          <p class="open-sans w-full md:text-center px-6 md:p-0 md:text-start mt-2">Have questions? Fill out the form below and one of our team members will reach out as soon as possible.</p>
+          <img src="./assets/contact/contact-main.png" class="mt-20 w-44 md:w-52 lg:w-64" alt="" srcset="">
+        </div>
+        <div
+          class="w-full md:w-[55%]  border border-[#F0F0F0] rounded-3xl px-6 py-10 sm:p-12 md:px-10 pb-7 relative bg-white bg-opacity-30">
+          <h1 class="text-3xl font-medium my-3">Submit a request</h1>
+          <input
+            class="font-normal w-full my-4 p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
+            type="text" name="name" placeholder="Your name">
+          <input
+            class="font-normal w-full my-4 p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
+            type="text" name="email" placeholder="Your email">
+          <input
+            class="font-normal w-full my-3 mb-6 p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
+            type="text" name="phone" placeholder="Your phone">
+          <h1><label class="font-medium my-4 " for="message">Optional</label></h1>
+          <textarea
+            class="font-normal w-full my-3  p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
+            name="message" id="message" rows="10" placeholder="Your message"></textarea>
+          <div class="w-full flex items-center justify-center">
+            <button class="custom-btn contact-form-btn flex justify-center items-center text-center mt-4 md:mb-4 mb-4">
+              <span class="">Submit</span>
+              <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="arrow-contact-path" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="absolute top-[215px] left-[-104px] rotate-[135deg] blur-[140px] -z-50 contact-bg-gradient bg-gradient-to-r from-[#67E8F9BF] to-[#C084FCBF] rounded-xl h-56 w-64">
           </div>
         </div>
-        <div class="mt-16 mb-4 flex flex-col sm:flex-row gap-10 md:justify-between w-full lg:w-full">
-          <div class="md:w-1/2 w-full border flex rounded-3xl py-3 px-2 sm:px-2 justify-start">
-            <img src="./assets/contact/contact1.png" class="w-20 h-20 mb-6" alt="Contact 1 Img" />
-            <div class="flex flex-col justify-center pl-4">
-              <h1 class="text-[20px] font-semibold mb-1">Contact Us @</h1>
-              <p class="text-[15px] text-[#212C38] font-medium">support@dochours.com</p>
-            </div>
+      </div>
+      <div
+        class="mt-16 mb-4 flex flex-col sm:flex-row gap-10 md:justify-between w-full lg:w-full xl:px-10  xl:w-[1100px] 2xl:w-[1100px] xl:max-w-[1100px]">
+        <div class="w-full md:w-[48%] border flex rounded-3xl py-4 px-2 min-[350px]:px-4 sm:px-2 justify-start">
+          <img src="./assets/contact/contact1.png" class="w-[70px] h-[70px] mb-6" alt="">
+          <div class="flex flex-col justify-center pl-4">
+            <h1 class="text-xl font-medium ">Contact Us @</h1>
+            <p>support@dochours.com</p>
           </div>
-          <div class="md:w-1/2 w-full border flex rounded-3xl py-3 px-2 sm:px-2 justify-start">
-            <img src="./assets/contact/contact2.png" class="w-20 h-20 mb-6" alt="" />
-            <div class="flex flex-col justify-center pl-4">
-              <h1 class="text-[20px] font-semibold mb-1">Phone</h1>
-              <div class="flex flex-col sm:flex-col min-[860px]:flex-row gap-1 text-[15px] text-[#212C38] font-medium">
-                <p>987 654 3210,</p>
-                <p> 0495 123 456</p>
-              </div>
+        </div>
+        <div class="w-full md:w-[48%] border flex rounded-3xl py-4 px-2 min-[350px]:px-4 sm:px-8 justify-start ">
+          <img src="./assets/contact/contact2.png" class="w-[70px] h-[70px] mb-6" alt="">
+          <div class="flex flex-col justify-center pl-4">
+            <h3 class="font-Poppins text-xl font-medium ">Phone</h3>
+            <div class="flex flex-col sm:flex-col min-[860px]:flex-row gap-1">
+              <p>987 654 3210,</p>
+              <p> 0495 123 456</p>
             </div>
           </div>
         </div>
       </div>
-
+    </div>
       <!-- Streamlining Care Section -->
       <div class="streamlining-section flex flex-col items-center justify-center w-full mt-16 w-full pt-8 bg-cover bg-no-repeat">
-        <div class="badge px-6 py-2 w-fit mt-12">
+        <div class="badge px-5 py-1.5 w-fit mt-12">
           <span class="green-icon rounded-full"></span>
           <h1 class="badge-text">STREAMLINING CARE</h1>
           <span class="green-icon rounded-full"></span>
         </div>
-        <h1 class="text-3xl font-semibold mt-6">Dochours assures you</h1>
-        <div id="vertical-text-slider" class="vertical-text-slider">
-          <h2 class="vt-slider-1 ">Faster Bookings</h2>
-          <h2 class="vt-slider-2 ">Quicker Care</h2>
-          <h2 class="vt-slider-3 ">Deeper Insights</h2>
+        <h1 class="text-3xl font-medium mt-6">Dochours assures you</h1>
+        <div id="vertical-text-slider" class="vertical-text-slider h-9 overflow-y-hidden mt-6">
+          <h1 class="vt-slider-1 text-3xl font-medium text-center text-[#4C42B8]">Faster Bookings</h1>
+          <h1 class="vt-slider-2 text-3xl font-medium text-center text-[#6AC37F]">Quicker Care</h1>
+          <h1 class="vt-slider-3 text-3xl font-medium text-center text-[#F25821]">Deeper Insights</h1>
         </div>
-        <p class="text-base text-[#212C38]   mt-8 md:w-4/12 w-3/4 text-center">We provide clinics with a user-friendly management solution that prioritizes their time and values</p>
+
+        <p class="text-base text-[#212C38]   mt-6 md:w-4/12 w-3/4 text-center">We provide clinics with a user-friendly management solution that prioritizes their time and values</p>
         <div class="flex justify-center items-center mt-2 mb-4">
-          <a class="custom-btn custom-btn-2 mt-10 md:mb-4 mb-8" href="https://app.dochours.com/" target="_blank">
+          <a class="custom-btn custom-btn-2 px-4 py-3 flex justify-center items-center text-center mt-10 md:mb-4 mb-8" href="https://app.dochours.com/" target="_blank">
             <span>Try it for free</span>
             <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path id="arrow-path-2" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -143,12 +155,12 @@
         <img src="./assets/rocket.gif" alt="Rocket" />
       </div>
 
-      <!-- Footer Section -->
-      <div class="container mx-auto flex flex-col items-center justify-center mt-28 mb-8 sm:justify-normal md:justify-center px-4 md:px-0 md:max-w-[1100px] md:w-11/12 xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
-        <h1 class="text-3xl font-semibold text-center lg:w-5/12 md:w-8/12 w-full leading-10">Subscribe to our newsletter to get the latest updates</h1>
+       <!-- Footer Section -->
+       <div class="container mx-auto flex flex-col items-center justify-center mt-14 mb-8 sm:justify-normal md:justify-center px-4 md:px-0 md:max-w-[1100px] md:w-11/12 xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
+        <h1 class="text-3xl font-medium text-center lg:w-5/12 md:w-8/12 w-full leading-10">Subscribe to our newsletter to get the latest updates</h1>
         <div class="flex rounded-full border mt-12 relative ">
-          <input placeholder="Your email" type="email" class="px-4 py-2 bg-gray-100 placeholder:italic rounded-full md:w-96 w-80" />
-          <button class="px-6 py-2 absolute top-0 right-0 bg-[#4C42B8] text-white rounded-full">Subscribe</button>
+          <input placeholder="Your email" type="email" class="px-4 py-2 bg-gray-100 placeholder:italic rounded-full md:w-80 w-64" />
+          <button class="custom-btn text-center items-center justify-center w-32 text-sm ml-[-50px] cursor-pointer">Subscribe</button>
         </div>
         <div class="flex items-center justify-center gap-4 mt-12 opacity-15 hover:opacity-100 transition ease-in-out delay-50">
           <a href="./index.html"><img src="./assets/footerLogo.svg" alt="Footer Logo" class="w-60" /></a>
@@ -161,7 +173,7 @@
           <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500">Blog</a>
           <a href="./contact.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Contact Us</a>
         </div>
-      
+        
         <div class="flex justify-between gap-12 mt-8 text-gray-400">
           <a href="#" class="cursor-pointer hover:text-green-500">Terms & Conditions</a>
           <a href="./policy.html" class="cursor-pointer hover:text-green-500">Privacy Policy</a>
@@ -174,10 +186,10 @@
           <img src="./assets/youtube.svg" class="social-icons" />
         </div>
         <hr class="w-8/12 mt-8 hr" />
-        <div class="flex justify-between gap-12 mt-6 text-lg font-semibold text-gray-400">
+        <div class="flex justify-between gap-12 mt-6 text-base text-gray-400">
           <span>© 2024</span>
           <a href="./index.html" class="flex items-center cursor-pointer">
-            <img src="./assets/headerLogo.svg" class="w-6 mr-1" />
+            <img src="./assets/headerLogo.svg" class="w-6 mr-2" />
             <span class="hover:text-gray-500">docHours</span>
           </a>
         </div>
