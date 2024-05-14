@@ -100,11 +100,11 @@ p {
     text-decoration: none;
     color: #FFFFFF;
     font-family: Open Sans, sans-serif;
-    font-size: 16px;
+    /* font-size: 16px; */
     font-weight: 500;
-    line-height: 21.79px;
-    margin-top: 0.5rem;
-    width: 10.5rem;
+    /* line-height: 21.79px; */
+    /* margin-top: 0.5rem; */
+    /* width: 10.5rem; */
     background: linear-gradient(90deg, #4C42B8, #4C42B8);
 }
 
@@ -318,58 +318,32 @@ p {
 }
 
 /* Slider */
-.vertical-text-slider {
-    height: 30px;
-    overflow-y: hidden;
-    margin-top: 1.5rem;
-}
-
-.vertical-text-slider h2 {
-    font-size: 28px;
-    line-height: 28px;
-    font-weight: 600;
-    font-family: 'Avenir', sans-serif;
-    text-align: center;
-}
-
 .vt-slider-1 {
-    color: #4C42B8;
-    animation: slide 5s linear infinite;
-}
-
-.vt-slider-2 {
-    color: #6AC37F;
-}
-
-.vt-slider-3 {
-    color: #F25821;
+    animation: slide 3s linear infinite;
 }
 
 @keyframes slide {
     0% {
-        margin-top: -80px;
+        margin-top: -110px;
     }
 
     5% {
-        /* For stopping effect */
-        margin-top: -60px;
+        margin-top: -75px;
     }
 
     33% {
-        margin-top: -60px;
+        margin-top: -80px;
     }
 
     38% {
-        /* For stopping effect */
-        margin-top: -30px;
+        margin-top: -36px;
     }
 
     66% {
-        margin-top: -30px;
+        margin-top: -36px;
     }
 
     71% {
-        /* For stopping effect */
         margin-top: 0px;
     }
 
@@ -377,6 +351,7 @@ p {
         margin-top: 0px;
     }
 }
+
 
 /* Policy Section CSS */
 .li-index {
