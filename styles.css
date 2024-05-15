@@ -20,7 +20,6 @@ p {
   }
 
   #play-btn-home:hover {
-    /* fill:#1A599E; */
     fill: url(#play-btn-color-hover);
     transform: scale(1.04);
   }
@@ -31,11 +30,9 @@ p {
 
   #play-btn-home path {
     fill: url(#play-btn-color);
-    /* fill:#4C42B8; */
   }
 
   #play-btn-home:hover path {
-    /* fill:#1A599E; */
     fill: url(#play-btn-color-hover);
   }
 

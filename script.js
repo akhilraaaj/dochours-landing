@@ -228,7 +228,7 @@ if (featuresNavbar) {
         });
 
         // If a section is in view, update the active navigation link and scroll the navigation bar
-        if (currentSectionIndex > 0) { 
+        if (currentSectionIndex > 0) {
             const activeLink = featuresNavLinks[currentSectionIndex];
             const navWidth = featuresNavContainer.offsetWidth;
             const linkWidth = activeLink.offsetWidth;
@@ -236,17 +236,17 @@ if (featuresNavbar) {
             const acitveLinkRight = activeLink.offsetLeft + linkWidth;
             const activeLinkLeft = activeLink.offsetLeft;
 
-            if (scrollAnimation) cancelAnimationFrame(scrollAnimation);
+            // if (scrollAnimation) cancelAnimationFrame(scrollAnimation);
             const startScrollLeft = featuresNavContainer.scrollLeft;
-            scrollAnimation = requestAnimationFrame(function animate(time) {
-                if (!scriptScrolling) {
-                    if (acitveLinkRight > navWidth) {
-                        featuresNavContainer.scrollLeft = startScrollLeft + (targetScrollLeft - startScrollLeft) 
-                    } else if (activeLinkLeft < (navWidth / 2) + 180) {
-                        featuresNavContainer.scrollLeft = 0;
-                    }
+            // scrollAnimation = requestAnimationFrame(function animate(time) {
+            if (!scriptScrolling) {
+                if (acitveLinkRight > navWidth) {
+                    featuresNavContainer.scrollLeft = startScrollLeft + (targetScrollLeft - startScrollLeft)
+                } else if (activeLinkLeft < (navWidth / 2) + 180) {
+                    featuresNavContainer.scrollLeft = 0;
                 }
-            });
+            }
+            // });
         }
     };
 
@@ -263,38 +263,37 @@ if (featuresNavbar) {
         };
     };
 
+    // remove event listener from navbar
     featuresNavLinks.forEach(link => {
         link.addEventListener('click', event => {
             window.removeEventListener(scroll, throttle(handleScroll, 1000))
             scrollNavBarOnClickOnNavLink(link)
         });
     });
+    // remove event listener from hero section navigation
     featuresNavLinksHero.forEach(link => {
         link.addEventListener('click', event => {
             window.removeEventListener(scroll, throttle(handleScroll, 1000))
             scrollNavBarOnClickOnNavLink(link)
         });
     });
-    async function scrollNavBarOnClickOnNavLink(linkElement) {
+    function scrollNavBarOnClickOnNavLink(linkElement) {
         const targetId = linkElement.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        window.removeEventListener(scroll, throttle(handleScroll, 1000))
         scriptScrolling = true;
-        targetElement.scrollIntoView()
+        targetElement.scrollIntoView() // mannually scrolling to target section.
         var timer = null;
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (timer !== null) {
                 clearTimeout(timer);
             }
-            timer = setTimeout(function() {
-                // do something
+            timer = setTimeout(function () {
                 scriptScrolling = false;
-                window.addEventListener('scroll', throttle(handleScroll, 1000));
                 handleScroll();
-                console.log("Attached event listener: for scroll ")
             }, 300);
         }, false);
     }
+
     // Type writing Effect on hero section
     const sentences = [
         "smoothly",
@@ -304,14 +303,18 @@ if (featuresNavbar) {
     let sentenceIndex = 0;
     let charIndex = 0;
     let deleting = false; // Flag to track whether we're deleting text
-    const typingSpeed = 150; // Speed of typing out a sentence
-    const deletingSpeed = 100; // Speed of deleting a sentence
+    const typingSpeed = 150;
+    const deletingSpeed = 100;
     const textElement = document.getElementById("text-typewriting");
+    const textElement_second = document.getElementById("text-typewriting-second");
+
 
     function typeWriter() {
+        // alert("");
         if (deleting) {
             if (textElement.textContent.length > 0) {
                 textElement.textContent = textElement.textContent.slice(0, -1);
+                textElement_second.textContent = textElement_second.textContent.slice(0, -1);
                 setTimeout(typeWriter, deletingSpeed);
             } else {
                 deleting = false;
@@ -325,6 +328,7 @@ if (featuresNavbar) {
         } else {
             if (charIndex < sentences[sentenceIndex].length) {
                 textElement.textContent += sentences[sentenceIndex].charAt(charIndex);
+                textElement_second.textContent += sentences[sentenceIndex].charAt(charIndex);
                 charIndex++;
                 setTimeout(typeWriter, typingSpeed);
             } else {
