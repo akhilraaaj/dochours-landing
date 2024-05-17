@@ -19,9 +19,9 @@ p {
     transition: fill 0.5s, transform 0.5s; 
   }
 
-  #play-btn-home:hover {
+  #play-btn-home:hover  svg {
     fill: url(#play-btn-color-hover);
-    transform: scale(1.04);
+    transform: scale(1.05);
   }
 
   path {
