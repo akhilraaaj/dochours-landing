@@ -17,24 +17,35 @@ p {
 #play-btn-home {
     fill: url(#play-btn-color);
     transition: fill 0.5s, transform 0.5s; 
-  }
+}
 
-  #play-btn-home:hover  svg {
+#play-btn-home:hover  svg {
     fill: url(#play-btn-color-hover);
     transform: scale(1.05);
-  }
+}
 
-  path {
+path {
     transition: fill 0.5s ease;
-  }
+}
 
-  #play-btn-home path {
+#play-btn-home path {
     fill: url(#play-btn-color);
-  }
+}
 
-  #play-btn-home:hover path {
+#play-btn-home:hover path {
     fill: url(#play-btn-color-hover);
-  }
+}
+
+.video-text {
+    background-image: linear-gradient(90deg, #4C42B8, #4C42B8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-image 0.5s ease;
+}
+  
+.video-text:hover {
+    background-image: linear-gradient(90deg, #7435FF 16.55%, #1A599E 88.98%);
+}
 
 .green-icon {
     background: #6AC37F;
@@ -123,12 +134,8 @@ p {
     border-radius: 25px;
     text-decoration: none;
     color: #FFFFFF;
-    font-family: Open Sans, sans-serif;
-    /* font-size: 16px; */
+    font-family: 'Open Sans', sans-serif;
     font-weight: 500;
-    /* line-height: 21.79px; */
-    /* margin-top: 0.5rem; */
-    /* width: 10.5rem; */
     background: linear-gradient(90deg, #4C42B8, #4C42B8);
 }
 
@@ -167,7 +174,6 @@ p {
 }
 
 .custom-btn-3 {
-    /* padding: 0.8rem 0.5rem 0.8rem 1.5rem; */
     width: 13rem;
     gap: 3px;
 }
@@ -489,14 +495,6 @@ p {
     /* Firefox */
 }
 
-/* style.css */
-
-
-
-/* 
-@import url('https://fonts.cdnfonts.com/css/avenir');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans'); */
-
 .typewriter {
     font-family: monospace;
     font-size: 24px;
@@ -507,7 +505,6 @@ p {
 .cursor {
     display: inline-block;
     width: 0.5em;
-
     animation: blink 0.7s steps(2, start) infinite;
 }
 
@@ -518,13 +515,9 @@ p {
 }
 
 .fr-hero-bg-blur {
-    /* background-image: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(103, 232, 249, 0.65) 0%, rgba(192, 132, 252, 0.65) 100%); */
-    /* background: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(103, 232, 249, 0.9) 0%, rgba(192, 132, 252, 0.9) 100%); */
-    background: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(192, 132, 252, 0.38) 9%, rgba(103, 232, 249, 0.38) 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-    ;
+    background: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(192, 132, 252, 0.38) 9%, rgba(103, 232, 249, 0.38) 100%);
 }
 
-.freature-branding-img-main {
+.feature-branding-img-main {
     background-image: url('./assets/features/features-card-8-bg.svg');
 }
