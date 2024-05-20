@@ -468,9 +468,9 @@ path {
 .nav-slider {
     background-color: #11144F;
     transition: all .3s linear;
-    height: 2px;
+    height: 3px;
     position: absolute;
-    top: 61px;
+    top: 62px;
 }
 
 .hr-scroll-sticky {
@@ -520,4 +520,18 @@ path {
 
 .feature-branding-img-main {
     background-image: url('./assets/features/features-card-8-bg.svg');
+}
+
+
+/* fetures page video */
+video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
 }
