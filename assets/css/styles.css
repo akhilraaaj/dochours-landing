@@ -217,7 +217,7 @@ path {
 }
 
 .streamlining-section {
-    background-image: url('./assets/loremIpsumBg.png');
+    background-image: url('/assets/images/loremIpsumBg.png');
     background-repeat: 'no-repeat';
     background-size: cover;
 }
@@ -519,5 +519,5 @@ path {
 }
 
 .feature-branding-img-main {
-    background-image: url('./assets/features/features-card-8-bg.svg');
+    background-image: url('./assets/images/features/features-card-8-bg.svg');
 }
