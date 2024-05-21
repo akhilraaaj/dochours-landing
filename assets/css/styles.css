@@ -468,9 +468,9 @@ path {
 .nav-slider {
     background-color: #11144F;
     transition: all .3s linear;
-    height: 2px;
+    height: 3px;
     position: absolute;
-    top: 61px;
+    top: 62px;
 }
 
 .hr-scroll-sticky {
