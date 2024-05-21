@@ -169,8 +169,13 @@ path {
     transition: all 0.5s;
 }
 
-.custom-btn-1, .custom-btn-2 {
+.custom-btn-1 {
     width: 11.5rem;
+    gap: 7px;
+}
+
+.custom-btn-2 {
+    width: 16rem;
     gap: 7px;
 }
 
