@@ -296,9 +296,9 @@ if (featuresNavbar) {
 
     // Type writing Effect on hero section
     const sentences = [
-        "smoothly",
-        "quickly",
-        "securely."
+        "smoothly,",
+        "quickly,",
+        "and securely."
     ];
     let sentenceIndex = 0;
     let charIndex = 0;
