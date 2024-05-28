@@ -221,7 +221,7 @@ path {
 }
 
 .streamlining-section {
-    background-image: url('/assets/images/loremIpsumBg.png');
+    background-image: url('../images/streamling-Bg.png');/* url('./assets/images/loremIpsumBg.png');*/
     background-repeat: 'no-repeat';
     background-size: cover;
 }
