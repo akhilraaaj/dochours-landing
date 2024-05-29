@@ -11,6 +11,7 @@ function closeNavbar() {
 
 // hero page 
 if(document.getElementById('mv-left-arrow')){
+    toggleHeroChildMovement();
     setInterval(function(){
         toggleHeroChildMovement();
     }, 2000);
