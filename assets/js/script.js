@@ -10,20 +10,48 @@ function closeNavbar() {
 }
 
 // hero page 
-if(document.getElementById('mv-left-arrow')){
-    toggleHeroChildMovement();
-    setInterval(function(){
-        toggleHeroChildMovement();
-    }, 2000);
+// if(document.getElementById('mv-left-arrow')){
+//     toggleHeroChildMovement();
+//     setInterval(function(){
+//         toggleHeroChildMovement();
+//     }, 2000);
     
-    function toggleHeroChildMovement(){
-        var mv_left_arrow = document.getElementById('mv-left-arrow');
-        var mv_right_arrow = document.getElementById('mv-right-arrow');
+//     function toggleHeroChildMovement(){
+//         var mv_left_arrow = document.getElementById('mv-left-arrow');
+//         var mv_right_arrow = document.getElementById('mv-right-arrow');
        
-        mv_left_arrow.classList.toggle("mv-left-arrow-active");
-        mv_right_arrow.classList.toggle("mv-right-arrow-active");
+//         mv_left_arrow.classList.toggle("mv-left-arrow-active");
+//         mv_right_arrow.classList.toggle("mv-right-arrow-active");
+//     }
+// }
+(function() {
+    // Check if the element exists before proceeding
+    var mv_left_arrow = document.getElementById('mv-left-arrow');
+    var mv_right_arrow = document.getElementById('mv-right-arrow');
+
+    if (mv_left_arrow && mv_right_arrow) {
+        // Function to toggle classes
+        function toggleHeroChildMovement() {
+            mv_left_arrow.classList.toggle("mv-left-arrow-active");
+            mv_right_arrow.classList.toggle("mv-right-arrow-active");
+        }
+
+        // Toggle classes initially
+        toggleHeroChildMovement();
+
+        // Use requestAnimationFrame to schedule the next toggle
+        function scheduleNextToggle() {
+            setTimeout(function() {
+                toggleHeroChildMovement();
+                scheduleNextToggle();
+            }, 2000);
+        }
+
+        // Start the toggling process
+        scheduleNextToggle();
     }
-}
+})();
+
 
 
 // Custom Button

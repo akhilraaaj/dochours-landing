@@ -22,20 +22,92 @@ p {
 }
 .mv-left-arrow{
     transition: all 3s;
-    transform: translate(252px, -133px);
+    transform: translate(52px, -50px);
 }
 
 .mv-left-arrow-active{
-    transform: translate(242px, -137px);
+    transform: translate(102px, -55px);
 }
 
 .mv-right-arrow{
     transition: all 2.5s;
-    transform: translate(71px, -101px);
+    transform: translate(65px, -98px);
 }
 
 .mv-right-arrow-active{
-    transform: translate(80px, -108px)
+    transform: translate(75px, -105px)
+}
+
+@media (min-width: 590px) {
+    .mv-left-arrow{
+        transform: translate(142px, -80px);
+    }
+    
+    .mv-left-arrow-active{
+        transform:translate(152px, -75px);
+    }
+    
+    .mv-right-arrow{
+        transform: translate(45px, -63px);
+    }
+    
+    .mv-right-arrow-active{
+        transform: translate(50px, -68px)
+    } 
+}
+
+@media (min-width: 800px) {
+    .mv-left-arrow{
+        transform: translate(185px, -92px);
+    }
+    
+    .mv-left-arrow-active{
+        transform:translate(175px, -97px);
+    }
+    
+    .mv-right-arrow{
+        transform: translate(40px, -75px);
+    }
+    
+    .mv-right-arrow-active{
+        transform: translate(50px, -80px)
+    } 
+}
+
+@media (min-width: 1024px) {
+    .mv-left-arrow{
+        transform: translate(252px, -133px);
+    }
+    
+    .mv-left-arrow-active{
+        transform: translate(242px, -137px);
+    }
+    
+    .mv-right-arrow{
+        transform: translate(65px, -98px);
+    }
+    
+    .mv-right-arrow-active{
+        transform: translate(75px, -105px)
+    } 
+}
+
+@media (min-width: 1280px) {
+    .mv-left-arrow{
+        transform: translate(252px, -133px);
+    }
+    
+    .mv-left-arrow-active{
+        transform: translate(242px, -137px);
+    }
+    
+    .mv-right-arrow{
+        transform: translate(65px, -108px);
+    }
+    
+    .mv-right-arrow-active{
+        transform: translate(75px, -115px)
+    } 
 }
 
 #play-btn-home {
