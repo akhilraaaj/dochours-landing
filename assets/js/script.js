@@ -9,6 +9,23 @@ function closeNavbar() {
     sideBar.classList.remove('opacity-100','h-full');
 }
 
+// hero page 
+if(document.getElementById('mv-left-arrow')){
+    toggleHeroChildMovement();
+    setInterval(function(){
+        toggleHeroChildMovement();
+    }, 2000);
+    
+    function toggleHeroChildMovement(){
+        var mv_left_arrow = document.getElementById('mv-left-arrow');
+        var mv_right_arrow = document.getElementById('mv-right-arrow');
+       
+        mv_left_arrow.classList.toggle("mv-left-arrow-active");
+        mv_right_arrow.classList.toggle("mv-right-arrow-active");
+    }
+}
+
+
 // Custom Button
 const button = document.querySelector('.custom-btn');
 const pathElement = document.querySelector('#arrow-path');
