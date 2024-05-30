@@ -58,13 +58,13 @@ p {
     } 
 }
 
-@media (min-width: 800px) {
+@media (min-width: 860px) {
     .mv-left-arrow{
-        transform: translate(185px, -92px);
+        transform: translate(185px, -82px);
     }
     
     .mv-left-arrow-active{
-        transform:translate(175px, -97px);
+        transform:translate(175px, -87px);
     }
     
     .mv-right-arrow{
@@ -433,6 +433,31 @@ path {
 
   
 .circle:nth-child(4) {
+    animation-delay: 0s;
+}
+
+.hero-circle {
+    border-radius: 50%;
+    background: rgba(177, 106, 248, 0.8);
+    position: absolute;
+    opacity: 0;
+    animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32);
+    z-index: 1;
+}
+
+.hero-circle:nth-child(1) {
+    animation-delay: -3s;
+}
+  
+.hero-circle:nth-child(2) {
+    animation-delay: -2s;
+}
+  
+.hero-circle:nth-child(3) {
+    animation-delay: -1s;
+}
+
+.hero-circle:nth-child(4) {
     animation-delay: 0s;
 }
 /* 
