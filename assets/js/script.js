@@ -222,167 +222,319 @@ window.addEventListener('scroll', function() {
   });
   
 
-// features page
-const featuresNavbar = document.getElementById('features-hr-scroll');
-const featuresBody = document.getElementById('features');
-const allFeatures = document.querySelectorAll('.features-sec');
-const featuresNavLinks = document.querySelectorAll('#features-hr-scroll a');
-const featuresNavLinksHero = document.querySelectorAll('#featuresLinks a');
-const featuresNavContainer = document.getElementById('featuresNav');
-let scriptScrolling = false; // variable to control the scroll event actions
-if (featuresNavbar) {
-    window.addEventListener('scroll', toggleNav)
-    var sticky = featuresBody.offsetTop - 100;
-    var bt_non_sticky = featuresBody.offsetHeight + featuresBody.offsetTop;
-    var runningSlider = document.getElementById('nav-slider');
+// // features page
+document.addEventListener("DOMContentLoaded", () => {
+    const featuresNavbar = document.getElementById('features-hr-scroll');
+    const featuresBody = document.getElementById('features');
+    const allFeatures = document.querySelectorAll('.features-sec');
+    const featuresNavLinks = document.querySelectorAll('#features-hr-scroll a');
+    const featuresNavLinksHero = document.querySelectorAll('#featuresLinks a');
+    const featuresNavContainer = document.getElementById('featuresNav');
+    const runningSlider = document.getElementById('nav-slider');
 
-    function toggleNav() {
-        if (window.scrollY >= sticky) {
-            featuresNavbar.classList.add("hr-scroll-sticky"); // make features navbar sticky.
-            if (window.scrollY >= bt_non_sticky) {
-                featuresNavbar.classList.remove("hr-scroll-sticky"); // remove sticky
-            }
-            allFeatures.forEach(feature => {
-                let top = window.scrollY;
-                let offset = feature.offsetTop;
-                let id = feature.getAttribute('id');
-                // running slider below features navbar.
-                if (top >= offset - 200) {
-                    const specificFeature = featuresNavContainer.querySelector(`a[href="#${id}"]`);
-                    runningSlider.style.left = specificFeature.offsetLeft + "px";
-                    runningSlider.style.width = specificFeature.offsetWidth + 'px';
-                }
-            })
-            if (!scriptScrolling) {
-                window.addEventListener('scroll', throttle(handleScroll, 200)); // re-attach scroll event 
-            }
-        } else {
-            featuresNavbar.classList.remove("hr-scroll-sticky");
-        }
-    }
-
-    // Get all the sections and convert the NodeList to an array
-    const sections = Array.from(allFeatures);
+    let scriptScrolling = false; // variable to control the scroll event actions
     let lastCall = 0; // Variable to track the last time the throttle function was called
     let scrollAnimation; // Variable to hold the reference to the animation frame
-    // Function to handle window scrolling
-    function handleScroll() {
-        const scrollPosition = window.scrollY + window.innerHeight / 2;   // Calculate the current scroll position, adjusting for the center of the screen
-        const currentSectionIndex = sections.findIndex(section => {  // Find the index of the section currently in view
-            return scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight;
-        });
 
-        // If a section is in view, update the active navigation link and scroll the navigation bar
-        if (currentSectionIndex > 0) {
-            const activeLink = featuresNavLinks[currentSectionIndex];
-            const navWidth = featuresNavContainer.offsetWidth;
-            const linkWidth = activeLink.offsetWidth;
-            const targetScrollLeft = activeLink.offsetLeft - navWidth / 2 + linkWidth / 2;
-            const acitveLinkRight = activeLink.offsetLeft + linkWidth;
-            const activeLinkLeft = activeLink.offsetLeft;
+    if (featuresNavbar && featuresBody && runningSlider) {
+        const sticky = featuresBody.offsetTop - 100;
+        const bt_non_sticky = featuresBody.offsetHeight + featuresBody.offsetTop;
 
-            // if (scrollAnimation) cancelAnimationFrame(scrollAnimation);
-            const startScrollLeft = featuresNavContainer.scrollLeft;
-            // scrollAnimation = requestAnimationFrame(function animate(time) {
-            if (!scriptScrolling) {
-                if (acitveLinkRight > navWidth) {
-                    featuresNavContainer.scrollLeft = startScrollLeft + (targetScrollLeft - startScrollLeft)
-                } else if (activeLinkLeft < (navWidth / 2) + 180) {
-                    featuresNavContainer.scrollLeft = 0;
+        window.addEventListener('scroll', toggleNav);
+
+        function toggleNav() {
+            const scrollY = window.scrollY;
+            if (scrollY >= sticky) {
+                featuresNavbar.classList.add("hr-scroll-sticky"); // make features navbar sticky.
+                if (scrollY >= bt_non_sticky) {
+                    featuresNavbar.classList.remove("hr-scroll-sticky"); // remove sticky
                 }
+                allFeatures.forEach(feature => {
+                    let offset = feature.offsetTop;
+                    let id = feature.getAttribute('id');
+                    if (scrollY >= offset - 200) {
+                        const specificFeature = featuresNavContainer.querySelector(`a[href="#${id}"]`);
+                        runningSlider.style.left = specificFeature.offsetLeft + "px";
+                        runningSlider.style.width = specificFeature.offsetWidth + 'px';
+                    }
+                });
+                if (!scriptScrolling) {
+                    window.addEventListener('scroll', throttle(handleScroll, 200)); // re-attach scroll event 
+                }
+            } else {
+                featuresNavbar.classList.remove("hr-scroll-sticky");
             }
-            // });
         }
-    };
 
-    // Throttle function limits the frequency of the handleScroll function
-    function throttle(callback, delay) {
-        return () => {
-            const now = Date.now();
-            // Check if enough time has passed since the last call
-            if (now - lastCall >= delay) {
-                callback();
-                // Update the lastCall timestamp to the current time
-                lastCall = now;
-            }
-        };
-    };
+        function handleScroll() {
+            const scrollPosition = window.scrollY + window.innerHeight / 2; // Calculate the current scroll position, adjusting for the center of the screen
+            const currentSectionIndex = Array.from(allFeatures).findIndex(section => {
+                return scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight;
+            });
 
-    // remove event listener from navbar
-    featuresNavLinks.forEach(link => {
-        link.addEventListener('click', event => {
-            window.removeEventListener(scroll, throttle(handleScroll, 1000))
-            scrollNavBarOnClickOnNavLink(link)
-        });
-    });
-    // remove event listener from hero section navigation
-    featuresNavLinksHero.forEach(link => {
-        link.addEventListener('click', event => {
-            window.removeEventListener(scroll, throttle(handleScroll, 1000))
-            scrollNavBarOnClickOnNavLink(link)
-        });
-    });
-    function scrollNavBarOnClickOnNavLink(linkElement) {
-        const targetId = linkElement.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        scriptScrolling = true;
-        targetElement.scrollIntoView() // mannually scrolling to target section.
-        var timer = null;
-        window.addEventListener('scroll', function () {
-            if (timer !== null) {
-                clearTimeout(timer);
-            }
-            timer = setTimeout(function () {
-                scriptScrolling = false;
-                handleScroll();
-            }, 300);
-        }, false);
-    }
+            if (currentSectionIndex > 0) {
+                const activeLink = featuresNavLinks[currentSectionIndex];
+                const navWidth = featuresNavContainer.offsetWidth;
+                const linkWidth = activeLink.offsetWidth;
+                const targetScrollLeft = activeLink.offsetLeft - navWidth / 2 + linkWidth / 2;
+                const activeLinkRight = activeLink.offsetLeft + linkWidth;
+                const activeLinkLeft = activeLink.offsetLeft;
 
-    // Type writing Effect on hero section
-    const sentences = [
-        "smoothly,",
-        "quickly,",
-        "and securely."
-    ];
-    let sentenceIndex = 0;
-    let charIndex = 0;
-    let deleting = false; // Flag to track whether we're deleting text
-    const typingSpeed = 150;
-    const deletingSpeed = 100;
-    const textElement = document.getElementById("text-typewriting");
-    const textElement_second = document.getElementById("text-typewriting-second");
+                const startScrollLeft = featuresNavContainer.scrollLeft;
 
-
-    function typeWriter() {
-        // alert("");
-        if (deleting) {
-            if (textElement.textContent.length > 0) {
-                textElement.textContent = textElement.textContent.slice(0, -1);
-                textElement_second.textContent = textElement_second.textContent.slice(0, -1);
-                setTimeout(typeWriter, deletingSpeed);
-            } else {
-                deleting = false;
-                sentenceIndex++;
-                if (sentenceIndex >= sentences.length) {
-                    sentenceIndex = 0;
+                if (!scriptScrolling) {
+                    if (activeLinkRight > navWidth) {
+                        featuresNavContainer.scrollLeft = startScrollLeft + (targetScrollLeft - startScrollLeft);
+                    } else if (activeLinkLeft < (navWidth / 2) + 180) {
+                        featuresNavContainer.scrollLeft = 0;
+                    }
                 }
-                charIndex = 0;
-                typeWriter();
             }
-        } else {
-            if (charIndex < sentences[sentenceIndex].length) {
-                textElement.textContent += sentences[sentenceIndex].charAt(charIndex);
-                textElement_second.textContent += sentences[sentenceIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(typeWriter, typingSpeed);
-            } else {
-                setTimeout(() => {
-                    deleting = true;
+        }
+
+        function throttle(callback, delay) {
+            return () => {
+                const now = Date.now();
+                if (now - lastCall >= delay) {
+                    callback();
+                    lastCall = now;
+                }
+            };
+        }
+
+        function scrollNavBarOnClickOnNavLink(linkElement) {
+            const targetId = linkElement.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                scriptScrolling = true;
+                targetElement.scrollIntoView(); // manually scrolling to target section
+                let timer = null;
+                window.addEventListener('scroll', function onScroll() {
+                    if (timer !== null) {
+                        clearTimeout(timer);
+                    }
+                    timer = setTimeout(function () {
+                        scriptScrolling = false;
+                        handleScroll();
+                        window.removeEventListener('scroll', onScroll);
+                    }, 300);
+                }, false);
+            }
+        }
+
+        featuresNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                window.removeEventListener('scroll', throttle(handleScroll, 200));
+                scrollNavBarOnClickOnNavLink(link);
+            });
+        });
+
+        featuresNavLinksHero.forEach(link => {
+            link.addEventListener('click', () => {
+                window.removeEventListener('scroll', throttle(handleScroll, 200));
+                scrollNavBarOnClickOnNavLink(link);
+            });
+        });
+
+        // Type writing Effect on hero section
+        const sentences = ["smoothly", "quickly", "securely"];
+        let sentenceIndex = 0;
+        let charIndex = 0;
+        let deleting = false; // Flag to track whether we're deleting text
+        const typingSpeed = 150;
+        const deletingSpeed = 100;
+        const textElement = document.getElementById("text-typewriting");
+        const textElementSecond = document.getElementById("text-typewriting-second");
+
+        function typeWriter() {
+            if (deleting) {
+                if (textElement.textContent.length > 0) {
+                    textElement.textContent = textElement.textContent.slice(0, -1);
+                    textElementSecond.textContent = textElementSecond.textContent.slice(0, -1);
+                    setTimeout(typeWriter, deletingSpeed);
+                } else {
+                    deleting = false;
+                    sentenceIndex = (sentenceIndex + 1) % sentences.length;
+                    charIndex = 0;
                     typeWriter();
-                }, 1000);
+                }
+            } else {
+                if (charIndex < sentences[sentenceIndex].length) {
+                    textElement.textContent += sentences[sentenceIndex].charAt(charIndex);
+                    textElementSecond.textContent += sentences[sentenceIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeWriter, typingSpeed);
+                } else {
+                    setTimeout(() => {
+                        deleting = true;
+                        typeWriter();
+                    }, 1000);
+                }
             }
         }
+        typeWriter();
     }
-    typeWriter();
-}
+});
+// const featuresNavbar = document.getElementById('features-hr-scroll');
+// const featuresBody = document.getElementById('features');
+// const allFeatures = document.querySelectorAll('.features-sec');
+// const featuresNavLinks = document.querySelectorAll('#features-hr-scroll a');
+// const featuresNavLinksHero = document.querySelectorAll('#featuresLinks a');
+// const featuresNavContainer = document.getElementById('featuresNav');
+// let scriptScrolling = false; // variable to control the scroll event actions
+// if (featuresNavbar) {
+//     window.addEventListener('scroll', toggleNav)
+//     var sticky = featuresBody.offsetTop - 100;
+//     var bt_non_sticky = featuresBody.offsetHeight + featuresBody.offsetTop;
+//     var runningSlider = document.getElementById('nav-slider');
+
+//     function toggleNav() {
+//         if (window.scrollY >= sticky) {
+//             featuresNavbar.classList.add("hr-scroll-sticky"); // make features navbar sticky.
+//             if (window.scrollY >= bt_non_sticky) {
+//                 featuresNavbar.classList.remove("hr-scroll-sticky"); // remove sticky
+//             }
+//             allFeatures.forEach(feature => {
+//                 let top = window.scrollY;
+//                 let offset = feature.offsetTop;
+//                 let id = feature.getAttribute('id');
+//                 // running slider below features navbar.
+//                 if (top >= offset - 200) {
+//                     const specificFeature = featuresNavContainer.querySelector(`a[href="#${id}"]`);
+//                     runningSlider.style.left = specificFeature.offsetLeft + "px";
+//                     runningSlider.style.width = specificFeature.offsetWidth + 'px';
+//                 }
+//             })
+//             if (!scriptScrolling) {
+//                 window.addEventListener('scroll', throttle(handleScroll, 200)); // re-attach scroll event 
+//             }
+//         } else {
+//             featuresNavbar.classList.remove("hr-scroll-sticky");
+//         }
+//     }
+
+//     // Get all the sections and convert the NodeList to an array
+//     const sections = Array.from(allFeatures);
+//     let lastCall = 0; // Variable to track the last time the throttle function was called
+//     let scrollAnimation; // Variable to hold the reference to the animation frame
+//     // Function to handle window scrolling
+//     function handleScroll() {
+//         const scrollPosition = window.scrollY + window.innerHeight / 2;   // Calculate the current scroll position, adjusting for the center of the screen
+//         const currentSectionIndex = sections.findIndex(section => {  // Find the index of the section currently in view
+//             return scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight;
+//         });
+
+//         // If a section is in view, update the active navigation link and scroll the navigation bar
+//         if (currentSectionIndex > 0) {
+//             const activeLink = featuresNavLinks[currentSectionIndex];
+//             const navWidth = featuresNavContainer.offsetWidth;
+//             const linkWidth = activeLink.offsetWidth;
+//             const targetScrollLeft = activeLink.offsetLeft - navWidth / 2 + linkWidth / 2;
+//             const acitveLinkRight = activeLink.offsetLeft + linkWidth;
+//             const activeLinkLeft = activeLink.offsetLeft;
+
+//             // if (scrollAnimation) cancelAnimationFrame(scrollAnimation);
+//             const startScrollLeft = featuresNavContainer.scrollLeft;
+//             // scrollAnimation = requestAnimationFrame(function animate(time) {
+//             if (!scriptScrolling) {
+//                 if (acitveLinkRight > navWidth) {
+//                     featuresNavContainer.scrollLeft = startScrollLeft + (targetScrollLeft - startScrollLeft)
+//                 } else if (activeLinkLeft < (navWidth / 2) + 180) {
+//                     featuresNavContainer.scrollLeft = 0;
+//                 }
+//             }
+//             // });
+//         }
+//     };
+
+//     // Throttle function limits the frequency of the handleScroll function
+//     function throttle(callback, delay) {
+//         return () => {
+//             const now = Date.now();
+//             // Check if enough time has passed since the last call
+//             if (now - lastCall >= delay) {
+//                 callback();
+//                 // Update the lastCall timestamp to the current time
+//                 lastCall = now;
+//             }
+//         };
+//     };
+
+//     // remove event listener from navbar
+//     featuresNavLinks.forEach(link => {
+//         link.addEventListener('click', event => {
+//             window.removeEventListener(scroll, throttle(handleScroll, 1000))
+//             scrollNavBarOnClickOnNavLink(link)
+//         });
+//     });
+//     // remove event listener from hero section navigation
+//     featuresNavLinksHero.forEach(link => {
+//         link.addEventListener('click', event => {
+//             window.removeEventListener(scroll, throttle(handleScroll, 1000))
+//             scrollNavBarOnClickOnNavLink(link)
+//         });
+//     });
+//     function scrollNavBarOnClickOnNavLink(linkElement) {
+//         const targetId = linkElement.getAttribute('href');
+//         const targetElement = document.querySelector(targetId);
+//         scriptScrolling = true;
+//         targetElement.scrollIntoView() // mannually scrolling to target section.
+//         var timer = null;
+//         window.addEventListener('scroll', function () {
+//             if (timer !== null) {
+//                 clearTimeout(timer);
+//             }
+//             timer = setTimeout(function () {
+//                 scriptScrolling = false;
+//                 handleScroll();
+//             }, 300);
+//         }, false);
+//     }
+
+//     // Type writing Effect on hero section
+//     const sentences = [
+//         "smoothly,",
+//         "quickly,",
+//         "and securely."
+//     ];
+//     let sentenceIndex = 0;
+//     let charIndex = 0;
+//     let deleting = false; // Flag to track whether we're deleting text
+//     const typingSpeed = 150;
+//     const deletingSpeed = 100;
+//     const textElement = document.getElementById("text-typewriting");
+//     const textElement_second = document.getElementById("text-typewriting-second");
+
+
+//     function typeWriter() {
+//         // alert("");
+//         if (deleting) {
+//             if (textElement.textContent.length > 0) {
+//                 textElement.textContent = textElement.textContent.slice(0, -1);
+//                 textElement_second.textContent = textElement_second.textContent.slice(0, -1);
+//                 setTimeout(typeWriter, deletingSpeed);
+//             } else {
+//                 deleting = false;
+//                 sentenceIndex++;
+//                 if (sentenceIndex >= sentences.length) {
+//                     sentenceIndex = 0;
+//                 }
+//                 charIndex = 0;
+//                 typeWriter();
+//             }
+//         } else {
+//             if (charIndex < sentences[sentenceIndex].length) {
+//                 textElement.textContent += sentences[sentenceIndex].charAt(charIndex);
+//                 textElement_second.textContent += sentences[sentenceIndex].charAt(charIndex);
+//                 charIndex++;
+//                 setTimeout(typeWriter, typingSpeed);
+//             } else {
+//                 setTimeout(() => {
+//                     deleting = true;
+//                     typeWriter();
+//                 }, 1000);
+//             }
+//         }
+//     }
+//     typeWriter();
+// }
