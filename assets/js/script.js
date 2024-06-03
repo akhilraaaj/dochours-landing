@@ -75,7 +75,7 @@ function toggleModal() {
 //     }
 // }
 (function() {
-    // Check if the element exists before proceeding
+    // Check if the elements exist before proceeding
     var mv_left_arrow = document.getElementById('mv-left-arrow');
     var mv_right_arrow = document.getElementById('mv-right-arrow');
 
@@ -89,16 +89,20 @@ function toggleModal() {
         // Toggle classes initially
         toggleHeroChildMovement();
 
-        // Use requestAnimationFrame to schedule the next toggle
-        function scheduleNextToggle() {
-            setTimeout(function() {
+        // Use requestAnimationFrame for better performance
+        let lastToggleTime = 0;
+        const toggleInterval = 2000; // 2000ms or 2 seconds
+
+        function scheduleNextToggle(timestamp) {
+            if (timestamp - lastToggleTime >= toggleInterval) {
                 toggleHeroChildMovement();
-                scheduleNextToggle();
-            }, 2000);
+                lastToggleTime = timestamp;
+            }
+            requestAnimationFrame(scheduleNextToggle);
         }
 
         // Start the toggling process
-        scheduleNextToggle();
+        requestAnimationFrame(scheduleNextToggle);
     }
 })();
 
