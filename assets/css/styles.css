@@ -376,7 +376,7 @@ path {
     position: absolute;
     width: 157.87px;
     height: 123.73px;
-    top: 500px;
+    top: 450px;
     left: 300px;
     z-index: -1;
     transform: rotate(43.73deg);
@@ -685,6 +685,6 @@ path {
 }
 
 .feature-branding-img-main {
-    background-image: url('./assets/images/features/features-card-8-bg.svg');
+    background-image: url('/assets/images/features/features-card-8-bg.svg');
 }
   
