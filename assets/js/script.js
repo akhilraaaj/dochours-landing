@@ -274,7 +274,7 @@ window.addEventListener('scroll', function() {
   });
   
 
-// // features page
+// features page
 document.addEventListener("DOMContentLoaded", () => {
     const featuresNavbar = document.getElementById('features-hr-scroll');
     const featuresBody = document.getElementById('features');
