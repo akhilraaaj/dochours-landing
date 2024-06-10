@@ -15,8 +15,11 @@ p {
 
 /* home page */
 .hero-gradient {
-    background: #FFFFFF;
-    background: linear-gradient(0deg, #FFFFFF, #FAFCFE);
+    /* background: #FFFFFF; */
+    /* background: linear-gradient(0deg, #FFFFFF, #FAFCFE); */
+    /* background: linear-gradient(359.96deg, #F7FBFE 0.03%, #F7FBFE 87.55%, #FFFFFF 96.6%); */
+    background: linear-gradient(359.96deg, #FFFFFF 0.03%, #F7FBFE 87.55%, #F7FBFE 96.6%);
+    /* background: linear-gradient(0deg, #FFFFFF, #F7FBFE, #F7FBFE); */
 }
 
 .hero-secondary {
