@@ -15,11 +15,7 @@ p {
 
 /* home page */
 .hero-gradient {
-    /* background: #FFFFFF; */
-    /* background: linear-gradient(0deg, #FFFFFF, #FAFCFE); */
-    /* background: linear-gradient(359.96deg, #F7FBFE 0.03%, #F7FBFE 87.55%, #FFFFFF 96.6%); */
     background: linear-gradient(359.96deg, #FFFFFF 0.03%, #F7FBFE 87.55%, #F7FBFE 96.6%);
-    /* background: linear-gradient(0deg, #FFFFFF, #F7FBFE, #F7FBFE); */
 }
 
 .hero-secondary {
@@ -142,40 +138,6 @@ p {
     .mv-right-arrow-active {
         transform: translate(75px, -115px)
     }
-}
-
-#play-btn-home {
-    fill: url(#play-btn-color);
-    transition: fill 0.5s, transform 0.5s;
-}
-
-#play-btn-home:hover svg {
-    fill: url(#play-btn-color-hover);
-    transform: scale(1.05);
-
-}
-
-path {
-    transition: fill 0.5s ease;
-}
-
-#play-btn-home path {
-    fill: url(#play-btn-color);
-}
-
-#play-btn-home:hover path {
-    fill: url(#play-btn-color-hover);
-}
-
-.video-text {
-    background-image: linear-gradient(90deg, #4C42B8, #4C42B8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    transition: background-image 0.5s ease;
-}
-
-.video-text:hover {
-    background-image: linear-gradient(90deg, #7435FF 16.55%, #1A599E 88.98%);
 }
 
 .green-icon {
@@ -352,7 +314,6 @@ path {
 
 .streamlining-section {
     background-image: url('../images/streamling-Bg.png');
-    /* url('./assets/images/loremIpsumBg.png');*/
     background-repeat: 'no-repeat';
     background-size: cover;
 }
@@ -463,11 +424,11 @@ path {
     animation-delay: -1s;
 }
 
-
 .circle:nth-child(4) {
     animation-delay: 0s;
 }
 
+/* Hero Circle */
 .hero-circle {
     border-radius: 50%;
     background: rgba(177, 106, 248, 0.8);
@@ -494,18 +455,6 @@ path {
     animation-delay: 0s;
 }
 
-/* 
-.circle:nth-child(5) {
-    animation-delay: 1s;
-}
-  
-.circle:nth-child(6) {
-    animation-delay: 2s;
-}
-  
-.circle:nth-child(7) {
-    animation-delay: 3s;
-} */
 @keyframes scaleIn {
     from {
         transform: scale(.5, .5);
@@ -553,7 +502,7 @@ path {
     }
 }
 
-/* Policy Section CSS */
+/* Policy Section Page */
 .li-index {
     position: sticky;
     position: -webkit-sticky;
@@ -564,7 +513,7 @@ path {
     color: #6AC37F;
 }
 
-/* Pricing CSS */
+/* Pricing Page */
 .pricing-save {
     background-color: #EEF0F2;
     color: #C8C8C8;
@@ -623,7 +572,7 @@ path {
     color: #4C42B8;
 }
 
-/* Features Section */
+/* Features Page */
 .pr-blur-round-bg {
     background: radial-gradient(81.39% 84.82% at -6.17% 12.35%, rgba(103, 232, 249, 0.9) 0%, rgba(192, 132, 252, 0.9) 100%);
 }
