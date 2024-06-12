@@ -251,6 +251,11 @@ if (toggleBtn) {
     }
 }
 
+// Footer year
+const currentYear = new Date().getFullYear();
+// Set the content of the span with id "year" to the current year
+document.getElementById('year').textContent = currentYear;
+
 // Policy Section 
 window.addEventListener('scroll', function() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -427,6 +432,7 @@ document.addEventListener("DOMContentLoaded", () => {
         typeWriter();
     }
 });
+
 // const featuresNavbar = document.getElementById('features-hr-scroll');
 // const featuresBody = document.getElementById('features');
 // const allFeatures = document.querySelectorAll('.features-sec');

@@ -231,7 +231,7 @@
           <h1 class="badge-text">STREAMLINING CARE</h1>
           <span class="green-icon rounded-full"></span>
         </div>
-        <h1 class="text-3xl font-medium mt-6">Dochours assures you</h1>
+        <h1 class="text-3xl text-center font-medium mt-6">Dochours assures you</h1>
         <div id="vertical-text-slider" class="vertical-text-slider h-9 overflow-y-hidden mt-6">
           <h1 class="vt-slider-1 text-3xl font-medium text-center text-[#4C42B8]">Faster Bookings</h1>
           <h1 class="vt-slider-2 text-3xl font-medium text-center text-[#6AC37F]">Quicker Care</h1>
@@ -247,27 +247,26 @@
           </a>
         </div>
       </div>
-
       <!-- Footer Section -->
       <div class="container mx-auto flex flex-col items-center justify-center mt-14 mb-8 sm:justify-normal md:justify-center px-6 md:px-0 md:max-w-[1100px] md:w-11/12 xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
         <h1 class="text-3xl font-medium text-center lg:w-5/12 md:w-8/12 w-full leading-10">Subscribe to our newsletter to get the latest updates</h1>
-        <div class="flex rounded-full border mt-12 relative ">
+        <div class="flex rounded-full border mt-12 relative">
           <input placeholder="Your email" type="email" class="px-4 py-2 bg-gray-100 placeholder:italic rounded-full md:w-80 w-64" />
           <button class="custom-btn text-center items-center justify-center w-32 text-sm ml-[-50px] cursor-pointer">Subscribe</button>
         </div>
         <div class="flex items-center justify-center gap-4 mt-12 opacity-15 hover:opacity-100 transition ease-in-out delay-50">
           <a href="./index.html"><img src="./assets/images/footerLogo.svg" alt="Footer Logo Img" class="w-60" /></a>
         </div>
-        <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 mt-10 justify-center text-center items-center gap-1">
+        <!-- <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 mt-10 justify-between text-center items-center"> -->
+        <div class="flex gap-12 mt-10 justify-center text-center items-center">
           <a href="./features.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Features</a>
           <a href="./pricing.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Pricing</a>
-          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500">Resources</a>
-          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500">Support</a>
-          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500">Blog</a>
+          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Resources</a>
+          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Support</a>
+          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Blog</a> 
           <a href="./contact.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Contact Us</a>
         </div>
-        
-        <div class="flex justify-between gap-12 mt-8 text-gray-400">
+        <div class="flex justify-center items-center gap-12 mt-8 text-gray-400">
           <a href="#" class="cursor-pointer hover:text-green-500">Terms & Conditions</a>
           <a href="./policy.html" class="cursor-pointer hover:text-green-500">Privacy Policy</a>
         </div>
@@ -280,7 +279,7 @@
         </div>
         <hr class="w-8/12 mt-8 hr" />
         <div class="flex justify-between gap-12 mt-6 text-base text-gray-400">
-          <span>© 2024</span>
+          <span>© <span id="year"></span></span>
           <a href="./index.html" class="flex items-center cursor-pointer">
             <img src="./assets/images/headerLogo.svg" class="w-6 mr-2" alt="Footer Logo" />
             <span class="hover:text-gray-500">docHours</span>
