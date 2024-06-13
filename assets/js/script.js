@@ -1,14 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Navbar
-    function openNavbar() {
-        const sideBar = document.getElementById('nav-bar');
-        sideBar.classList.add('opacity-100', 'h-full');
-    }
+// Navbar
+function openNavbar() {
+    const sideBar = document.getElementById('nav-bar');
+    sideBar.classList.add('opacity-100', 'h-full');
+}
 
-    function closeNavbar() {
-        const sideBar = document.getElementById('nav-bar');
-        sideBar.classList.remove('opacity-100', 'h-full');
-    }
+function closeNavbar() {
+    const sideBar = document.getElementById('nav-bar');
+    sideBar.classList.remove('opacity-100', 'h-full');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
 
     // Hero Play Button Modal
     var openmodal = document.querySelectorAll('.modal-open');
@@ -175,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let free, growth, enterprise;
 
-    fetchPricingData();
+  
 
     function fetchPricingData() {
         fetch('https://irisdoctors.in/api/v1/subscription/plans')
@@ -217,6 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const toggleBtn = document.getElementById('pricing-toggle-btn');
     if (toggleBtn) {
+        fetchPricingData();
         toggleBtn.addEventListener('change', () => {
             const offerLabel = document.getElementById('pricing-save')
             const annuallyPayLabel = document.getElementById('annually-label');
@@ -259,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set the content of the span with id "year" to the current year
     document.getElementById('year').textContent = currentYear;
 
-    // Policy Section 
+    // Policy & Terms Section 
     window.addEventListener('scroll', function () {
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
         const sections = document.querySelectorAll('section');
