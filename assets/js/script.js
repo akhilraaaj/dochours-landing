@@ -2,11 +2,17 @@
 function openNavbar() {
     const sideBar = document.getElementById('nav-bar');
     sideBar.classList.add('opacity-100', 'h-full');
+
+    // Remove scrolling
+    document.body.style.overflow = 'hidden';
 }
 
 function closeNavbar() {
     const sideBar = document.getElementById('nav-bar');
     sideBar.classList.remove('opacity-100', 'h-full');
+
+    // Restore scrolling
+    document.body.style.overflow = '';
 }
 
 document.addEventListener("DOMContentLoaded", () => {
