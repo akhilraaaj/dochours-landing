@@ -36,7 +36,7 @@
           <div class="nav-child"></div>
           <div class="nav-footer absolute bottom-20 w-full flex flex-col items-center">
             <div class="flex justify-between gap-12 mt-8 text-gray-400 ">
-              <a href="#" class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Terms & Conditions</a>
+              <a href="./terms.html" class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Terms & Conditions</a>
               <a href="./policy.html" class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Privacy Policy</a>
             </div>
             <div class="flex justify-between gap-4 mt-8">
@@ -77,7 +77,7 @@
           <div class="relative flex justify-start items-center gap-4 min-[510px]:w-[28rem]">
             <div class="annually-toggle-sec flex flex-col-reverse gap-0.5 pt-[27px] min-[510px]:flex-row min-[510px]:gap-4 min-[510px]:pt-0">
               <span id="pricing-save"
-                class="pricing-save pricing-save-active w-[77px] h-[25px] rounded-3xl font-['Open_Sans'] text-xs font-medium leading-[25px] text-center ">Save 15%</span>
+                class="pricing-save pricing-save-active w-[77px] h-[25px] rounded-3xl font-['Open_Sans'] text-xs font-medium leading-[25px] text-center ">Save 20%</span>
               <p id="annually-label" class="text-[#343F4C] pricing-lable-active">Pay Annually</p>
             </div>
             <label>
@@ -89,24 +89,24 @@
           <div class="cards-container gap-5 content-center max-w-full sm:w-sm pr-cards-container mt-16 flex flex-col justify-center items-center max-[975px]:px-4 w-full min-[975px]:flex-row  gap-5 relative">
             <div class="card border border-[#EDEDED] bg-[#fbfbfc7a] rounded-3xl transition-all duration-300 pt-2.5 pr-4 pb-8 pl-7 w-full max-[975px]:max-w-[500px]  lg:w-[352px] h-[484px] relative">
               <div class="pr-card-header flex justify-between items-center h-[100px]">
-                <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
+                <div id="free-price-badge" class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem] ">
                   <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-                  <h1 class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[24px] uppercase">FREE</h1>
+                  <h1 id="free-price-plan" class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[24px] uppercase">FREE</h1>
                   <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
                 </div>
                 <img src="./assets/images/pricing/pricing1.png" class="pr-card-top-img w-[8.7rem] mt-2.5 max-[975px]:w-28 lg:w-32" alt="Pricing 1 Img" />
               </div>
               <div class="price-div mt-[-15px] mt-[15px] flex items-center gap-2 font-['Open_Sans'] text-[35px] font-medium text-left text-[#000000]">
                 <img src="./assets/images/pricing/rupee.svg" alt="Rupee Sign" />
-                <p>0</p>
+                <p id="free-price">0</p>
                 <p class="text-[#ACB6C3] text-sm mt-4 font-normal">/Month</p>
               </div>
               <hr class="pr-card-hr h-px w-[96%]">
-              <div class="plan-features py-6">
-                <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4 mt-2">
+              <div id="pricing-free-notes-container" class="plan-features py-6">
+                <!-- <div id="free-appoinments-div" class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4 mt-2 ">
                   <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
                   <p class="text-[#212C38]">
-                    <span class="font-bold">Upto 250</span> 
+                    <span id="free-appoinments-upto" class="font-bold">Upto 250</span> 
                     <span>Appointment limits</span>
                   </p>
                 </div>
@@ -114,7 +114,7 @@
                   <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
                   <p class="text-[#212C38]">
                     <span class="font-bold">Unlimited access</span> 
-                    <span>to all features</span>
+                    <span>to all <a href="/features.html" class="text-green-500 hover:text-[#1edc64]">features</a></span>
                   </p>
                 </div>
                 <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4">
@@ -123,7 +123,7 @@
                     <span class="font-bold">No</span> 
                     <span>SMS Credits</span>
                   </p>
-                </div>
+                </div> -->
               </div>
               <div class="plan-getstart-btn-div absolute pr-3 left-[5px] bottom-24 w-full h-12 flex justify-center">
                 <a class="custom-btn pricing-btn-1 px-5 py-6 flex justify-center  items-center text-center mt-10 md:mb-4 mb-8" href="https://app.dochours.com/" target="_blank">
@@ -139,7 +139,7 @@
               <div class="pr-card-header flex justify-between items-center h-[100px]">
                 <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
                   <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-                  <h1 class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[24px] uppercase">BASIC</h1>
+                  <h1 id="basic-price-plan" class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[24px] uppercase">BASIC</h1>
                   <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
                 </div>
                 <img src="./assets/images/pricing/pricing2.png" class="pr-card-top-img pr-basic-round-img mt-2.5 mb-3 w-[7.7rem] max-[975px]:w-28 lg:w-32" alt="Pricing 2 Img" />
@@ -150,8 +150,8 @@
                 <p class="text-[#ACB6C3] text-sm mt-4 font-normal">/Month</p>
               </div>
               <hr class="pr-card-hr h-px w-[96%]">
-              <div class="plan-features py-6">
-                <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4 mt-2">
+              <div id="pricing-basic-notes-container" class="plan-features py-6">
+                <!-- <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4 mt-2">
                   <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block "></span>
                   <p class="text-[#212C38]">
                     <span class="font-bold">Upto 1000</span> 
@@ -161,7 +161,7 @@
                 <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4">
                   <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
                   <p class="text-[#212C38]">
-                    <span class="font-bold">Full access</span> 
+                    <span class="font-bold">Unlimited access</span> 
                     <span>to all features</span>
                   </p>
                 </div>
@@ -171,7 +171,7 @@
                     <span class="font-bold">3000</span> 
                     <span>SMS Credits</span>
                   </p>
-                </div>
+                </div> -->
               </div>
               <div class="plan-getstart-btn-div absolute pr-3 left-[5px] bottom-24 w-full h-12 flex justify-center">
                 <a class="custom-btn pricing-btn-2 px-5 py-6 flex justify-center  items-center text-center mt-10 md:mb-4 mb-8" href="https://app.dochours.com/" target="_blank">
@@ -186,7 +186,7 @@
               <div class="pr-card-header flex justify-between items-center h-[100px]">
                 <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
                   <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-                  <h1 class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[24px] uppercase">GROWTH</h1>
+                  <h1 id="enterprise-price-plan" class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[24px] uppercase">GROWTH</h1>
                   <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
                 </div>
                 <img src="./assets/images/pricing/pricing3.png" class="pr-card-top-img pr-basic-round-img mt-2.5 mb-3 w-[6.7rem] max-[975px]:w-28 lg:w-32" alt="Pricing 3 Img" />
@@ -197,8 +197,8 @@
                 <p class="text-[#ACB6C3] text-sm mt-4 font-normal">/Month</p>
               </div>
               <hr class="pr-card-hr h-px w-[96%]">
-              <div class="plan-features py-6">
-                <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4 mt-2">
+              <div id="pricing-Enterprise-notes-container" class="plan-features py-6">
+                <!-- <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4 mt-2">
                   <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
                   <p class="text-[#212C38]">
                     <span class="font-bold">Upto 2500</span> 
@@ -218,7 +218,7 @@
                     <span class="plan-feature-bold text-[15px] font-bold leading-[29px] text-left">7500</span>
                     SMS Credits
                   </p>
-                </div>
+                </div> -->
               </div>
               <div class="plan-getstart-btn-div absolute pr-3 left-[5px] bottom-24 w-full h-12 flex justify-center">
                 <a class="custom-btn pricing-btn-3 px-5 py-6 flex justify-center  items-center text-center mt-10 md:mb-4 mb-8" href="https://app.dochours.com/" target="_blank">
@@ -278,7 +278,7 @@
           <a href="./contact.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Contact Us</a>
         </div>
         <div class="flex justify-center items-center gap-12 mt-8 text-gray-400">
-          <a href="#" class="cursor-pointer hover:text-green-500">Terms & Conditions</a>
+          <a href="./terms.html" class="cursor-pointer hover:text-green-500">Terms & Conditions</a>
           <a href="./policy.html" class="cursor-pointer hover:text-green-500">Privacy Policy</a>
         </div>
         <div class="flex justify-between gap-4 mt-8">

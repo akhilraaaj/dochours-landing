@@ -1,14 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Navbar
-    function openNavbar() {
-        const sideBar = document.getElementById('nav-bar');
-        sideBar.classList.add('opacity-100', 'h-full');
-    }
+// Navbar
+function openNavbar() {
+    const sideBar = document.getElementById('nav-bar');
+    sideBar.classList.add('opacity-100', 'h-full');
+}
 
-    function closeNavbar() {
-        const sideBar = document.getElementById('nav-bar');
-        sideBar.classList.remove('opacity-100', 'h-full');
-    }
+function closeNavbar() {
+    const sideBar = document.getElementById('nav-bar');
+    sideBar.classList.remove('opacity-100', 'h-full');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
 
     // Hero Play Button Modal
     var openmodal = document.querySelectorAll('.modal-open');
@@ -173,23 +174,353 @@ document.addEventListener("DOMContentLoaded", () => {
     const arrowPathPrBasic = document.querySelector('#pricing-arrow-path-2');
     const arrowPathPrGrowth = document.querySelector('#pricing-arrow-path-3');
 
-    let free, growth, enterprise;
+    var sampleData = 
+    {
+        "monthlyPlans": {
+            "Free": {
+                "amount": 99900,
+                "created_at": "2024-05-31T09:23:20.319727",
+                "description": "Free - plan",
+                "extra": null,
+                "features": null,
+                "id": "aaf44522-f918-492b-9c9b-971e63e02554",
+                "interval": 1,
+                "limits": null,
+                "name": "Free",
+                "notes": {
+                    "anual_revenue": 11988,
+                    "appoiment_limit": 1000,
+                    "sms_annual_changes": 7200,
+                    "sms_credit": 3000,
+                    "sms_deducting_charges": 4788,
+                    "sms_monthly_charges": 600,
+                    "sms_per_appointment_charges": 0.6
+                },
+                "payment_gateway_service": "razorpay",
+                "period": "monthly",
+                "plan_id": "plan_OH3A9EHfMAcZDS",
+                "status": "active"
+            },
+            "Basic": {
+                "amount": 299900,
+                "created_at": "2024-06-12T12:53:10.888289",
+                "description": "Growth - plan",
+                "extra": null,
+                "features": null,
+                "id": "dc9f2d68-3a9d-43dd-af34-0aa3e53fad86",
+                "interval": 1,
+                "limits": null,
+                "name": "Growth",
+                "notes": {
+                    "anual_revenue": 35988,
+                    "appoiment_limit": 2500,
+                    "sms_annual_changes": 18000,
+                    "sms_credit": 7500,
+                    "sms_deducting_charges": 17988,
+                    "sms_monthly_charges": 1500,
+                    "sms_per_appointment_charges": 0.6
+                },
+                "payment_gateway_service": "razorpay",
+                "period": "monthly",
+                "plan_id": "plan_OLr9G1DFiDXJkL",
+                "status": "active"
+            },
+            "Enterprise": {
+                "amount": 599900,
+                "created_at": "2024-06-12T12:53:28.361749",
+                "description": "Enterprise - plan",
+                "extra": null,
+                "features": null,
+                "id": "83e36bbb-145e-4f90-aef7-48b46a8bbc34",
+                "interval": 1,
+                "limits": null,
+                "name": "Enterprise",
+                "notes": {
+                    "anual_revenue": 71988,
+                    "appoiment_limit": 5000,
+                    "sms_annual_changes": 36000,
+                    "sms_credit": 15000,
+                    "sms_deducting_charges": 35988,
+                    "sms_monthly_charges": 3000,
+                    "sms_per_appointment_charges": 0.6
+                },
+                "payment_gateway_service": "razorpay",
+                "period": "monthly",
+                "plan_id": "plan_OLr9Z71CbyrBTG",
+                "status": "active"
+            }
+        },
+        "yearlyPlans": {
+            "Free": {
+                "amount": 99800,
+                "created_at": "2024-05-31T09:23:20.319727",
+                "description": "Free - plan",
+                "extra": null,
+                "features": null,
+                "id": "aaf44522-f918-492b-9c9b-971e63e02554",
+                "interval": 1,
+                "limits": null,
+                "name": "Free",
+                "notes": {
+                    "anual_revenue": 11988,
+                    "appoiment_limit": 1000,
+                    "sms_annual_changes": 7200,
+                    "sms_credit": 3000,
+                    "sms_deducting_charges": 4788,
+                    "sms_monthly_charges": 600,
+                    "sms_per_appointment_charges": 0.6
+                },
+                "payment_gateway_service": "razorpay",
+                "period": "monthly",
+                "plan_id": "plan_OH3A9EHfMAcZDS",
+                "status": "active"
+            },
+            "Basic": {
+                "amount": 299800,
+                "created_at": "2024-06-12T12:53:10.888289",
+                "description": "Growth - plan",
+                "extra": null,
+                "features": null,
+                "id": "dc9f2d68-3a9d-43dd-af34-0aa3e53fad86",
+                "interval": 1,
+                "limits": null,
+                "name": "Growth",
+                "notes": {
+                    "anual_revenue": 35988,
+                    "appoiment_limit": 2500,
+                    "sms_annual_changes": 18000,
+                    "sms_credit": 7500,
+                    "sms_deducting_charges": 17988,
+                    "sms_monthly_charges": 1500,
+                    "sms_per_appointment_charges": 0.6
+                },
+                "payment_gateway_service": "razorpay",
+                "period": "monthly",
+                "plan_id": "plan_OLr9G1DFiDXJkL",
+                "status": "active"
+            },
+            "Enterprise": {
+                "amount": 599800,
+                "created_at": "2024-06-12T12:53:28.361749",
+                "description": "Enterprise - plan",
+                "extra": null,
+                "features": null,
+                "id": "83e36bbb-145e-4f90-aef7-48b46a8bbc34",
+                "interval": 1,
+                "limits": null,
+                "name": "Enterprise",
+                "notes": {
+                    "anual_revenue": 71988,
+                    "appoiment_limit": 5000,
+                    "sms_annual_changes": 36000,
+                    "sms_credit": 15000,
+                    "sms_deducting_charges": 35988,
+                    "sms_monthly_charges": 3000,
+                    "sms_per_appointment_charges": 0.6
+                },
+                "payment_gateway_service": "razorpay",
+                "period": "monthly",
+                "plan_id": "plan_OLr9Z71CbyrBTG",
+                "status": "active"
+            }
+        }
+    }
 
-    fetchPricingData();
+
+    let monthlyPlans, yearlyPlans
+
+
 
     function fetchPricingData() {
         fetch('https://irisdoctors.in/api/v1/subscription/plans')
-            .then(response => response.json())
-            .then(data => {
-                free = data[0];
-                growth = data[1];
-                enterprise = data[2];
-                console.log(free);
-                console.log(growth);
-                console.log(enterprise);
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
             })
+            .then(data => {
+               // const categorizedPlans = categorizePlans(data);
+                const categorizedPlans = sampleData
+               
+                monthlyPlans = categorizedPlans.monthlyPlans;
+                yearlyPlans = categorizedPlans.yearlyPlans;
+                // console.log("Blaa");
+                // console.log(categorizedPlans);
+
+
+            })
+            .then(() => {
+                // Ensure yearlyPlanSelected is executed after the plans are set
+                // console.log("SDS");
+                yearlyPlanSelected();
+            })
+            .catch(error => {
+                console.error('There was a problem with the price fetch operation:');
+            });
     }
 
+
+    function categorizePlans(plans) {
+        const monthlyPlans = { Free: null, Basic: null, Enterprise: null };
+        const yearlyPlans = { Free: null, Basic: null, Enterprise: null };
+
+        const monthlyData = plans.filter(plan => plan.period === 'monthly').sort((a, b) => a.amount - b.amount);
+        const yearlyData = plans.filter(plan => plan.period === 'yearly').sort((a, b) => a.amount - b.amount);
+
+        if (monthlyData.length === 3) {
+            monthlyPlans.Free = monthlyData[0];
+            monthlyPlans.Basic = monthlyData[1];
+            monthlyPlans.Enterprise = monthlyData[2];
+        }
+
+        if (yearlyData.length === 3) {
+            yearlyPlans.Free = yearlyData[0];
+            yearlyPlans.Basic = yearlyData[1];
+            yearlyPlans.Enterprise = yearlyData[2];
+        }
+
+        return { monthlyPlans, yearlyPlans };
+    }
+
+    // price toggle monthly and annually
+    const toggleBtn = document.getElementById('pricing-toggle-btn');
+    const offerLabel = document.getElementById('pricing-save')
+    const annuallyPayLabel = document.getElementById('annually-label');
+    const montlyPayLabel = document.getElementById('monthly-label');
+
+    if (toggleBtn) {
+       
+        
+        fetchPricingData();
+       
+       
+        toggleBtn.addEventListener('change', () => {
+            pricePeriodToggle();
+        })
+
+        function pricePeriodToggle() {
+            if (toggleBtn.value == "on") {
+                // monthly plan selected
+                monthlyPlanSelected();
+            } else {
+                // yearly plan selected
+                yearlyPlanSelected();
+            }
+        }
+
+        function updatedPricing(id, end) {
+            let obj = document.getElementById(id);
+            obj.textContent = end;
+        }
+
+        function yearlyPlanSelected() {
+            toggleBtn.value = "on";
+            updatedPricing('free-price', yearlyPlans.Free ? yearlyPlans.Free.amount : 0);
+            updatedPricing('basic-price', yearlyPlans.Basic ? yearlyPlans.Basic.amount : 0);
+            updatedPricing('growth-price', yearlyPlans.Enterprise ? yearlyPlans.Enterprise.amount : 0);
+            offerLabel.classList.add('pricing-save-active');
+            annuallyPayLabel.classList.add('pricing-lable-active');
+            montlyPayLabel.classList.remove('pricing-lable-active');
+
+            updatePricingAllCardsNotes(yearlyPlans);
+        }
+
+        function monthlyPlanSelected() {
+            toggleBtn.value = "";
+            updatedPricing('free-price', monthlyPlans.Free ? monthlyPlans.Free.amount : 0);
+            updatedPricing('basic-price', monthlyPlans.Basic ? monthlyPlans.Basic.amount : 0);
+            updatedPricing('growth-price', monthlyPlans.Enterprise ? monthlyPlans.Enterprise.amount : 0);
+            montlyPayLabel.classList.add('pricing-lable-active');
+            annuallyPayLabel.classList.remove('pricing-lable-active');
+            offerLabel.classList.remove('pricing-save-active');
+
+            updatePricingAllCardsNotes(monthlyPlans);
+        }
+
+        function updatePricingAllCardsNotes(plans) {
+            if (plans.Free) {
+                updatePlanBadge("free-price-plan", plans.Free.name);
+                updatePricingSingleCardNotesById('pricing-free-notes-container', plans.Free);
+            } else {
+                updatePricingSingleCardNotesById('pricing-free-notes-container', null);
+            };
+
+            if (plans.Basic) {
+                updatePlanBadge("basic-price-plan", plans.Basic.name);
+                updatePricingSingleCardNotesById('pricing-basic-notes-container', plans.Basic);
+            } else {
+                updatePricingSingleCardNotesById('pricing-basic-notes-container', null);
+            };
+
+            if (plans.Enterprise) {
+                updatePlanBadge("enterprise-price-plan", plans.Enterprise.name);
+                updatePricingSingleCardNotesById('pricing-Enterprise-notes-container', plans.Enterprise);
+            } else {
+                updatePricingSingleCardNotesById('pricing-Enterprise-notes-container', null);
+            };
+
+        }
+    }
+
+    function updatePlanBadge(badgeId, planName) {
+        // console.log(badgeId);
+        // console.log("document.getElementById(badgeId): ", document.getElementById(badgeId));
+        document.getElementById(badgeId).textContent = planName;
+    }
+
+    function updatePricingSingleCardNotesById(cardId, plan) {
+        const pricingNotesContainer = document.getElementById(cardId);
+        pricingNotesContainer.innerHTML = '';
+
+        if (plan && plan.notes) {
+            const planNotes = plan.notes;
+            if (planNotes.appoiment_limit) {
+                // Appointment limit
+                const appointmentLimitHTML = `
+                    <div id="free-appointments-div" class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4 mt-2">
+                        <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
+                        <p class="text-[#212C38]">
+                            <span id="free-appointments-upto" class="font-bold">Upto ${planNotes.appoiment_limit}</span>
+                            <span> Appointment limits</span>
+                        </p>
+                    </div>
+                `;
+                pricingNotesContainer.innerHTML += appointmentLimitHTML;
+            }
+
+            // Features access
+            const featuresAccessHTML = `
+                <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4">
+                    <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
+                    <p class="text-[#212C38]">
+                        <span class="font-bold">Unlimited access</span> 
+                        <span> to all  <a href="/features.html" class="text-green-500 hover:text-[#1edc64]">features</a></span>
+                    </p>
+                </div>
+            `;
+            pricingNotesContainer.innerHTML += featuresAccessHTML;
+
+            if (planNotes.sms_credit) {
+                // SMS credits
+                const smsCreditHTML = `
+                    <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4">
+                        <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
+                        <p class="text-[#212C38]">
+                            <span class="font-bold">${planNotes.sms_credit}</span> 
+                            <span> SMS Credits</span>
+                        </p>
+                    </div>
+                `;
+                pricingNotesContainer.innerHTML += smsCreditHTML;
+            }
+        }
+    }
+
+
+
+
+    // button animation
     if (pricingFreeBtn) {
         pricingFreeBtn.addEventListener('mouseover', () => {
             arrowPathPrFree.setAttribute('d', newD);
@@ -215,44 +546,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    const toggleBtn = document.getElementById('pricing-toggle-btn');
-    if (toggleBtn) {
-        toggleBtn.addEventListener('change', () => {
-            const offerLabel = document.getElementById('pricing-save')
-            const annuallyPayLabel = document.getElementById('annually-label');
-            const montlyPayLabel = document.getElementById('monthly-label');
-            if (toggleBtn.value == "on") {
-                toggleBtn.value = "";
-                counter('basic-price', 999, 1099, 200);
-                counter('growth-price', 2999, 3099, 200);
-                montlyPayLabel.classList.add('pricing-lable-active');
-                annuallyPayLabel.classList.remove('pricing-lable-active');
-                offerLabel.classList.remove('pricing-save-active');
-            } else {
-                toggleBtn.value = "on";
-                counter('basic-price', 1099, 999, 200);
-                counter('growth-price', 3099, 2999, 200);
-                offerLabel.classList.add('pricing-save-active');
-                annuallyPayLabel.classList.add('pricing-lable-active');
-                montlyPayLabel.classList.remove('pricing-lable-active');
-            }
-        })
-        // counter function for pricing page, from start price to end price give a counter transition
-        function counter(id, start, end, duration) {
-            let obj = document.getElementById(id),
-                current = start,
-                range = end - start,
-                increment = end > start ? 1 : -1,
-                step = Math.abs(Math.floor(duration / range)),
-                timer = setInterval(() => {
-                    current += increment;
-                    obj.textContent = current;
-                    if (current == end) {
-                        clearInterval(timer);
-                    }
-                }, step);
-        }
-    }
+
 
     // Footer year
     const currentYear = new Date().getFullYear();
