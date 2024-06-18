@@ -1,524 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DocHours</title>
-  <link rel="icon" type="image/x-icon" href="./assets/images/headerLogo.svg">
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body>
-  <div class="overflow-x-hidden">
-
-    <!-- Sign Up Header -->
-    <div class="flex sm:flex-row flex-col items-center justify-center text-lg py-3 bg-[#E8EBFF] md:gap-8 gap-2">
-      <p class="text-center text-base font-['Poppins']">Get up to <span class="font-bold">3 Months</span> of free access to DocHours</p>
-      <a href="https://app.dochours.com/" target="_blank"
-        class="custom-btn text-center items-center justify-center w-32 py-2 text-sm cursor-pointer">Sign Up Now</a>
-    </div>
-
-    <!-- Header Section -->
-    <div id="nav-bar"
-      class="h-0 w-full pt-2.5 fixed z-50 top-0 right-0 bg-white overflow-x-hidden overflow-y-hidden opacity-0 transition-all duration-300">
-      <div class="w-full flex justify-between items-center px-4">
-        <a href="./index.html"><img class="h-7 mt-1.5" src="./assets/images/headerLogo.svg" alt="logo"></a>
-        <a onclick="closeNavbar()" class="closebtn w-6 transition-all duration-300">
-          <img class="h-7 mt-1.5" src="./assets/images/close.svg" alt="close-arrow">
-        </a>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocHours</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/headerLogo.svg">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="overflow-x-hidden">
+      <!-- Sign Up Header -->
+      <div class="flex sm:flex-row flex-col items-center justify-center text-lg py-3 bg-[#E8EBFF] md:gap-8 gap-2">
+        <p class="text-center text-base font-['Poppins']">Get up to <span class="font-bold">3 Months</span> of free access to DocHours</p>
+        <a href="https://app.dochours.com/" target="_blank"
+          class="custom-btn text-center items-center justify-center w-32 py-2 text-sm cursor-pointer">Sign Up Now</a>
       </div>
-      <nav class="nav-links relative h-full flex flex-col gap-6 text-center justify-start">
-        <div class="absolute mt-16 w-full flex flex-col gap-6 text-center justify-start h-screen">
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
-          <a class="text-[#6AC37F] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./pricing.html">Pricing</a>
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./contact.html">Contact</a>
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/"
-            target="_blank">Login / Register</a>
+      <!-- Header Section -->
+      <div id="nav-bar"
+        class="h-0 w-full pt-2.5 fixed z-50 top-0 right-0 bg-white overflow-x-hidden overflow-y-hidden opacity-0 transition-all duration-300">
+        <div class="w-full flex justify-between items-center px-4">
+          <a href="./index.html"><img class="h-7 mt-1.5" src="./assets/images/headerLogo.svg" alt="logo"></a>
+          <a onclick="closeNavbar()" class="closebtn w-6 transition-all duration-300">
+          <img class="h-7 mt-1.5" src="./assets/images/close.svg" alt="close-arrow">
+          </a>
         </div>
-        <div class="nav-child"></div>
-        <div class="nav-footer absolute bottom-20 w-full flex flex-col items-center">
-          <div class="flex justify-between gap-12 mt-8 text-gray-400 ">
-            <a href="./terms.html"
-              class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Terms &
-              Conditions</a>
-            <a href="./policy.html"
-              class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Privacy
-              Policy</a>
-          </div>
-          <div class="flex justify-between gap-4 mt-8">
-            <img src="./assets/images/facebook.svg" class="social-icons" alt="Facebook" />
-            <a href="https://www.instagram.com/dochours/" target="_blank"><img src="./assets/images/instagram.svg" class="social-icons" alt="Instagram" /></a>
-            <img src="./assets/images/twitter.svg" class="social-icons hidden" alt="Twitter" />
-            <a href="https://www.linkedin.com/company/dochours/" target="_blank"><img src="./assets/images/linkedin.svg" class="social-icons" alt="LinkedIn" /></a>
-            <a href="https://www.youtube.com/@dochours" target="_blank"><img src="./assets/images/youtube.svg" class="social-icons" alt="Youtube" /></a>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <div class="bg-[#F7FBFE] pb-4 w-full border-x border-t border-[#E3EFF8]">
-      <header
-        class="container mx-auto flex px-6 md:px-0 sm:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 xl:3/5 2xl:max-w-screen-2xl   xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px]">
-        <div class="w-full items-center flex justify-between mt-4">
-          <div class="header-left-sec">
-            <a href="./index.html" class="logo">
-              <img class="header-logo w-36" src="./assets/images/navLogo.svg" alt="logo">
-            </a>
-          </div>
-          <nav class="hidden flex items-center gap-8 md:flex">
+        <nav class="nav-links relative h-full flex flex-col gap-6 text-center justify-start">
+          <div class="absolute mt-16 w-full flex flex-col gap-6 text-center justify-start h-screen">
             <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
             <a class="text-[#6AC37F] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
             <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./pricing.html">Pricing</a>
-            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F] " href="./contact.html">Contact</a>
-            <a class="text-white font-medium custom-btn text-center items-center justify-center w-36 py-2 text-sm cursor-pointer mt-0"
-              href="https://app.dochours.com/" target="_blank">Login / Register</a>
-          </nav>
-          <img src="./assets/images/hamburger.svg" onclick="openNavbar()" class="md:hidden h-6" alt="hamburger">
-        </div>
-      </header>
-    </div>
-
-    <!-- features hero  -->
-    <div class="feature-page bg-[#F7FBFE] pt-12 pb-16 md:pb-24 w-full border-x border-b border-[#E3EFF8]">
-      <div
-        class="container mx-auto flex flex-col items-center px-6 md:px-0 md:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
-        <div class="w-full relative z-10">
-          <div
-            class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-            <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">The Essentials
-            </p>
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./contact.html">Contact</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/"
+              target="_blank">Login / Register</a>
           </div>
-          <div class="w-full lg:w-9/12 xl:w-[80%]">
-            <h1 class="text-2xl font-medium mt-3 text-[43px] font-medium leading-[58px] font-Poppins hidden sm:block ">
-              We deliver a wide range of features to ensure your clinic runs
-              <span class="text-[#224D91] text-nowrap" id="text-typewriting"></span>
-              <span class="cursor">|</span>
-            </h1>
-            <div
-              class="text-2xl font-medium mt-3 text-[43px] font-medium leading-[58px] font-Poppins flex flex-col sm:hidden">
-              We deliver a wide range of features to ensure your clinic runs
-              <div>
-                <span class="text-[#224D91] text-nowrap" id="text-typewriting-second"></span>
+          <div class="nav-child"></div>
+          <div class="nav-footer absolute bottom-20 w-full flex flex-col items-center">
+            <div class="flex justify-between gap-12 mt-8 text-gray-400 ">
+              <a href="./terms.html"
+                class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Terms &
+              Conditions</a>
+              <a href="./policy.html"
+                class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Privacy
+              Policy</a>
+            </div>
+            <div class="flex justify-between gap-4 mt-8">
+              <img src="./assets/images/facebook.svg" class="social-icons" alt="Facebook" />
+              <a href="https://www.instagram.com/dochours/" target="_blank"><img src="./assets/images/instagram.svg" class="social-icons" alt="Instagram" /></a>
+              <img src="./assets/images/twitter.svg" class="social-icons hidden" alt="Twitter" />
+              <a href="https://www.linkedin.com/company/dochours/" target="_blank"><img src="./assets/images/linkedin.svg" class="social-icons" alt="LinkedIn" /></a>
+              <a href="https://www.youtube.com/@dochours" target="_blank"><img src="./assets/images/youtube.svg" class="social-icons" alt="Youtube" /></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="bg-[#F7FBFE] pb-4 w-full border-x border-t border-[#E3EFF8]">
+        <header class="container mx-auto flex px-6 md:px-0 sm:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 xl:3/5 2xl:max-w-screen-2xl   xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px]">
+          <div class="w-full items-center flex justify-between mt-4">
+            <div class="header-left-sec">
+              <a href="./index.html" class="logo">
+              <img class="header-logo w-36" src="./assets/images/navLogo.svg" alt="logo">
+              </a>
+            </div>
+            <nav class="hidden flex items-center gap-8 md:flex">
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
+              <a class="text-[#6AC37F] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./pricing.html">Pricing</a>
+              <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F] " href="./contact.html">Contact</a>
+              <a class="text-white font-medium custom-btn text-center items-center justify-center w-36 py-2 text-sm cursor-pointer mt-0"
+                href="https://app.dochours.com/" target="_blank">Login / Register</a>
+            </nav>
+            <img src="./assets/images/hamburger.svg" onclick="openNavbar()" class="md:hidden h-6" alt="hamburger">
+          </div>
+        </header>
+      </div>
+      <!-- features hero  -->
+      <div class="feature-page bg-[#F7FBFE] pt-12 pb-16 md:pb-24 w-full border-x border-b border-[#E3EFF8]">
+        <div class="container mx-auto flex flex-col items-center px-6 md:px-0 md:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
+          <div class="w-full relative z-10">
+            <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+              <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">The Essentials
+              </p>
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+            </div>
+            <div class="w-full lg:w-9/12 xl:w-[80%]">
+              <h1 class="text-2xl font-medium mt-3 text-[43px] font-medium leading-[58px] font-Poppins hidden sm:block">
+                We deliver a wide range of features to ensure your clinic runs
+                <span class="text-[#224D91] text-nowrap" id="text-typewriting"></span>
                 <span class="cursor">|</span>
+              </h1>
+              <div class="text-2xl font-medium mt-3 text-[43px] font-medium leading-[58px] font-Poppins flex flex-col sm:hidden">
+                We deliver a wide range of features to ensure your clinic runs
+                <div>
+                  <span class="text-[#224D91] text-nowrap" id="text-typewriting-second"></span>
+                  <span class="cursor">|</span>
+                </div>
               </div>
+              <p class="mt-3 text-xl text-[#343F4C]">Explore the intuitive and carefully crafted solutions we have in
+                store for you.
+              </p>
             </div>
-            <p class="mt-3 text-xl text-[#343F4C]">Explore the intuitive and carefully crafted solutions we have in
-              store for you.</p>
+            <div id="featuresLinks" class="w-full hidden md:flex justify-start gap-2 py-4 mt-3 flex-wrap">
+              <a href="#efffective-crowd-management">
+                <div class="flex flex-row p-4 justify-between items-center w-[315px] h-14 border rounded-lg gap-2">
+                  <img src="./assets/images/features/features-icon-1.svg" class="w-[20.96px]" srcset="" />
+                  <p class="font-normal open-sans text-base text-[#343F4C]">Effective crowd management</p>
+                  <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
+                </div>
+              </a>
+              <a href="#secure-cloud-based-ehr">
+                <div class="flex flex-row p-4 justify-between items-center w-[284px] h-14 border rounded-lg gap-2">
+                  <img src="./assets/images/features/features-icon-2.svg" class="w-[20.96px]" srcset="" />
+                  <p class="font-normal open-sans text-base text-[#343F4C]">Secure cloud-based EHR</p>
+                  <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
+                </div>
+              </a>
+              <a href="#intelligent-dashboard">
+                <div class="flex flex-row p-4 justify-between items-center w-[260px] h-14 border rounded-lg gap-2">
+                  <img src="./assets/images/features/features-icon-3.svg" class="w-[20.96px]" srcset="" />
+                  <p class="font-normal open-sans text-base text-[#343F4C]">Intelligent Dashboard</p>
+                  <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
+                </div>
+              </a>
+              <a href="#patient-360">
+                <div class="flex flex-row p-4 justify-between items-center w-[209px] h-14 border rounded-lg gap-2">
+                  <img src="./assets/images/features/features-icon-4.svg" class="w-[20.96px]" srcset="" />
+                  <p class="font-normal open-sans text-base text-[#343F4C]">Patient 360</p>
+                  <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
+                </div>
+              </a>
+              <a href="#better-online-presense">
+                <div class="flex flex-row p-4 justify-between items-center w-[265px] h-14 border rounded-lg gap-2">
+                  <img src="./assets/images/features/features-icon-5.svg" class="w-[20.96px]" srcset="" />
+                  <p class="font-normal open-sans text-base text-[#343F4C]">Better online presence</p>
+                  <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
+                </div>
+              </a>
+              <a href="#automated-clinical-note-suggestions">
+                <div class="flex flex-row p-4 justify-between items-center w-[365px] h-14 border rounded-lg gap-2">
+                  <img src="./assets/images/features/features-icon-6.svg" class="w-[20.96px]" srcset="" />
+                  <p class="font-normal open-sans text-base text-[#343F4C]">Automated clinical note suggestions</p>
+                  <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
+                </div>
+              </a>
+              <a href="#smooth-user-experience">
+                <div class="flex flex-row p-4 justify-between items-center w-[280px] h-14 border rounded-lg gap-2">
+                  <img src="./assets/images/features/features-icon-7.svg" class="w-[20.96px]" srcset="" />
+                  <p class="font-normal open-sans text-base text-[#343F4C]">Smooth User Experience</p>
+                  <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
+                </div>
+              </a>
+              <a href="#branding">
+                <div class="flex flex-row p-4 justify-between items-center w-[165px] h-14 border rounded-lg gap-2">
+                  <img src="./assets/images/features/features-icon-8.svg" class="w-[20.96px]" srcset="" />
+                  <p class="font-normal open-sans text-base text-[#343F4C]">Branding</p>
+                  <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
+                </div>
+              </a>
+            </div>
           </div>
-          <div id="featuresLinks" class="w-full hidden md:flex justify-start gap-2 py-4 mt-3 flex-wrap">
-            <a href="#efffective-crowd-management">
-              <div class="flex flex-row p-4 justify-between items-center w-[315px] h-14 border rounded-lg gap-2">
-                <img src="./assets/images/features/features-icon-1.svg" class="w-[20.96px]" srcset="" />
-                <p class="font-normal open-sans text-base text-[#343F4C]">Effective crowd management</p>
-                <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
-              </div>
-            </a>
-            <a href="#secure-cloud-based-ehr">
-              <div class="flex flex-row p-4 justify-between items-center w-[284px] h-14 border rounded-lg gap-2">
-                <img src="./assets/images/features/features-icon-2.svg" class="w-[20.96px]" srcset="" />
-                <p class="font-normal open-sans text-base text-[#343F4C]">Secure cloud-based EHR</p>
-                <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
-              </div>
-            </a>
-            <a href="#intelligent-dashboard">
-              <div class="flex flex-row p-4 justify-between items-center w-[260px] h-14 border rounded-lg gap-2">
-                <img src="./assets/images/features/features-icon-3.svg" class="w-[20.96px]" srcset="" />
-                <p class="font-normal open-sans text-base text-[#343F4C]">Intelligent Dashboard</p>
-                <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
-              </div>
-            </a>
-            <a href="#patient-360">
-              <div class="flex flex-row p-4 justify-between items-center w-[209px] h-14 border rounded-lg gap-2">
-                <img src="./assets/images/features/features-icon-4.svg" class="w-[20.96px]" srcset="" />
-                <p class="font-normal open-sans text-base text-[#343F4C]">Patient 360</p>
-                <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
-              </div>
-            </a>
-            <a href="#better-online-presense">
-              <div class="flex flex-row p-4 justify-between items-center w-[265px] h-14 border rounded-lg gap-2">
-                <img src="./assets/images/features/features-icon-5.svg" class="w-[20.96px]" srcset="" />
-                <p class="font-normal open-sans text-base text-[#343F4C]">Better online presence</p>
-                <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
-              </div>
-            </a>
-            <a href="#automated-clinical-note-suggestions">
-              <div class="flex flex-row p-4 justify-between items-center w-[365px] h-14 border rounded-lg gap-2">
-                <img src="./assets/images/features/features-icon-6.svg" class="w-[20.96px]" srcset="" />
-                <p class="font-normal open-sans text-base text-[#343F4C]">Automated clinical note suggestions</p>
-                <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
-              </div>
-            </a>
-            <a href="#smooth-user-experience">
-              <div class="flex flex-row p-4 justify-between items-center w-[280px] h-14 border rounded-lg gap-2">
-                <img src="./assets/images/features/features-icon-7.svg" class="w-[20.96px]" srcset="" />
-                <p class="font-normal open-sans text-base text-[#343F4C]">Smooth User Experience</p>
-                <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
-              </div>
-            </a>
-            <a href="#branding">
-              <div class="flex flex-row p-4 justify-between items-center w-[165px] h-14 border rounded-lg gap-2">
-                <img src="./assets/images/features/features-icon-8.svg" class="w-[20.96px]" srcset="" />
-                <p class="font-normal open-sans text-base text-[#343F4C]">Branding</p>
-                <img src="./assets/images/features/arrowDown.svg" alt="" class="w-3" srcset="" />
-              </div>
-            </a>
+          <div class=" pr-blur-round-bg absolute w-40 h-32 top-[-30px] right-[50px] sm:right-[50px] min-[870px]:right-[40px] z-0 blur-[110px]">
           </div>
-        </div>
-        <div
-          class=" pr-blur-round-bg absolute w-40 h-32 top-[-30px] right-[50px] sm:right-[50px] min-[870px]:right-[40px] z-0 blur-[110px]">
-        </div>
-        <div
-          class=" pr-blur-round-bg absolute w-40 h-32 top-[20px] left-[-80px] sm:left-[-80px] min-[870px]:left-[-80px] z-0 blur-[110px]">
+          <div class=" pr-blur-round-bg absolute w-40 h-32 top-[20px] left-[-80px] sm:left-[-80px] min-[870px]:left-[-80px] z-0 blur-[110px]">
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- horizontal scroll slider -->
-    <div id="features-hr-scroll" class="hr-scroll bg-white w-full hidden lg:flex justify-center z-[100]">
-      <nav id="featuresNav"
-        class="px-16 flex justify-start gap-16 items-center overflow-x-auto hide-scrollbar relative z-80">
-        <a href="#efffective-crowd-management"
-          class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C] hr-scroll-acitve">Effective crowd
+      <!-- Horizontal Scroll Slider -->
+      <div id="features-hr-scroll" class="hr-scroll bg-white w-full hidden lg:flex justify-center z-[100]">
+        <nav id="featuresNav" class="px-16 flex justify-start gap-16 items-center overflow-x-auto hide-scrollbar relative z-80">
+          <a href="#efffective-crowd-management"
+            class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C] hr-scroll-acitve">Effective crowd
           management</a>
-        <a href="#secure-cloud-based-ehr" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Secure
+          <a href="#secure-cloud-based-ehr" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Secure
           cloud-based EHR</a>
-        <a href="#intelligent-dashboard" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Intelligent
+          <a href="#intelligent-dashboard" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Intelligent
           Dashboard</a>
-        <a href="#patient-360" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Patient 360</a>
-        <a href="#better-online-presense" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Better online
+          <a href="#patient-360" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Patient 360</a>
+          <a href="#better-online-presense" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Better online
           presence</a>
-        <a href="#automated-clinical-note-suggestions"
-          class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Automated clinical note suggestions</a>
-        <a href="#smooth-user-experience" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Smooth User
+          <a href="#automated-clinical-note-suggestions"
+            class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Automated clinical note suggestions</a>
+          <a href="#smooth-user-experience" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Smooth User
           Experience</a>
-        <a href="#branding" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Branding</a>
-        <div id="nav-slider" class="nav-slider rounded-full"></div>
-      </nav>
-    </div>
-
-    <!-- features -->
-    <div id="features"
-      class="w-full container mx-auto pb-0 flex flex-col items-center px-6 mb-36 lg:px-10 xl:px-0 md:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] transition-all duration-500">
-      <section id="efffective-crowd-management"
-        class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
-        <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
-          <div
-            class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py- md:py-2 h-[2.3rem] px-[0.1rem]">
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-            <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">EFFECTIVE CROWD
-              MANAGEMENT</p>
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-          </div>
-          <h3 class="font-medium text-3xl font-Poppins">Seamless OP Flow</h3>
-          <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Dochours optimizes operation flow to reduce
-            wait times and minimize overcrowding.</p>
-          <div class="flex flex-col gap-3">
-            <div class="flex flex-row items-start gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Instant Patient Registration</p>
+          <a href="#branding" class="px-4 pt-[1.2rem] pb-[1.1rem] text-nowrap text-[#343F4C]">Branding</a>
+          <div id="nav-slider" class="nav-slider rounded-full"></div>
+        </nav>
+      </div>
+      <!-- Features -->
+      <div id="features" class="w-full container mx-auto pb-0 flex flex-col items-center px-6 mb-36 lg:px-10 xl:px-0 md:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 lg:w-full xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] transition-all duration-500">
+        <section id="efffective-crowd-management"
+          class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
+          <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
+            <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py- md:py-2 h-[2.3rem] px-[0.1rem]">
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+              <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">EFFECTIVE CROWD MANAGEMENT</p>
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
             </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Efficient Appointment Scheduling</p>
-            </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Patient Flow Tracking</p>
+            <h3 class="font-medium text-3xl font-Poppins">Seamless OP Flow</h3>
+            <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Dochours optimizes operation flow to reduce wait times and minimize overcrowding.</p>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-row items-start gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Instant Patient Registration</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Efficient Appointment Scheduling</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Patient Flow Tracking</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
-          <img src="./assets/images/features/features-card-efffective-crowd-management.png"
-            class="w-full sm:w-1/2 lg:w-full" alt="features-card-efffective-crowd-management.png" />
-        </div>
-        <div
-          class=" fr-hero-bg-blur absolute w-40 h-32 top-[253px] sm:top-[257px] md:top-[270px] lg:top-[336px] left-[-30px] sm:left-[-80px] min-[870px]:left-[-80px] z-[-10] blur-[110px]  ">
-        </div>
-      </section>
-      <section id="secure-cloud-based-ehr"
-        class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col-reverse lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
-        <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
-          <img src="./assets/images/features/features-card-secure-cloud-based-ehr.png"
-            class="w-full sm:w-3/4 md:w-[450px] lg:w-full" alt="features-card-secure-cloud-based-ehr.png" />
-        </div>
-        <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
-          <div
-            class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-            <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Keep your data
-              safe</p>
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+          <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
+            <img src="./assets/images/features/features-card-efffective-crowd-management.png" class="w-full sm:w-1/2 lg:w-full" alt="features-card-efffective-crowd-management.png" />
           </div>
-          <h3 class="font-medium text-3xl font-Poppins">Secure Cloud-Based EMR</h3>
-          <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Your patient data is secure in
-            HIPAA-compliant <span class="font-semibold">AWS data centers, </span> with regular checks for breaches.</p>
-          <div class="flex flex-col gap-3">
-            <div class="flex flex-row items-start gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Sensitive data stored in an encrypted
-                cloud environment.</p>
+          <div class=" fr-hero-bg-blur absolute w-40 h-32 top-[253px] sm:top-[257px] md:top-[270px] lg:top-[336px] left-[-30px] sm:left-[-80px] min-[870px]:left-[-80px] z-[-10] blur-[110px]  ">
+          </div>
+        </section>
+        <section id="secure-cloud-based-ehr" class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col-reverse lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
+          <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
+            <img src="./assets/images/features/features-card-secure-cloud-based-ehr.png"
+              class="w-full sm:w-3/4 md:w-[450px] lg:w-full" alt="features-card-secure-cloud-based-ehr.png" />
+          </div>
+          <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
+            <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+              <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Keep your data safe</p>
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
             </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Minimal Maintenance.</p>
-            </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Robust Security Measures</p>
+            <h3 class="font-medium text-3xl font-Poppins">Secure Cloud-Based EMR</h3>
+            <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Your patient data is secure in HIPAA-compliant <span class="font-semibold">AWS data centers, </span> with regular checks for breaches.</p>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-row items-start gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Sensitive data stored in an encrypted cloud environment.</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Minimal Maintenance.</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Robust Security Measures</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class=" fr-hero-bg-blur absolute w-40 h-32 top-[388px] min-[870px]:top-[360px] xl:top-[404px] right-[150px] sm:right-[200px] min-[870px]:right-[373px] z-[-10] blur-[110px] ">
-        </div>
-      </section>
-      <section id="intelligent-dashboard"
-        class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
-        <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
-          <div
-            class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-            <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Informed
-              Decision Making</p>
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+          <div class=" fr-hero-bg-blur absolute w-40 h-32 top-[388px] min-[870px]:top-[360px] xl:top-[404px] right-[150px] sm:right-[200px] min-[870px]:right-[373px] z-[-10] blur-[110px] ">
           </div>
-          <h3 class="font-medium text-3xl font-Poppins">Intelligent Dashboard</h3>
-          <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">With Dochours’ Intelligent Dashboard, you
-            have the ability to oversee all the activities of your clinical practice on one screen and make insightful
-            decisions.</p>
-          <div class="flex flex-col gap-3">
-            <div class="flex flex-row items-start gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Data-driven insights</p>
+        </section>
+        <section id="intelligent-dashboard" class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
+          <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
+            <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+              <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Informed Decision Making
+              </p>
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
             </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Live updates</p>
-            </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Timely patient care.</p>
-            </div>
-          </div>
-        </div>
-        <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
-          <img src="./assets/images/features/feature-card-intelligent-dashboard.png" class="w-full sm:w-1/2 lg:w-full"
-            alt="feature-card-intelligent-dashboard.png" />
-        </div>
-        <div
-          class=" fr-hero-bg-blur absolute w-40 h-32 top-[253px] sm:top-[257px] md:top-[270px] lg:top-[336px] left-[-30px] sm:left-[-80px] min-[870px]:left-[-80px] z-[-10] blur-[110px]">
-        </div>
-      </section>
-      <section id="patient-360"
-        class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col-reverse lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
-        <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
-          <img src="./assets/images/features/feature-card-patient-360.png" class="w-full sm:w-1/2 lg:w-full"
-            alt="feature-card-patient-360.png" />
-        </div>
-        <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
-          <div
-            class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-            <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Stay Informed
+            <h3 class="font-medium text-3xl font-Poppins">Intelligent Dashboard</h3>
+            <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">With Dochours’ Intelligent Dashboard, you
+              have the ability to oversee all the activities of your clinical practice on one screen and make insightful
+              decisions.
             </p>
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-          </div>
-          <h3 class="font-medium text-3xl font-Poppins">Patient 360</h3>
-          <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Access and manage your patient's medical
-            information, including basic details, history, appointments, treatments, notes, and prescriptions.</p>
-          <div class="flex flex-col gap-3">
-            <div class="flex flex-row items-start gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">A brief and simple layout for easier
-                viewing.</p>
-            </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Constant Patient Monitoring</p>
-            </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Real-time Alerts and Notifications</p>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-row items-start gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Data-driven insights</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Live updates</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Timely patient care.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class=" fr-hero-bg-blur absolute w-40 h-32 top-[388px] min-[870px]:top-[360px] xl:top-[404px] right-[150px] sm:right-[200px] min-[870px]:right-[373px] z-[-10] blur-[110px] ">
-        </div>
-      </section>
-      <section id="better-online-presense"
-        class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
-        <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
-          <div
-            class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-            <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Better online
-              presence</p>
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+          <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
+            <img src="./assets/images/features/feature-card-intelligent-dashboard.png" class="w-full sm:w-1/2 lg:w-full"
+              alt="feature-card-intelligent-dashboard.png" />
           </div>
-          <h3 class="font-medium text-3xl font-Poppins">Lightning Fast Website Setup.</h3>
-          <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Launch your very own website with
-            department listings and patient bookings in an instant.</p>
-          <div class="flex flex-col gap-3">
-            <div class="flex flex-row items-start gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">A fully functional website in an
-                instant</p>
-            </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">No external help required.</p>
-            </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Readily customizable templates.</p>
-            </div>
+          <div class=" fr-hero-bg-blur absolute w-40 h-32 top-[253px] sm:top-[257px] md:top-[270px] lg:top-[336px] left-[-30px] sm:left-[-80px] min-[870px]:left-[-80px] z-[-10] blur-[110px]">
           </div>
-        </div>
-        <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
-          <video class="w-full sm:w-1/2 lg:w-full" autoplay loop muted controlsList="nodownload">
-            <source src="./assets/images/features/video/features-card-better-online-presense.mp4" type="video/mp4" />
-            <p>Your browser cannot play the provided video file.</p>
-          </video>
-        </div>
-
-        <div
-          class=" fr-hero-bg-blur absolute w-40 h-32 top-[253px] sm:top-[257px] md:top-[270px] lg:top-[336px] left-[-30px] sm:left-[-80px] min-[870px]:left-[-80px] z-[-10] blur-[110px]">
-        </div>
-      </section>
-      <section id="automated-clinical-note-suggestions"
-        class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col-reverse lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
-        <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
-          <img src="./assets/images/features/features-card-automated-clinical-note-suggestions.png"
-            class="w-full sm:w-1/2 lg:w-full" alt="automated-clinical-note-suggestions" />
-        </div>
-        <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
-          <div
-            class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-            <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Automated
-              Clinical Notes</p>
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+        </section>
+        <section id="patient-360" class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col-reverse lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
+          <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
+            <img src="./assets/images/features/feature-card-patient-360.png" class="w-full sm:w-1/2 lg:w-full"
+              alt="feature-card-patient-360.png" />
           </div>
-          <h3 class="font-medium text-3xl font-Poppins">Save time. Get more done.</h3>
-          <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">With our automated note suggestions,
-            doctors can save time on the recurring and tiring tasks of generating clinical notes.</p>
-          <div class="flex flex-col gap-3">
-            <div class="flex flex-row items-start gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Adaptive Learning</p>
+          <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
+            <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+              <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Stay Informed
+              </p>
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
             </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Personalized care</p>
-            </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Faster than manual note-taking.</p>
+            <h3 class="font-medium text-3xl font-Poppins">Patient 360</h3>
+            <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Access and manage your patient's medical
+              information, including basic details, history, appointments, treatments, notes, and prescriptions.
+            </p>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-row items-start gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">A brief and simple layout for easier
+                  viewing.
+                </p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Constant Patient Monitoring</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Real-time Alerts and Notifications</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-        class=" fr-hero-bg-blur absolute w-40 h-32 top-[388px] min-[870px]:top-[360px] xl:top-[404px] right-[150px] sm:right-[200px] min-[870px]:right-[373px] z-[-10] blur-[110px] hidden lg:block ">
+          <div class=" fr-hero-bg-blur absolute w-40 h-32 top-[388px] min-[870px]:top-[360px] xl:top-[404px] right-[150px] sm:right-[200px] min-[870px]:right-[373px] z-[-10] blur-[110px] ">
+          </div>
+        </section>
+        <section id="better-online-presense" class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
+          <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
+            <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+              <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Better online presence</p>
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+            </div>
+            <h3 class="font-medium text-3xl font-Poppins">Lightning Fast Website Setup.</h3>
+            <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Launch your very own website with department listings and patient bookings in an instant.</p>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-row items-start gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">A fully functional website in an instant</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">No external help required.</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Readily customizable templates.</p>
+              </div>
+            </div>
+          </div>
+          <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
+            <video class="w-full sm:w-1/2 lg:w-full" autoplay loop muted controlsList="nodownload">
+              <source src="./assets/images/features/video/features-card-better-online-presense.mp4" type="video/mp4" />
+              <p>Your browser cannot play the provided video file.</p>
+            </video>
+          </div>
+          <div class=" fr-hero-bg-blur absolute w-40 h-32 top-[253px] sm:top-[257px] md:top-[270px] lg:top-[336px] left-[-30px] sm:left-[-80px] min-[870px]:left-[-80px] z-[-10] blur-[110px]">
+          </div>
+        </section>
+        <section id="automated-clinical-note-suggestions" class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col-reverse lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
+          <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
+            <img src="./assets/images/features/features-card-automated-clinical-note-suggestions.png" class="w-full sm:w-1/2 lg:w-full" alt="automated-clinical-note-suggestions" />
+          </div>
+          <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
+            <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+              <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Automated Clinical Notes
+              </p>
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+            </div>
+            <h3 class="font-medium text-3xl font-Poppins">Save time. Get more done.</h3>
+            <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">With our automated note suggestions,
+              doctors can save time on the recurring and tiring tasks of generating clinical notes.
+            </p>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-row items-start gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Adaptive Learning</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Personalized care</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Faster than manual note-taking.</p>
+              </div>
+            </div>
+          </div>
+          <div class=" fr-hero-bg-blur absolute w-40 h-32 top-[388px] min-[870px]:top-[360px] xl:top-[404px] right-[150px] sm:right-[200px] min-[870px]:right-[373px] z-[-10] blur-[110px] hidden lg:block ">
+          </div>
+          <div class=" fr-hero-bg-blur absolute w-40 h-32 top-[270px] left-[-30px] sm:left-[-25px] min-[870px]:left-[-30px] z-[-10] blur-[110px]  block lg:hidden  ">
+          </div>
+        </section>
+        <section id="smooth-user-experience" class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
+          <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
+            <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+              <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Smooth User Experience</p>
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+            </div>
+            <h3 class="font-medium text-3xl font-Poppins">A Hassle-Free Journey</h3>
+            <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">With our user-friendly interface, you can
+              easily navigate from booking to consultation with no further problems.
+            </p>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-row items-start gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Simple navigation</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Minimalist Design</p>
+              </div>
+              <div class="flex flex-row gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Responsive UI</p>
+              </div>
+            </div>
+          </div>
+          <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
+            <img src="./assets/images/features/feature-card-smooth-user-experience.png" class="w-full sm:w-1/2 lg:w-full"
+              alt="feature-card-smooth-user-experience.png" />
+          </div>
+          <div class=" fr-hero-bg-blur absolute w-40 h-32 top-[253px] sm:top-[257px] md:top-[270px] lg:top-[336px] left-[-30px] sm:left-[-80px] min-[870px]:left-[-80px] z-[-10] blur-[110px]">
+          </div>
+        </section>
+        <section id="branding" class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col-reverse lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
+          <div class="feature-branding-img-main w-11/12 sm:w-[513px] h-[280px] mx-auto overflow-hidden bg-no-repeat bg-cover px-4">
+            <div id="featureBrandingImgDiv"
+              class="flex flex-row gap-1 w-full feature-branding-sub-div mt-7 ml-[-1rem] w-full transition-all duration-1000 translate-x-0 hover:translate-x-[-630px] sm:hover:translate-x-[-490px]">
+              <img src="./assets/images/features/features-card-8-1.png" class="w-[326px] h-[387px] " alt="" />
+              <img src="./assets/images/features/features-card-8-2.png" class="w-[326px] h-[387px] " alt="" />
+              <img src="./assets/images/features/features-card-8-3.png" class="w-[326px] h-[387px] " alt="" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
+            <div class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+              <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Branding</p>
+              <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
+            </div>
+            <h3 class="font-medium text-3xl font-Poppins">E- invoice templates</h3>
+            <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Generate customized bill templates that
+              align with your clinic's branding swiftly.
+            </p>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-row items-start gap-3">
+                <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
+                <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Our templates offer a variety of
+                  invoice options for easy switching.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class=" fr-hero-bg-blur absolute w-40 h-32 top-[328px] right-[150px] sm:right-[200px] min-[870px]:right-[404px] z-[-10] blur-[110px] ">
+          </div>
+          <div class=" fr-hero-bg-blur absolute w-40 h-32 top-[230px] left-[-30px] sm:left-[-25px] min-[870px]:left-[-30px] z-[-10] blur-[110px] block lg:hidden ">
+          </div>
+        </section>
       </div>
-      <div
-        class=" fr-hero-bg-blur absolute w-40 h-32 top-[270px] left-[-30px] sm:left-[-25px] min-[870px]:left-[-30px] z-[-10] blur-[110px]  block lg:hidden  ">
-      </div>
-      </section>
-      <section id="smooth-user-experience"
-        class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
-        <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
-          <div
-            class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-            <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Smooth User
-              Experience</p>
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-          </div>
-          <h3 class="font-medium text-3xl font-Poppins">A Hassle-Free Journey</h3>
-          <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">With our user-friendly interface, you can
-            easily navigate from booking to consultation with no further problems.</p>
-          <div class="flex flex-col gap-3">
-            <div class="flex flex-row items-start gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Simple navigation</p>
+      <div class="flex flex-col items-center justify-center w-full mt-16 w-full px-4 py-[5.2rem] bg-[#4C42B8]">
+        <div class="px-4 md:px-0 md:justify-normal md:justify-center w-full md:max-w-[946px] md:w-11/12 lg:w-full xl:w-[946px] 2xl:w-[946px] max-w-[946px]">
+          <p class="features-footer-hash-tag open-sans font-normal text-xl md:text-3xl text-white text-center lowercase">
+            #Makeclinicmanagmentsimple
+          </p>
+          <div class="features-yt-referance w-full p-3 mt-[30px] flex justify-start gap-8  items-center flex-col md:flex-row ">
+            <div class="group flex relative">
+              <button class="modal-open w-full max-md:max-w-[439px] md:w-[439px]">
+                <img src="./assets/images/features/thumbnail.png" class="w-full rounded-3xl" alt="" />
+                <div class="rounded-3xl absolute custom-btn right-4 bottom-4 py-2 px-4 w-[145px] bg-[#4C42B8] flex flex-row gap-2 justify-center items-center">
+                  <img src="./assets/images/features/playBtn.svg" class="" alt="play" srcset="" />
+                  <span class="font-normal text-sm text-white text-nowrap font-thin">WATCH NOW</span>
+                </div>
+              </button>
             </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Minimalist Design</p>
-            </div>
-            <div class="flex flex-row gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Responsive UI</p>
-            </div>
-          </div>
-        </div>
-        <div class="px-4 md:px-0 w-full lg:w-1/2 flex justify-center items-center">
-          <img src="./assets/images/features/feature-card-smooth-user-experience.png" class="w-full sm:w-1/2 lg:w-full"
-            alt="feature-card-smooth-user-experience.png" />
-        </div>
-        <div
-        class=" fr-hero-bg-blur absolute w-40 h-32 top-[253px] sm:top-[257px] md:top-[270px] lg:top-[336px] left-[-30px] sm:left-[-80px] min-[870px]:left-[-80px] z-[-10] blur-[110px]">
-      </div>
-      </section>
-      <section id="branding"
-        class="features-sec w-full pt-20 md:pt-32 pb-0 flex flex-col-reverse lg:flex-row gap-8 lg:gap-20 justify-between md:items-center relative">
-        <div
-          class="feature-branding-img-main w-11/12 sm:w-[513px] h-[280px] mx-auto overflow-hidden bg-no-repeat bg-cover px-4">
-          <div id="featureBrandingImgDiv"
-            class="flex flex-row gap-1 w-full feature-branding-sub-div mt-7 ml-[-1rem] w-full transition-all duration-1000 translate-x-0 hover:translate-x-[-630px] sm:hover:translate-x-[-490px]">
-            <img src="./assets/images/features/features-card-8-1.png" class="w-[326px] h-[387px] " alt="" />
-            <img src="./assets/images/features/features-card-8-2.png" class="w-[326px] h-[387px] " alt="" />
-            <img src="./assets/images/features/features-card-8-3.png" class="w-[326px] h-[387px] " alt="" />
-          </div>
-        </div>
-        <div class="flex flex-col gap-4 items-start w-full lg:w-1/2">
-          <div
-            class="pr-badge bg-[#FAFAFA] border border-[#ECECEC] rounded-[35px] flex items-center w-fit justify-between mb-2 text-center py-2 h-[2.3rem] px-[0.1rem]">
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-            <p class="badge-title m-0 text-[#343F4C] text-xs leading-[22px] md:leading-[23px] uppercase">Branding</p>
-            <span class="badge-circle bg-[#6AC37F] w-2 h-2 rounded-full mx-4"></span>
-          </div>
-          <h3 class="font-medium text-3xl font-Poppins">E- invoice templates</h3>
-          <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Generate customized bill templates that
-            align with your clinic's branding swiftly.</p>
-          <div class="flex flex-col gap-3">
-            <div class="flex flex-row items-start gap-3">
-              <img src="./assets/images/features/checkbox.svg" alt="checkbox" />
-              <p class="text-base text-[#212C38] open-sans font-normal mt-[3px]">Our templates offer a variety of
-                invoice options for easy switching.</p>
-            </div>
-          </div>
-        </div>
-        <div
-          class=" fr-hero-bg-blur absolute w-40 h-32 top-[328px] right-[150px] sm:right-[200px] min-[870px]:right-[404px] z-[-10] blur-[110px] ">
-        </div>
-        <div
-        class=" fr-hero-bg-blur absolute w-40 h-32 top-[230px] left-[-30px] sm:left-[-25px] min-[870px]:left-[-30px] z-[-10] blur-[110px] block lg:hidden ">
-      </div>
-      </section>
-    </div>
-    <div class="flex flex-col items-center justify-center w-full mt-16 w-full px-4 py-[5.2rem] bg-[#4C42B8]">
-      <div
-        class="px-4 md:px-0 md:justify-normal md:justify-center w-full md:max-w-[946px] md:w-11/12 lg:w-full xl:w-[946px] 2xl:w-[946px] max-w-[946px]">
-        <p class="features-footer-hash-tag open-sans font-normal text-xl md:text-3xl text-white text-center lowercase">
-          #Makeclinicmanagmentsimple</p>
-        <div
-          class="features-yt-referance w-full p-3 mt-[30px] flex justify-start gap-8  items-center flex-col md:flex-row ">
-          <div class="group flex relative">
-            <button class="modal-open w-full max-md:max-w-[439px] md:w-[439px]">
-            <img src="./assets/images/features/thumbnail.png" class="w-full rounded-3xl" alt="" />
-            <div
-              class="rounded-3xl absolute custom-btn right-4 bottom-4 py-2 px-4 w-[145px] bg-[#4C42B8] flex flex-row gap-2 justify-center items-center">
-              <img src="./assets/images/features/playBtn.svg" class="" alt="play" srcset="" />
-              <span class="font-normal text-sm text-white text-nowrap font-thin">WATCH NOW</span>
-            </div>
-            </button>
-          </div>
             <!-- Modal -->
             <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
               <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
@@ -535,78 +488,78 @@
                 </div>
               </div>
             </div>
-          <p class="md:w-[423px] text-white mx-2 md:mx-0 text-center md:text-start text-base leading-[1.7rem] ">
-            Dochours is committed to simplifying your clinic operations and minimizing the complications that can arise
-            from a lack of proper clinic management software. We offer constant updates, and frequent addition of new
-            modules to
-            ensure that we remain up-to-date and perfectly suited to your needs.
-          </p>
+            <p class="md:w-[423px] text-white mx-2 md:mx-0 text-center md:text-start text-base leading-[1.7rem] ">
+              Dochours is committed to simplifying your clinic operations and minimizing the complications that can arise
+              from a lack of proper clinic management software. We offer constant updates, and frequent addition of new
+              modules to
+              ensure that we remain up-to-date and perfectly suited to your needs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Streamlining Care Section -->
+      <div class="streamlining-section flex flex-col items-center justify-center w-full pt-8 pb-11 bg-cover bg-no-repeat">
+        <div class="badge px-5 py-1.5 w-fit mt-12">
+          <span class="green-icon rounded-full"></span>
+          <h1 class="badge-text">STREAMLINING CARE</h1>
+          <span class="green-icon rounded-full"></span>
+        </div>
+        <h1 class="text-3xl text-center font-medium mt-6">Dochours assures you</h1>
+        <div id="vertical-text-slider" class="vertical-text-slider h-9 overflow-y-hidden mt-6">
+          <h1 class="vt-slider-1 text-3xl font-medium text-center text-[#4C42B8]">Faster Bookings</h1>
+          <h1 class="vt-slider-2 text-3xl font-medium text-center text-[#6AC37F]">Quicker Care</h1>
+          <h1 class="vt-slider-3 text-3xl font-medium text-center text-[#F25821]">Deeper Insights</h1>
+        </div>
+        <p class="text-base text-[#212C38] mt-6 md:w-[29rem] w-3/4 text-center">We provide clinics with a user-friendly management solution that prioritizes their time and values</p>
+        <div class="flex justify-center items-center mb-4">
+          <a class="custom-btn custom-btn-2 px-2 py-3 flex justify-center items-center text-center mt-10 md:mb-4 mb-8" href="https://app.dochours.com/" target="_blank">
+            <span>Start your free trial now</span>
+            <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="arrow-path-2" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!-- Footer Section -->
+      <div class="container mx-auto flex flex-col items-center justify-center mt-14 mb-8 sm:justify-normal md:justify-center px-6 md:px-0 md:max-w-[1100px] md:w-11/12 xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
+        <h1 class="text-3xl font-medium text-center lg:w-5/12 md:w-8/12 w-full leading-10">Subscribe to our newsletter to get the latest updates</h1>
+        <div class="flex rounded-full border mt-12 relative">
+          <input placeholder="Your email" type="email" class="px-4 py-2 bg-gray-100 placeholder:italic rounded-full md:w-80 w-64" />
+          <button class="custom-btn text-center items-center justify-center w-32 text-sm ml-[-50px] cursor-pointer">Subscribe</button>
+        </div>
+        <div class="flex items-center justify-center gap-4 mt-12 opacity-15 hover:opacity-100 transition ease-in-out delay-50">
+          <a href="./index.html"><img src="./assets/images/footerLogo.svg" alt="Footer Logo Img" class="w-60" /></a>
+        </div>
+        <!-- <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 mt-10 justify-between text-center items-center"> -->
+        <div class="flex gap-12 mt-10 justify-center text-center items-center">
+          <a href="./features.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Features</a>
+          <a href="./pricing.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Pricing</a>
+          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Resources</a>
+          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Support</a>
+          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Blog</a> 
+          <a href="./contact.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Contact Us</a>
+        </div>
+        <div class="flex justify-center items-center gap-12 mt-8 text-gray-400">
+          <a href="./terms.html" class="cursor-pointer hover:text-green-500">Terms & Conditions</a>
+          <a href="./policy.html" class="cursor-pointer hover:text-green-500">Privacy Policy</a>
+        </div>
+        <div class="flex justify-between gap-4 mt-8">
+          <img src="./assets/images/facebook.svg" class="social-icons" alt="Facebook" />
+          <a href="https://www.instagram.com/dochours/" target="_blank"><img src="./assets/images/instagram.svg" class="social-icons" alt="Instagram" /></a>
+          <img src="./assets/images/twitter.svg" class="social-icons hidden" alt="Twitter" />
+          <a href="https://www.linkedin.com/company/dochours/" target="_blank"><img src="./assets/images/linkedin.svg" class="social-icons" alt="LinkedIn" /></a>
+          <a href="https://www.youtube.com/@dochours" target="_blank"><img src="./assets/images/youtube.svg" class="social-icons" alt="Youtube" /></a>
+        </div>
+        <hr class="w-8/12 mt-8 hr" />
+        <div class="flex justify-between gap-12 mt-6 text-base text-gray-400">
+          <span>© <span id="year"></span></span>
+          <a href="./index.html" class="flex items-center cursor-pointer">
+          <img src="./assets/images/headerLogo.svg" class="w-6 mr-2" alt="Footer Logo" />
+          <span class="hover:text-gray-500 font-['Poppins']">docHours</span>
+          </a>
         </div>
       </div>
     </div>
-    <!-- Streamlining Care Section -->
-    <div class="streamlining-section flex flex-col items-center justify-center w-full pt-8 pb-11 bg-cover bg-no-repeat">
-      <div class="badge px-5 py-1.5 w-fit mt-12">
-        <span class="green-icon rounded-full"></span>
-        <h1 class="badge-text">STREAMLINING CARE</h1>
-        <span class="green-icon rounded-full"></span>
-      </div>
-      <h1 class="text-3xl text-center font-medium mt-6">Dochours assures you</h1>
-      <div id="vertical-text-slider" class="vertical-text-slider h-9 overflow-y-hidden mt-6">
-        <h1 class="vt-slider-1 text-3xl font-medium text-center text-[#4C42B8]">Faster Bookings</h1>
-        <h1 class="vt-slider-2 text-3xl font-medium text-center text-[#6AC37F]">Quicker Care</h1>
-        <h1 class="vt-slider-3 text-3xl font-medium text-center text-[#F25821]">Deeper Insights</h1>
-      </div>
-      <p class="text-base text-[#212C38] mt-6 md:w-[29rem] w-3/4 text-center">We provide clinics with a user-friendly management solution that prioritizes their time and values</p>
-      <div class="flex justify-center items-center mb-4">
-        <a class="custom-btn custom-btn-2 px-2 py-3 flex justify-center items-center text-center mt-10 md:mb-4 mb-8" href="https://app.dochours.com/" target="_blank">
-          <span>Start your free trial now</span>
-          <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path id="arrow-path-2" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </a>
-      </div>
-    </div>
-    <!-- Footer Section -->
-    <div class="container mx-auto flex flex-col items-center justify-center mt-14 mb-8 sm:justify-normal md:justify-center px-6 md:px-0 md:max-w-[1100px] md:w-11/12 xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
-      <h1 class="text-3xl font-medium text-center lg:w-5/12 md:w-8/12 w-full leading-10">Subscribe to our newsletter to get the latest updates</h1>
-      <div class="flex rounded-full border mt-12 relative">
-        <input placeholder="Your email" type="email" class="px-4 py-2 bg-gray-100 placeholder:italic rounded-full md:w-80 w-64" />
-        <button class="custom-btn text-center items-center justify-center w-32 text-sm ml-[-50px] cursor-pointer">Subscribe</button>
-      </div>
-      <div class="flex items-center justify-center gap-4 mt-12 opacity-15 hover:opacity-100 transition ease-in-out delay-50">
-        <a href="./index.html"><img src="./assets/images/footerLogo.svg" alt="Footer Logo Img" class="w-60" /></a>
-      </div>
-      <!-- <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 mt-10 justify-between text-center items-center"> -->
-      <div class="flex gap-12 mt-10 justify-center text-center items-center">
-        <a href="./features.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Features</a>
-        <a href="./pricing.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Pricing</a>
-        <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Resources</a>
-        <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Support</a>
-        <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Blog</a> 
-        <a href="./contact.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Contact Us</a>
-      </div>
-      <div class="flex justify-center items-center gap-12 mt-8 text-gray-400">
-        <a href="./terms.html" class="cursor-pointer hover:text-green-500">Terms & Conditions</a>
-        <a href="./policy.html" class="cursor-pointer hover:text-green-500">Privacy Policy</a>
-      </div>
-      <div class="flex justify-between gap-4 mt-8">
-        <img src="./assets/images/facebook.svg" class="social-icons" alt="Facebook" />
-        <a href="https://www.instagram.com/dochours/" target="_blank"><img src="./assets/images/instagram.svg" class="social-icons" alt="Instagram" /></a>
-        <img src="./assets/images/twitter.svg" class="social-icons hidden" alt="Twitter" />
-        <a href="https://www.linkedin.com/company/dochours/" target="_blank"><img src="./assets/images/linkedin.svg" class="social-icons" alt="LinkedIn" /></a>
-        <a href="https://www.youtube.com/@dochours" target="_blank"><img src="./assets/images/youtube.svg" class="social-icons" alt="Youtube" /></a>
-      </div>
-      <hr class="w-8/12 mt-8 hr" />
-      <div class="flex justify-between gap-12 mt-6 text-base text-gray-400">
-        <span>© <span id="year"></span></span>
-        <a href="./index.html" class="flex items-center cursor-pointer">
-          <img src="./assets/images/headerLogo.svg" class="w-6 mr-2" alt="Footer Logo" />
-          <span class="hover:text-gray-500 font-['Poppins']">docHours</span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <script src="./assets/js/script.js"></script>
-</body>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

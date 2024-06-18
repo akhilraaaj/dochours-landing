@@ -1,210 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DocHours</title>
-  <link rel="icon" type="image/x-icon" href="./assets/images/headerLogo.svg">
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body>
-  <div class="overflow-x-hidden">
-
-    <!-- Sign Up Header -->
-    <div class="flex sm:flex-row flex-col items-center justify-center text-lg py-3 bg-[#E8EBFF] md:gap-8 gap-2">
-      <p class="text-center text-base font-['Poppins']">Get up to <span class="font-bold">3 Months</span> of free access to DocHours</p>
-      <a href="https://app.dochours.com/" target="_blank" class="custom-btn text-center items-center justify-center w-32 py-2 text-sm cursor-pointer">Sign Up Now</a>
-    </div>
-
-    <!-- Header Section -->
-    <div id="nav-bar"
-      class="h-0 w-full pt-2.5 fixed z-50 top-0 right-0 bg-white overflow-x-hidden overflow-y-hidden opacity-0 transition-all duration-300">
-      <div class="w-full flex justify-between items-center px-4">
-        <a href="./index.html"><img class="h-7 mt-1.5" src="./assets/images/headerLogo.svg" alt="Header Logo"></a>
-        <a onclick="closeNavbar()" class="closebtn w-6 transition-all duration-300">
-          <img class="h-7 mt-1.5" src="./assets/images/close.svg" alt="close-arrow">
-        </a>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocHours</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/headerLogo.svg">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="overflow-x-hidden">
+      <!-- Sign Up Header -->
+      <div class="flex sm:flex-row flex-col items-center justify-center text-lg py-3 bg-[#E8EBFF] md:gap-8 gap-2">
+        <p class="text-center text-base font-['Poppins']">Get up to <span class="font-bold">3 Months</span> of free access to DocHours</p>
+        <a href="https://app.dochours.com/" target="_blank" class="custom-btn text-center items-center justify-center w-32 py-2 text-sm cursor-pointer">Sign Up Now</a>
       </div>
-      <nav class="nav-links relative h-full flex flex-col gap-6 text-center justify-start">
-        <div class="absolute mt-16 w-full flex flex-col gap-6 text-center justify-start h-screen">
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./pricing.html">Pricing</a>
-          <a class="text-[#6AC37F] font-medium leading-5 hover:text-[#6AC37F]" href="./contact.html">Contact</a>
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/"
-            target="_blank">Login / Register</a>
-        </div>
-        <div class="nav-child"></div>
-        <div class="nav-footer absolute bottom-20 w-full flex flex-col items-center">
-          <div class="flex justify-between gap-12 mt-8 text-gray-400 ">
-            <a href="./terms.html"
-              class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Terms &
-              Conditions</a>
-            <a href="./policy.html"
-              class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Privacy
-              Policy</a>
-          </div>
-          <div class="flex justify-between gap-4 mt-8">
-            <img src="./assets/images/facebook.svg" class="social-icons" alt="Facebook" />
-            <a href="https://www.instagram.com/dochours/" target="_blank"><img src="./assets/images/instagram.svg" class="social-icons" alt="Instagram" /></a>
-            <img src="./assets/images/twitter.svg" class="social-icons hidden" alt="Twitter" />
-            <a href="https://www.linkedin.com/company/dochours/" target="_blank"><img src="./assets/images/linkedin.svg" class="social-icons" alt="LinkedIn" /></a>
-            <a href="https://www.youtube.com/@dochours" target="_blank"><img src="./assets/images/youtube.svg" class="social-icons" alt="Youtube" /></a>
-          </div>
-        </div>
-      </nav>
-    </div>
-
-    <header
-      class="container mx-auto flex px-6 md:px-0 sm:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 xl:3/5 2xl:max-w-screen-2xl   xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px]">
-      <div class="w-full items-center flex justify-between mt-4">
-        <div class="header-left-sec">
-          <a href="./index.html" class="logo">
-            <img class="header-logo w-36" src="./assets/images/navLogo.svg" alt="Header Logo">
+      <!-- Header Section -->
+      <div id="nav-bar"
+        class="h-0 w-full pt-2.5 fixed z-50 top-0 right-0 bg-white overflow-x-hidden overflow-y-hidden opacity-0 transition-all duration-300">
+        <div class="w-full flex justify-between items-center px-4">
+          <a href="./index.html"><img class="h-7 mt-1.5" src="./assets/images/headerLogo.svg" alt="Header Logo"></a>
+          <a onclick="closeNavbar()" class="closebtn w-6 transition-all duration-300">
+          <img class="h-7 mt-1.5" src="./assets/images/close.svg" alt="close-arrow">
           </a>
         </div>
-        <nav class="hidden flex items-center gap-8 md:flex">
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
-          <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./pricing.html">Pricing</a>
-          <a class="text-[#6AC37F] font-medium leading-5 hover:text-[#6AC37F] " href="./contact.html">Contact</a>
-          <a class="text-white font-medium custom-btn text-center items-center justify-center w-36 py-2 text-sm cursor-pointer mt-0"
-            href="https://app.dochours.com/" target="_blank">Login / Register</a>
+        <nav class="nav-links relative h-full flex flex-col gap-6 text-center justify-start">
+          <div class="absolute mt-16 w-full flex flex-col gap-6 text-center justify-start h-screen">
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./pricing.html">Pricing</a>
+            <a class="text-[#6AC37F] font-medium leading-5 hover:text-[#6AC37F]" href="./contact.html">Contact</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="https://app.dochours.com/"
+              target="_blank">Login / Register</a>
+          </div>
+          <div class="nav-child"></div>
+          <div class="nav-footer absolute bottom-20 w-full flex flex-col items-center">
+            <div class="flex justify-between gap-12 mt-8 text-gray-400 ">
+              <a href="./terms.html"
+                class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Terms &
+              Conditions</a>
+              <a href="./policy.html"
+                class="cursor-pointer text-[#ACB6C3] text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]">Privacy
+              Policy</a>
+            </div>
+            <div class="flex justify-between gap-4 mt-8">
+              <img src="./assets/images/facebook.svg" class="social-icons" alt="Facebook" />
+              <a href="https://www.instagram.com/dochours/" target="_blank"><img src="./assets/images/instagram.svg" class="social-icons" alt="Instagram" /></a>
+              <img src="./assets/images/twitter.svg" class="social-icons hidden" alt="Twitter" />
+              <a href="https://www.linkedin.com/company/dochours/" target="_blank"><img src="./assets/images/linkedin.svg" class="social-icons" alt="LinkedIn" /></a>
+              <a href="https://www.youtube.com/@dochours" target="_blank"><img src="./assets/images/youtube.svg" class="social-icons" alt="Youtube" /></a>
+            </div>
+          </div>
         </nav>
-        <img src="./assets/images/hamburger.svg" onclick="openNavbar()" class="md:hidden h-6" alt="Hamburger">
       </div>
-    </header>
-
-    <!-- Contact Section -->
-    <div
-      class="container mx-auto flex flex-col items-center px-6 md:px-0 md:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12  xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
-      <div class="mt-16 md:mt-24 flex flex-col gap-10 justify-between w-full 2xl:w-full md:flex-row ">
-        <div
-          class="relative w-full flex flex-col px-12 sm:px-24 md:px-0 justify-center items-center md:w-[40%] md:py-20 md:justify-start md:items-start">
-          <h1 class="text-[40px] font-medium w-full text-center md:p-0 md:text-start md:w-[310px]">We'd Love to Hear
-            From You!</h1>
-          <p class="open-sans w-full text-center sm:pr-10 md:p-0 md:text-start mt-2">Any questions? Fill out the query
-            form and one of our team members will contact you as soon as possible.</p>
-          <img src="./assets/images/contact/contact-main.png" class="mt-20 w-44 md:w-52 lg:w-64"
-            alt="Contact Main Img" />
+      <header
+        class="container mx-auto flex px-6 md:px-0 sm:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12 xl:3/5 2xl:max-w-screen-2xl   xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px]">
+        <div class="w-full items-center flex justify-between mt-4">
+          <div class="header-left-sec">
+            <a href="./index.html" class="logo">
+            <img class="header-logo w-36" src="./assets/images/navLogo.svg" alt="Header Logo">
+            </a>
+          </div>
+          <nav class="hidden flex items-center gap-8 md:flex">
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./index.html">Home</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./features.html">Features</a>
+            <a class="text-[#212C38] font-medium leading-5 hover:text-[#6AC37F]" href="./pricing.html">Pricing</a>
+            <a class="text-[#6AC37F] font-medium leading-5 hover:text-[#6AC37F] " href="./contact.html">Contact</a>
+            <a class="text-white font-medium custom-btn text-center items-center justify-center w-36 py-2 text-sm cursor-pointer mt-0"
+              href="https://app.dochours.com/" target="_blank">Login / Register</a>
+          </nav>
+          <img src="./assets/images/hamburger.svg" onclick="openNavbar()" class="md:hidden h-6" alt="Hamburger">
         </div>
-        <div
-          class="w-full md:w-[55%]  border border-[#F0F0F0] rounded-3xl px-6 py-10 sm:p-12 md:px-10 pb-6 sm:pb-6 relative bg-white bg-opacity-30">
-          <h1 class="text-3xl font-medium my-3">Reach out to us</h1>
-          <input
-            class="font-normal w-full my-4 p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
-            type="text" name="name" placeholder="Your name">
-          <input
-            class="font-normal w-full my-4 p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
-            type="text" name="email" placeholder="Your email">
-          <input
-            class="font-normal w-full my-3 mb-6 p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
-            type="text" name="phone" placeholder="Your phone">
-          <h1><label class="font-medium my-4 " for="message">Optional</label></h1>
-          <textarea
-            class="font-normal w-full my-3  p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
-            name="message" id="message" rows="6" placeholder="Your message"></textarea>
-          <div class="w-full flex items-center justify-center">
-            <button class="custom-btn contact-form-btn px-2 py-3 flex justify-center items-center text-center mt-2">
-              <span>Submit</span>
-              <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="arrow-contact-path" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F"
-                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
+      </header>
+      <!-- Contact Section -->
+      <div
+        class="container mx-auto flex flex-col items-center px-6 md:px-0 md:justify-normal md:justify-center md:max-w-[1100px] md:w-11/12  xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
+        <div class="mt-16 md:mt-24 flex flex-col gap-10 justify-between w-full 2xl:w-full md:flex-row ">
+          <div
+            class="relative w-full flex flex-col px-12 sm:px-24 md:px-0 justify-center items-center md:w-[40%] md:py-20 md:justify-start md:items-start">
+            <h1 class="text-[40px] font-medium w-full text-center md:p-0 md:text-start md:w-[310px]">We'd Love to Hear
+              From You!
+            </h1>
+            <p class="open-sans w-full text-center sm:pr-10 md:p-0 md:text-start mt-2">Any questions? Fill out the query
+              form and one of our team members will contact you as soon as possible.
+            </p>
+            <img src="./assets/images/contact/contact-main.png" class="mt-20 w-44 md:w-52 lg:w-64"
+              alt="Contact Main Img" />
           </div>
           <div
-            class="absolute top-[215px] left-[-104px] rotate-[135deg] blur-[140px] -z-50 contact-bg-gradient bg-gradient-to-r from-[#67E8F9BF] to-[#C084FCBF] rounded-xl h-56 w-64">
+            class="w-full md:w-[55%]  border border-[#F0F0F0] rounded-3xl px-6 py-10 sm:p-12 md:px-10 pb-6 sm:pb-6 relative bg-white bg-opacity-30">
+            <h1 class="text-3xl font-medium my-3">Reach out to us</h1>
+            <input
+              class="font-normal w-full my-4 p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
+              type="text" name="name" placeholder="Your name">
+            <input
+              class="font-normal w-full my-4 p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
+              type="text" name="email" placeholder="Your email">
+            <input
+              class="font-normal w-full my-3 mb-6 p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
+              type="text" name="phone" placeholder="Your phone">
+            <h1><label class="font-medium my-4 " for="message">Optional</label></h1>
+            <textarea
+              class="font-normal w-full my-3  p-4 text-sm open-sans placeholder:italic border border-[#E9E9E9] rounded-xl outline-none focus:border-[#4C42B8]"
+              name="message" id="message" rows="6" placeholder="Your message"></textarea>
+            <div class="w-full flex items-center justify-center">
+              <button class="custom-btn contact-form-btn px-2 py-3 flex justify-center items-center text-center mt-2">
+                <span>Submit</span>
+                <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path id="arrow-contact-path" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="absolute top-[215px] left-[-104px] rotate-[135deg] blur-[140px] -z-50 contact-bg-gradient bg-gradient-to-r from-[#67E8F9BF] to-[#C084FCBF] rounded-xl h-56 w-64">
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="mt-10 sm:mt-16 mb-4 flex flex-col sm:flex-row gap-10 md:justify-between w-full lg:w-full xl:w-[1100px] 2xl:w-[1100px] xl:max-w-[1100px]">
-        <div class="w-full md:w-[48%] border flex rounded-3xl py-4 px-2 min-[350px]:px-4 sm:px-2 justify-start">
-          <img src="./assets/images/contact/contact1.png" class="w-[70px] h-[70px] mb-6" alt="Contact 1 Img" />
-          <div class="flex flex-col justify-center pl-4">
-            <h1 class="text-xl font-medium ">Email Us</h1>
-            <p>support@dochours.com</p>
+        <div
+          class="mt-10 sm:mt-16 mb-4 flex flex-col sm:flex-row gap-10 md:justify-between w-full lg:w-full xl:w-[1100px] 2xl:w-[1100px] xl:max-w-[1100px]">
+          <div class="w-full md:w-[48%] border flex rounded-3xl py-4 px-2 min-[350px]:px-4 sm:px-2 justify-start">
+            <img src="./assets/images/contact/contact1.png" class="w-[70px] h-[70px] mb-6" alt="Contact 1 Img" />
+            <div class="flex flex-col justify-center pl-4">
+              <h1 class="text-xl font-medium ">Email Us</h1>
+              <p>support@dochours.com</p>
+            </div>
           </div>
-        </div>
-        <div class="w-full md:w-[48%] border flex rounded-3xl py-4 px-2 min-[350px]:px-4 sm:px-8 justify-start ">
-          <img src="./assets/images/contact/contact2.png" class="w-[70px] h-[70px] mb-6" alt="Contact 2 Img" />
-          <div class="flex flex-col justify-center pl-4">
-            <h3 class="font-Poppins text-xl font-medium ">Phone</h3>
-            <div class="flex flex-col sm:flex-col min-[860px]:flex-row gap-1">
-              <p>987 654 3210,</p>
-              <p> 812 900 5599</p>
+          <div class="w-full md:w-[48%] border flex rounded-3xl py-4 px-2 min-[350px]:px-4 sm:px-8 justify-start ">
+            <img src="./assets/images/contact/contact2.png" class="w-[70px] h-[70px] mb-6" alt="Contact 2 Img" />
+            <div class="flex flex-col justify-center pl-4">
+              <h3 class="font-Poppins text-xl font-medium ">Phone</h3>
+              <div class="flex flex-col sm:flex-col min-[860px]:flex-row gap-1">
+                <p>987 654 3210,</p>
+                <p> 812 900 5599</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Streamlining Care Section -->
-    <div class="streamlining-section flex flex-col items-center justify-center w-full mt-16 w-full pt-8 pb-11 bg-cover bg-no-repeat">
-      <div class="badge px-5 py-1.5 w-fit mt-12">
-        <span class="green-icon rounded-full"></span>
-        <h1 class="badge-text">STREAMLINING CARE</h1>
-        <span class="green-icon rounded-full"></span>
+      <!-- Streamlining Care Section -->
+      <div class="streamlining-section flex flex-col items-center justify-center w-full mt-16 w-full pt-8 pb-11 bg-cover bg-no-repeat">
+        <div class="badge px-5 py-1.5 w-fit mt-12">
+          <span class="green-icon rounded-full"></span>
+          <h1 class="badge-text">STREAMLINING CARE</h1>
+          <span class="green-icon rounded-full"></span>
+        </div>
+        <h1 class="text-3xl text-center font-medium mt-6">Dochours assures you</h1>
+        <div id="vertical-text-slider" class="vertical-text-slider h-9 overflow-y-hidden mt-6">
+          <h1 class="vt-slider-1 text-3xl font-medium text-center text-[#4C42B8]">Faster Bookings</h1>
+          <h1 class="vt-slider-2 text-3xl font-medium text-center text-[#6AC37F]">Quicker Care</h1>
+          <h1 class="vt-slider-3 text-3xl font-medium text-center text-[#F25821]">Deeper Insights</h1>
+        </div>
+        <p class="text-base text-[#212C38] mt-6 md:w-[29rem] w-3/4 text-center">We provide clinics with a user-friendly management solution that prioritizes their time and values</p>
+        <div class="flex justify-center items-center mb-4">
+          <a class="custom-btn custom-btn-2 px-2 py-3 flex justify-center items-center text-center mt-10 md:mb-4 mb-8" href="https://app.dochours.com/" target="_blank">
+            <span>Start your free trial now</span>
+            <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="arrow-path-2" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
       </div>
-      <h1 class="text-3xl text-center font-medium mt-6">Dochours assures you</h1>
-      <div id="vertical-text-slider" class="vertical-text-slider h-9 overflow-y-hidden mt-6">
-        <h1 class="vt-slider-1 text-3xl font-medium text-center text-[#4C42B8]">Faster Bookings</h1>
-        <h1 class="vt-slider-2 text-3xl font-medium text-center text-[#6AC37F]">Quicker Care</h1>
-        <h1 class="vt-slider-3 text-3xl font-medium text-center text-[#F25821]">Deeper Insights</h1>
-      </div>
-      <p class="text-base text-[#212C38] mt-6 md:w-[29rem] w-3/4 text-center">We provide clinics with a user-friendly management solution that prioritizes their time and values</p>
-      <div class="flex justify-center items-center mb-4">
-        <a class="custom-btn custom-btn-2 px-2 py-3 flex justify-center items-center text-center mt-10 md:mb-4 mb-8" href="https://app.dochours.com/" target="_blank">
-          <span>Start your free trial now</span>
-          <svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path id="arrow-path-2" d="M21 7L1 7M21 7L15.0511 1M21 7L15.0511 13" stroke="#6AC37F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </a>
-      </div>
-    </div>
-    <!-- Footer Section -->
-    <div class="container mx-auto flex flex-col items-center justify-center mt-14 mb-8 sm:justify-normal md:justify-center px-6 md:px-0 md:max-w-[1100px] md:w-11/12 xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
-      <h1 class="text-3xl font-medium text-center lg:w-5/12 md:w-8/12 w-full leading-10">Subscribe to our newsletter to get the latest updates</h1>
-      <div class="flex rounded-full border mt-12 relative">
-        <input placeholder="Your email" type="email" class="px-4 py-2 bg-gray-100 placeholder:italic rounded-full md:w-80 w-64" />
-        <button class="custom-btn text-center items-center justify-center w-32 text-sm ml-[-50px] cursor-pointer">Subscribe</button>
-      </div>
-      <div class="flex items-center justify-center gap-4 mt-12 opacity-15 hover:opacity-100 transition ease-in-out delay-50">
-        <a href="./index.html"><img src="./assets/images/footerLogo.svg" alt="Footer Logo Img" class="w-60" /></a>
-      </div>
-      <!-- <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 mt-10 justify-between text-center items-center"> -->
-      <div class="flex gap-12 mt-10 justify-center text-center items-center">
-        <a href="./features.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Features</a>
-        <a href="./pricing.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Pricing</a>
-        <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Resources</a>
-        <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Support</a>
-        <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Blog</a> 
-        <a href="./contact.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Contact Us</a>
-      </div>
-      <div class="flex justify-center items-center gap-12 mt-8 text-gray-400">
-        <a href="./terms.html" class="cursor-pointer hover:text-green-500">Terms & Conditions</a>
-        <a href="./policy.html" class="cursor-pointer hover:text-green-500">Privacy Policy</a>
-      </div>
-      <div class="flex justify-between gap-4 mt-8">
-        <img src="./assets/images/facebook.svg" class="social-icons" alt="Facebook" />
-        <a href="https://www.instagram.com/dochours/" target="_blank"><img src="./assets/images/instagram.svg" class="social-icons" alt="Instagram" /></a>
-        <img src="./assets/images/twitter.svg" class="social-icons hidden" alt="Twitter" />
-        <a href="https://www.linkedin.com/company/dochours/" target="_blank"><img src="./assets/images/linkedin.svg" class="social-icons" alt="LinkedIn" /></a>
-        <a href="https://www.youtube.com/@dochours" target="_blank"><img src="./assets/images/youtube.svg" class="social-icons" alt="Youtube" /></a>
-      </div>
-      <hr class="w-8/12 mt-8 hr" />
-      <div class="flex justify-between gap-12 mt-6 text-base text-gray-400">
-        <span>© <span id="year"></span></span>
-        <a href="./index.html" class="flex items-center cursor-pointer">
+      <!-- Footer Section -->
+      <div class="container mx-auto flex flex-col items-center justify-center mt-14 mb-8 sm:justify-normal md:justify-center px-6 md:px-0 md:max-w-[1100px] md:w-11/12 xl:w-[1100px] 2xl:w-[1100px] max-w-[1100px] relative">
+        <h1 class="text-3xl font-medium text-center lg:w-5/12 md:w-8/12 w-full leading-10">Subscribe to our newsletter to get the latest updates</h1>
+        <div class="flex rounded-full border mt-12 relative">
+          <input placeholder="Your email" type="email" class="px-4 py-2 bg-gray-100 placeholder:italic rounded-full md:w-80 w-64" />
+          <button class="custom-btn text-center items-center justify-center w-32 text-sm ml-[-50px] cursor-pointer">Subscribe</button>
+        </div>
+        <div class="flex items-center justify-center gap-4 mt-12 opacity-15 hover:opacity-100 transition ease-in-out delay-50">
+          <a href="./index.html"><img src="./assets/images/footerLogo.svg" alt="Footer Logo Img" class="w-60" /></a>
+        </div>
+        <!-- <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 mt-10 justify-between text-center items-center"> -->
+        <div class="flex gap-12 mt-10 justify-center text-center items-center">
+          <a href="./features.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Features</a>
+          <a href="./pricing.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Pricing</a>
+          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Resources</a>
+          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Support</a>
+          <a href="#" class="cursor-pointer text-[#343F4C] hover:text-green-500 hidden">Blog</a> 
+          <a href="./contact.html" class="cursor-pointer text-[#343F4C] hover:text-green-500">Contact Us</a>
+        </div>
+        <div class="flex justify-center items-center gap-12 mt-8 text-gray-400">
+          <a href="./terms.html" class="cursor-pointer hover:text-green-500">Terms & Conditions</a>
+          <a href="./policy.html" class="cursor-pointer hover:text-green-500">Privacy Policy</a>
+        </div>
+        <div class="flex justify-between gap-4 mt-8">
+          <img src="./assets/images/facebook.svg" class="social-icons" alt="Facebook" />
+          <a href="https://www.instagram.com/dochours/" target="_blank"><img src="./assets/images/instagram.svg" class="social-icons" alt="Instagram" /></a>
+          <img src="./assets/images/twitter.svg" class="social-icons hidden" alt="Twitter" />
+          <a href="https://www.linkedin.com/company/dochours/" target="_blank"><img src="./assets/images/linkedin.svg" class="social-icons" alt="LinkedIn" /></a>
+          <a href="https://www.youtube.com/@dochours" target="_blank"><img src="./assets/images/youtube.svg" class="social-icons" alt="Youtube" /></a>
+        </div>
+        <hr class="w-8/12 mt-8 hr" />
+        <div class="flex justify-between gap-12 mt-6 text-base text-gray-400">
+          <span>© <span id="year"></span></span>
+          <a href="./index.html" class="flex items-center cursor-pointer">
           <img src="./assets/images/headerLogo.svg" class="w-6 mr-2" alt="Footer Logo" />
           <span class="hover:text-gray-500 font-['Poppins']">docHours</span>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="./assets/js/script.js"></script>
-</body>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

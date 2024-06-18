@@ -16,7 +16,6 @@ function closeNavbar() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
     // Hero Play Button Modal
     var openmodal = document.querySelectorAll('.modal-open');
     for (var i = 0; i < openmodal.length; i++) {
@@ -182,8 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let free, growth, enterprise;
 
-  
-
     function fetchPricingData() {
         fetch('https://irisdoctors.in/api/v1/subscription/plans')
             .then(response => response.json())
@@ -289,8 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-    // features page
+    // Features page
     const featuresNavbar = document.getElementById('features-hr-scroll');
     const featuresBody = document.getElementById('features');
     const allFeatures = document.querySelectorAll('.features-sec');
@@ -403,7 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // Type writing Effect on hero section
+        // Type writing effect on hero section
         const sentences = ["smoothly", "quickly", "securely"];
         let sentenceIndex = 0;
         let charIndex = 0;
