@@ -179,21 +179,211 @@ document.addEventListener("DOMContentLoaded", () => {
     const arrowPathPrBasic = document.querySelector('#pricing-arrow-path-2');
     const arrowPathPrGrowth = document.querySelector('#pricing-arrow-path-3');
 
-    let free, growth, enterprise;
+    let monthlyPlans, yearlyPlans
 
     function fetchPricingData() {
-        fetch('https://irisdoctors.in/api/v1/subscription/plans')
-            .then(response => response.json())
-            .then(data => {
-                free = data[0];
-                growth = data[1];
-                enterprise = data[2];
-                console.log(free);
-                console.log(growth);
-                console.log(enterprise);
+        fetch(priceApiLink)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
             })
+            .then(data => {
+                const categorizedPlans = categorizePlans(data);
+                // const categorizedPlans = apiDummyData
+               
+                monthlyPlans = categorizedPlans.monthlyPlans;
+                yearlyPlans = categorizedPlans.yearlyPlans;
+
+            
+            })
+            .then(() => {
+               
+                yearlyPlanSelected();
+            })
+            .catch(error => {
+               // console.error('There was a problem with the price fetch operation:');
+               const categorizedPlans = apiDummyData;
+               
+               monthlyPlans = categorizedPlans.monthlyPlans;
+               yearlyPlans = categorizedPlans.yearlyPlans;
+            })
+            .then(() => {
+                // this will only work if there is a error in api call
+                yearlyPlanSelected();
+            });
     }
 
+
+    function categorizePlans(plans) {
+        const monthlyPlans = { free: null, basic: null, enterprise: null };
+        const yearlyPlans = { free: null, basic: null, enterprise: null };
+
+        const monthlyData = plans.filter(plan => plan.period === 'monthly').sort((a, b) => a.amount - b.amount);
+        const yearlyData = plans.filter(plan => plan.period === 'yearly').sort((a, b) => a.amount - b.amount);
+
+        // console.log("monthlyData = ",monthlyData);
+
+        // monthlyPlans.free = monthlyData.find(plan => plan.name === "")
+        if (monthlyData.length === 3) {
+            monthlyPlans.free = monthlyData[0];
+            monthlyPlans.basic = monthlyData[1];
+            monthlyPlans.enterprise = monthlyData[2];
+        }
+
+        if (yearlyData.length === 3) {
+            yearlyPlans.free = yearlyData[0];
+            yearlyPlans.basic = yearlyData[1];
+            yearlyPlans.enterprise = yearlyData[2];
+        }
+
+        return { monthlyPlans, yearlyPlans };
+    }
+
+    // price toggle monthly and annually
+    const toggleBtn = document.getElementById('pricing-toggle-btn');
+    const offerLabel = document.getElementById('pricing-save')
+    const annuallyPayLabel = document.getElementById('annually-label');
+    const montlyPayLabel = document.getElementById('monthly-label');
+
+    if (toggleBtn) {
+        
+        fetchPricingData();
+       
+        toggleBtn.addEventListener('change', () => {
+            pricePeriodToggle();
+        })
+
+        function pricePeriodToggle() {
+            if (toggleBtn.value == "on") {
+                // monthly plan selected
+                monthlyPlanSelected();
+            } else {
+                // yearly plan selected
+                yearlyPlanSelected();
+            }
+        }
+
+        function updatedPricing(id, end) {
+            let obj = document.getElementById(id);
+            obj.textContent = end;
+        }
+
+        function yearlyPlanSelected() {
+            toggleBtn.value = "on";
+            updatedPricing('free-price', yearlyPlans.free ? parseInt(yearlyPlans.free.amount) : 0);
+            updatedPricing('basic-price', yearlyPlans.basic ? parseInt(yearlyPlans.basic.amount) : 0);
+            updatedPricing('growth-price', yearlyPlans.enterprise ? parseInt(yearlyPlans.enterprise.amount) : 0);
+            offerLabel.classList.add('pricing-save-active');
+            annuallyPayLabel.classList.add('pricing-lable-active');
+            montlyPayLabel.classList.remove('pricing-lable-active');
+
+            updatePricingAllCardsNotes(yearlyPlans);
+        }
+
+        function monthlyPlanSelected() {
+            toggleBtn.value = "";
+            updatedPricing('free-price', monthlyPlans.free ? parseInt(monthlyPlans.free.amount) : 0);
+            updatedPricing('basic-price', monthlyPlans.basic ? parseInt(monthlyPlans.basic.amount) : 0);
+            updatedPricing('growth-price', monthlyPlans.enterprise ? parseInt(monthlyPlans.enterprise.amount) : 0);
+            montlyPayLabel.classList.add('pricing-lable-active');
+            annuallyPayLabel.classList.remove('pricing-lable-active');
+            offerLabel.classList.remove('pricing-save-active');
+
+            updatePricingAllCardsNotes(monthlyPlans);
+        }
+
+        function updatePricingAllCardsNotes(plans) {
+            if (plans.free) {
+                updatePlanBadge("free-price-plan", plans.free.name);
+                updatePricingSingleCardNotesById('pricing-free-notes-container', plans.free);
+            } else {
+                updatePricingSingleCardNotesById('pricing-free-notes-container', null);
+            };
+
+            if (plans.basic) {
+                updatePlanBadge("basic-price-plan", plans.basic.name);
+                updatePricingSingleCardNotesById('pricing-basic-notes-container', plans.basic);
+            } else {
+                updatePricingSingleCardNotesById('pricing-basic-notes-container', null);
+            };
+
+            if (plans.enterprise) {
+                updatePlanBadge("enterprise-price-plan", plans.enterprise.name);
+                updatePricingSingleCardNotesById('pricing-enterprise-notes-container', plans.enterprise);
+            } else {
+                updatePricingSingleCardNotesById('pricing-enterprise-notes-container', null);
+            };
+
+        }
+    }
+
+    function updatePlanBadge(badgeId, planName) {
+        document.getElementById(badgeId).textContent = planName;
+    }
+
+    function updatePricingSingleCardNotesById(cardId, plan) {
+        const pricingNotesContainer = document.getElementById(cardId);
+        pricingNotesContainer.innerHTML = '';
+
+        if (plan && plan.notes) {
+            const planNotes = plan.notes;
+            if (planNotes.appoiment_limit) {
+                // Appointment limit
+                const appointmentLimitHTML = `
+                    <div id="free-appointments-div" class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4 mt-2">
+                        <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
+                        <p class="text-[#212C38]">
+                            <span id="free-appointments-upto" class="font-bold">Upto ${planNotes.appoiment_limit}</span>
+                            <span> Appointment limits</span>
+                        </p>
+                    </div>
+                `;
+                pricingNotesContainer.innerHTML += appointmentLimitHTML;
+            }
+
+            // Features access
+            const featuresAccessHTML = `
+                <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4">
+                    <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
+                    <p class="text-[#212C38]">
+                        <span class="font-bold">Unlimited access</span> 
+                        <span> to all  <a href="/features.html" class="text-green-500 hover:text-[#1edc64]">features</a></span>
+                    </p>
+                </div>
+            `;
+            pricingNotesContainer.innerHTML += featuresAccessHTML;
+
+            if (planNotes.sms_credit) {
+                // SMS credits
+                const smsCreditHTML = `
+                    <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4">
+                        <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
+                        <p class="text-[#212C38]">
+                            <span class="font-bold">${planNotes.sms_credit}</span> 
+                            <span> SMS Credits/month</span>
+                        </p>
+                    </div>
+                `;
+                pricingNotesContainer.innerHTML += smsCreditHTML;
+            }
+
+            // surchage
+            const surChargeHTML = `
+                    <div class="plan-feature flex gap-[0.7rem] justify-start items-center mb-4">
+                        <span class="plan-feature-bullet rounded-full w-2.5 h-2.5 bg-[#6AC37F] inline-block"></span>
+                        <p class="text-[#212C38]">
+                            <span class="font-bold">Rs 1.4</span> 
+                            <span> per appointment (over limit)</span>
+                        </p>
+                    </div>
+                `;
+                pricingNotesContainer.innerHTML += surChargeHTML;
+        }
+    }
+
+    // button animation
     if (pricingFreeBtn) {
         pricingFreeBtn.addEventListener('mouseover', () => {
             arrowPathPrFree.setAttribute('d', newD);
@@ -219,45 +409,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    const toggleBtn = document.getElementById('pricing-toggle-btn');
-    if (toggleBtn) {
-        fetchPricingData();
-        toggleBtn.addEventListener('change', () => {
-            const offerLabel = document.getElementById('pricing-save')
-            const annuallyPayLabel = document.getElementById('annually-label');
-            const montlyPayLabel = document.getElementById('monthly-label');
-            if (toggleBtn.value == "on") {
-                toggleBtn.value = "";
-                counter('basic-price', 999, 1099, 200);
-                counter('growth-price', 2999, 3099, 200);
-                montlyPayLabel.classList.add('pricing-lable-active');
-                annuallyPayLabel.classList.remove('pricing-lable-active');
-                offerLabel.classList.remove('pricing-save-active');
-            } else {
-                toggleBtn.value = "on";
-                counter('basic-price', 1099, 999, 200);
-                counter('growth-price', 3099, 2999, 200);
-                offerLabel.classList.add('pricing-save-active');
-                annuallyPayLabel.classList.add('pricing-lable-active');
-                montlyPayLabel.classList.remove('pricing-lable-active');
-            }
-        })
-        // counter function for pricing page, from start price to end price give a counter transition
-        function counter(id, start, end, duration) {
-            let obj = document.getElementById(id),
-                current = start,
-                range = end - start,
-                increment = end > start ? 1 : -1,
-                step = Math.abs(Math.floor(duration / range)),
-                timer = setInterval(() => {
-                    current += increment;
-                    obj.textContent = current;
-                    if (current == end) {
-                        clearInterval(timer);
-                    }
-                }, step);
-        }
-    }
 
     // Footer year
     const currentYear = new Date().getFullYear();
